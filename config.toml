@@ -17,6 +17,8 @@ googleAnalytics = "UA-91853319-4"
     title = "Nathan Vaughn"
     description = "Adventures in programming and tech"
     subtitle = "Adventures in programming and tech"
+    # default open graph image
+    images = ["img/favicon.png"]
     keywords = ["programming", "tech"]
     copyright = ""
     menuMore = "Show more"
