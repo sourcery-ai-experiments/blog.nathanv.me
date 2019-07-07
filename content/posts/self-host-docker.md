@@ -4,6 +4,8 @@ date = "2019-07-07"
 author = "Nathan Vaughn"
 tags = ["Docker", "self-hosting"]
 description = "Moving my personal web apps from the cloud to self-hosted infrastructure"
+images = ["/img/self-host-docker/hp_dl_360_g5.jpg"]
+#cover = "/img/self-host-docker/hp_dl_360_g5.jpg"
 +++
 
 # Background
