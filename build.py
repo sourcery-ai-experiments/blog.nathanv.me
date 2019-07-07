@@ -17,9 +17,6 @@ def main():
     time.sleep(1)
     subprocess.call(["hugo"])
 
-    with open("public/CNAME", "w") as f:
-        f.write("blog.nathanv.me")
-
 def delete_folder_contents(folder):
     pattern = folder + '/*'
     r = glob.glob(pattern)
