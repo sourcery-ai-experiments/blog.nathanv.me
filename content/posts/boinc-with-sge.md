@@ -161,3 +161,9 @@ $CLIENT_BASE/boinc_client --dir $DATA_DIR
 That's it! You should now be able to run your array job submission script which will
 start a BOINC process on each available host. If any new jobs come in, the BOINC
 jobs will be paused until the entire host is available again.
+
+## References
+
+- https://boinc.berkeley.edu/wiki/Boinccmd_tool#Miscellaneous
+- http://wiki.gridengine.info/wiki/index.php/Integrating_BOINC_and_Grid_Engine
+- https://boinc.berkeley.edu/wiki/Client_configuration_#Command-line_options
