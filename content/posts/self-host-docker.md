@@ -152,7 +152,8 @@ various Compose stacks.
 # Networking
 
 This is where the real key is. Since my server lives behind a university firewall,
-and I want to access applications running on it from the outside world.
+and I want to access applications running on it from the outside world, I need
+to use some sort of tunnel.
 I opted to use Cloudflare's new service, Argo Tunnel to accomplish this. Basically,
 you install the command-line client on your server. You connect it to your locally
 running application, it automatically creates a persistent tunnel into Cloudflare's
@@ -163,9 +164,9 @@ The only limit is a hard cap of 1000 tunnels per account.
 So far so good.
 
 However, Cloudflare's [official instructions](https://developers.cloudflare.com/argo-tunnel/reference/docker/)
-of how to use Argo Tunnel with Docker conatiners, kinda sucks and is very manual. No good.
+of how to use Argo Tunnel with Docker conatiners kinda sucks and is very manual. No good.
 I initially tried to use an [nginx reverse proxy](https://github.com/jwilder/nginx-proxy)
-and have a single tunnel coming out of the Docker host but wasn't able to get it work.
+and have a single tunnel coming out of the Docker host, but wasn't able to get it work.
 Then, I came across [Hera](https://github.com/aschzero/hera).
 
 Hera is a Docker container which automatically monitors your containers and creates
