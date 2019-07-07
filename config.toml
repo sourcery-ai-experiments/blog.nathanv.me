@@ -12,9 +12,6 @@ googleAnalytics = "UA-91853319-4"
   centerTheme = true
   showReadingTime = true
 
-[outputs]
-  home = ["HTML"]
-
 [languages]
   [languages.en]
     title = "Nathan Vaughn"
