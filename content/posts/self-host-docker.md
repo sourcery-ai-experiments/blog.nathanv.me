@@ -43,9 +43,9 @@ Docker containers behave a lot like Virtual Machines (VMs). However, under-the-h
 they're completely different. Instead of running a full-blown operating system,
 they actually share the host's kernel, and run off of that. The processes inside a
 container are actually processes under the host OS. However, to the processes in the
-in container, it's like they are in their own OS. The filesystem is sandboxed
+container, it's like they are in their own OS. The filesystem is sandboxed
 from the host (unless you decide to provide access to specific directories)
-and containers even get their own network interface. Compared to VM's, containers
+and containers even get their own network interface. Compared to VMs, containers
 have a **much** lower memory footprint, and are super fast to start. Neat!
 
 ```
@@ -70,7 +70,6 @@ nathan@zeus:[~]$ sudo /usr/bin/landscape-sysinfo
   IP address for br-7799754001bc: 192.168.32.1
   IP address for br-3780ddef1e2f: 192.168.64.1
 ```
-
 
 {{< figure src="/img/self-host-docker/docker_vs_vm.png" alt="Docker vs VM diagram" position="center" style="border-radius: 8px;" caption="Docker vs VM diagram (Image from https://blog.docker.com/2018/08/containers-replacing-virtual-machines/)" captionPosition="center" >}}
 
@@ -159,12 +158,12 @@ you install the command-line client on your server. You connect it to your local
 running application, it automatically creates a persistent tunnel into Cloudflare's
 network, and creates the appropriate DNS record for your domain. Argo Tunnel is included
 free with [Argo](https://www.cloudflare.com/products/argo-smart-routing/) which is
-$5/month/domain. It's also $0.10/GB of bandwidth after the first gigabyte.
+$5/month/domain. It's also $0.10/GB of bandwidth after the first gigabyte per month.
 The only limit is a hard cap of 1000 tunnels per account.
 So far so good.
 
 However, Cloudflare's [official instructions](https://developers.cloudflare.com/argo-tunnel/reference/docker/)
-of how to use Argo Tunnel with Docker conatiners kinda sucks and is very manual. No good.
+of how to use Argo Tunnel with Docker containers kinda sucks and is very manual. No good.
 I initially tried to use an [nginx reverse proxy](https://github.com/jwilder/nginx-proxy)
 and have a single tunnel coming out of the Docker host, but wasn't able to get it work.
 Then, I came across [Hera](https://github.com/aschzero/hera).
@@ -244,11 +243,11 @@ volumes:
 ```
 
 The port being exposed to the host (`1001` in the example above) isn't important
-as Hera only cares about the port **inside** the container. It just needs to be unique,
-however, as you can't have duplicates. I simply started at 1000 and started counting up.
+as Hera only cares about the port **inside** the container. It just needs to be unique
+as you can't have duplicates. I simply started at 1000 and started counting up.
 
 Yes, I could probably also just run a container with the `cloudflared` daemon as part of
-each stack, but I didn't see regularly updated image available.
+each stack, but I didn't see a regularly updated image available.
 
 ## Note About Domains
 
