@@ -163,7 +163,7 @@ The only limit is a hard cap of 1000 tunnels per account.
 So far so good.
 
 However, Cloudflare's [official instructions](https://developers.cloudflare.com/argo-tunnel/reference/docker/)
-of how to use Argo Tunnel with Docker containers kinda sucks and is very manual. No good.
+of how to use Argo Tunnel with Docker containers kinda suck and is very manual. No good.
 I initially tried to use an [nginx reverse proxy](https://github.com/jwilder/nginx-proxy)
 and have a single tunnel coming out of the Docker host, but wasn't able to get it work.
 Then, I came across [Hera](https://github.com/aschzero/hera).
@@ -306,7 +306,7 @@ with Docker so much easier.
 
 While not specifically Docker-related, I recently found out about
 [Netdata](https://www.netdata.cloud/). Netdata is an all-in-one performance monitoring
-tool for Linux servers. while similar to Grafana + Prometheus, the appeal is that
+tool for Linux servers. While similar to Grafana + Prometheus, the appeal is that
 everything is configured out-of-the-box.
 It's a really beautiful interface with a **ton** of statistics available. While not
 particularly customizable, the amount of information is immense, and it integrates
@@ -349,7 +349,7 @@ As much as I love tinkering with things, I do like making the machines work for 
 ## Docker Container Updates
 
 Every night, an instance of [Watchtower](https://github.com/containrrr/watchtower)
-runs and updates any container which have a new image version available.
+runs and updates any container which has a new image version available.
 While probably not the best for a true production environment,
 as this is just for myself, I don't mind living life dangerously.
 
@@ -400,7 +400,9 @@ unnecessary memory overhead.
 ### Docker Secrets
 
 I feel like Docker doesn't really have a *great* way to manage secrets. Right now, you can
-create secrets with Docker, but they are only made available to containers via files.
+[create secrets with Docker](https://docs.docker.com/engine/swarm/secrets/),
+but they are only made available to containers via files and are only
+available for Docker Swarms.
 This sucks, because nearly every container uses environment variables to handle secrets.
 Unless you add some shims to your Dockerfiles to support loading values from
 files into environment variables, you're out of luck. This essentially forces you
@@ -418,7 +420,7 @@ which charges differently, or hosting my own solution, which I talk about more b
 
 The biggest limitation that bothers me is that Argo Tunnel only works for HTTP traffic.
 This means that I can't run any sort of game servers that work over TCP traffic
-without using a service like [serveo](https://serveo.net) or [ngrok](https://ngrok.com/)
+without using a service like [Serveo](https://serveo.net) or [ngrok](https://ngrok.com/)
 on an ad-hoc basis. I could use a `f1-micro` instance in the free-tier of
 [Google Cloud](https://cloud.google.com/free/) to run
 a server with Serveo or [frp](https://github.com/fatedier/frp) or something.
