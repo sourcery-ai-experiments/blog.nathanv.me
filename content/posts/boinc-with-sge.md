@@ -8,7 +8,7 @@ description = "Getting BOINC to work on a High-Performance Cluster that uses Sun
 
 # Background
 
-Recently, I setup a small High-Performance Computing cluster for Iowa State's
+Recently, I setup a small High-Performance Computing (HPC) cluster for Iowa State's
 solar car team. This cluster was primarily used for running
 Computational Fluid Dynamics (CFD) and MATLAB code. However, whenever the team
 was in the build phase and not actively designing the next car, the cluster
@@ -21,7 +21,7 @@ We decided that BOINC would be the best way to donate our extra compute time.
 In case you're not aware, [BOINC](https://boinc.berkeley.edu/) stands for
 Berkeley Open Infrastructure for Network Computing. Basically,
 it's a way for people to have their personal computers
-donate extra computational ability to various scientific research projects and
+donate extra computational capacity to various scientific research projects and
 is run by University of California, Berkeley. Being designed for home computers
 will prove to be problematic.
 
@@ -31,7 +31,7 @@ The first challenge was simply installing BOINC. To avoid as many configuration 
 as possible, we prefer to install applications to our network file share rather than
 locally on each compute node. Also, all of our compute nodes are headless, and BOINC
 usually ships with a GUI manager. This quickly rules out simply using the
-package manager, and the prebuilt binaries available are severely out-of date. This
+package manager and the prebuilt binaries available are severely out-of date. This
 leaves us with compiling from source.
 
 ```bash
@@ -52,18 +52,18 @@ make -j
 # Creating Account(s)
 
 In order to use BOINC, you need to create an account with each project you want
-to contribute to, and attach your hosts to it. This can be extremely tedious,
+to contribute to and attach your hosts to it. This can be extremely tedious,
 so using a service like [BOINC Account Manager](https://boincstats.com/en/bam/) (BAM)
-is highly recommedned. Once you select some projects, you can also check the option
+is highly recommended. Once you select some projects, you can also check the option
 "Attach new host by default?" so that everything is automatic.
 
 The only issue I've had with BAM, is that my work profile was not being added to new
-hosts default.
+hosts by default.
 
 # Configuring SGE
 
 The next challenge was that BOINC is designed to only be run on a single computer
-and is *not* build around Message Passing Interface (MPI) like most applications that
+and is *not* built around Message Passing Interface (MPI) like most applications that
 run on HPC clusters. To get around this, we created a separate queue in our job
 scheduler (Son of Grid Engine (SGE, an open-source fork of Sun Grid Engine)) with a
 single slot per compute node, so that if a BOINC job got scheduled on a node,
