@@ -4,6 +4,6 @@
 }
 
 /* Allow links to be word broken */
-.post-content a {
+.post-content li>a {
     word-break: break-all;
-  }
+}
