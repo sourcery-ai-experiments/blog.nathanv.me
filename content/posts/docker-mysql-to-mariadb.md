@@ -1,5 +1,5 @@
 +++
-title = "Converting MySQL 8 Docker containers to MariaDB"
+title = "Converting MySQL 8 Docker Containers to MariaDB"
 date = "2019-07-20"
 author = "Nathan Vaughn"
 tags = ["Docker", "MySQL", "MariaDB"]
