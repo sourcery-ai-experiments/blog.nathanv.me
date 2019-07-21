@@ -17,15 +17,16 @@ After recently reading about some of MariaDB's
 [features and speed-improvements](https://mariadb.com/kb/en/library/mariadb-vs-mysql-features/)
 over MySQL Community Edition
 (and [many people](https://www.reddit.com/r/sysadmin/search/?q=flair_name%3A%22Rant%22%20oracle&restrict_sr=1)
-including myself **really** hate Oracle),
+including myself ***really*** hate Oracle),
 I decided I wanted to swap out my MySQL databases.
 This ended up being more complicated than I initially hoped.
 
-# Challenges
+# Challenge
 
-The first was that I had previously used MySQL 8 for my databases.
-This presented the problem that I simply couldn't use MariaDB with the existing
-`/var/lib/mysql` folder as is supported
+The challenge was that I had previously used MySQL 8 for my databases.
+This presented the problem that I simply couldn't stop the old MySQL container,
+and start a new MariaDB container with the existing volume of the `/var/lib/mysql`
+folder (which contains MySQL's data) as is supported
 with [older versions of MySQL](https://mariadb.com/kb/en/library/upgrading-from-mysql-to-mariadb/).
 This meant that I would need to export the data from each database, delete the volume,
 start a new MariaDB database, and reimport the data. While it sounds simple enough,
