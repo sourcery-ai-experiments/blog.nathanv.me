@@ -8,7 +8,7 @@ images = ["/img/self-host-docker/hp_dl_360_g5.jpg"]
 #cover = "/img/self-host-docker/hp_dl_360_g5.jpg"
 +++
 
-# Background
+## Background
 
 For the past few years, I've rented a VPS to host some web apps for myself. I've done
 this since I've lived in college apartments behind a NAT and I wanted to be able
@@ -22,7 +22,7 @@ I decided to move my apps to be hosted on-premise.
 
 {{< figure src="/img/self-host-docker/hp_dl_360_g5.jpg" alt="HP DL360 G5 with dual Xeon E5410s and 64GB of RAM" position="center" style="border-radius: 8px;" caption="HP DL360 G5 with dual Xeon E5410s and 64GB of RAM" captionPosition="center" >}}
 
-# Decision to Use Docker
+## Decision to Use Docker
 
 Previously, my $5/month Linode VPS only had 1GB of RAM, so memory was at a premium.
 Because of this, I exclusively used applications built on a LAMP stack
@@ -37,7 +37,7 @@ I would move all my applications to my server. I decided to try out Docker and
 containerization first since that's all the rage now. If Docker didn't
 work out, I would try traditional VMs with VSphere, ESXi, Proxmox, or something.
 
-# What are containers?
+## What are containers?
 
 Docker containers behave a lot like Virtual Machines (VMs). However, under-the-hood,
 they're completely different. Instead of running a full-blown operating system,
@@ -73,7 +73,7 @@ nathan@zeus:[~]$ sudo /usr/bin/landscape-sysinfo
 
 {{< figure src="/img/self-host-docker/docker_vs_vm.png" alt="Docker vs VM diagram" position="center" style="border-radius: 8px;" caption="Docker vs VM diagram (Image from https://blog.docker.com/2018/08/containers-replacing-virtual-machines/)" captionPosition="center" >}}
 
-# Docker Setup
+## Docker Setup
 
 After choosing to try out containers with Docker,
 I quickly decided upon using [Docker Compose](https://docs.docker.com/compose/) rather
@@ -148,7 +148,7 @@ In order to start or stop them all quickly, I wrote a small Python script which 
 `sudo docker-compose up -d` or `sudo docker-compose down` all the
 various Compose stacks.
 
-# Networking
+## Networking
 
 This is where the real key is. Since my server lives behind a university firewall,
 and I want to access applications running on it from the outside world, I need
@@ -249,7 +249,7 @@ as you can't have duplicates. I simply started at 1000 and started counting up.
 Yes, I could probably also just run a container with the `cloudflared` daemon as part of
 each stack, but I didn't see a regularly updated image available.
 
-## Note About Domains
+### Note About Domains
 
 Cloudflare Argo is billed per **domain**. This means without doubling your monthly cost,
 you can't create tunnels for two domains. I have a short domain I like to use for
@@ -262,7 +262,7 @@ Example:
 Link Shortener (app) -> linkshortener.example.com (Tunnel) -> xmpl.com  (CNAME DNS)
 ```
 
-# Security
+## Security
 
 Now that I have my applications accessible from the outside world, I would like to
 secure them more than their built-in login forms. Niche software developed by amateur
@@ -290,9 +290,9 @@ ports:
     - '127.0.0.1:1001:80'
 ```
 
-# Useful Tools
+## Useful Tools
 
-## Portainer
+### Portainer
 
 [Portainer](https://www.portainer.io) is an absolutely incredible tool for
 managing Docker. You can easily view container logs,
@@ -302,7 +302,7 @@ with Docker so much easier.
 
 {{< figure src="/img/self-host-docker/portainer.jpg" alt="Screenshot of Portainer interface" position="center" style="border-radius: 8px;" caption="Screenshot of Portainer interface" captionPosition="center" >}}
 
-## Netdata
+### Netdata
 
 While not specifically Docker-related, I recently found out about
 [Netdata](https://www.netdata.cloud/). Netdata is an all-in-one performance monitoring
@@ -315,22 +315,22 @@ CPU.
 
 {{< figure src="/img/self-host-docker/netdata.jpg" alt="Screenshot of Netdata statistics" position="center" style="border-radius: 8px;" caption="Screenshot of Netdata statstics" captionPosition="center" >}}
 
-# Backups
+## Backups
 
 One of the most important parts of any hosting operation is backups. I backup the data
 and configurations I use for Docker in 3 places.
 
-## Docker Compose files
+### Docker Compose files
 
 The Docker Compose files I've built are stored in a private Git repository on
 my GitHub account.
 
-## Docker Secrets
+### Docker Secrets
 
 All of my secrets (MySQL passwords, SMTP login, etc.) are stored as secure notes
 in my [LastPass](https://lastpass.com/f?14012062) account.
 
-## Data
+### Data
 
 Every night, I have setup an instance of [Duplicati](https://www.duplicati.com/)
 to backup the entire contents of `/var/lib/docker/volumes` to a
@@ -342,33 +342,33 @@ versus AWS S3 or Google Cloud because I've been a big fan of their
 service for a long time, and their pricing is really good
 ($0.005/GB/month with the first 10GB free).
 
-# Automation
+## Automation
 
 As much as I love tinkering with things, I do like making the machines work for me.
 
-## Docker Container Updates
+### Docker Container Updates
 
 Every night, an instance of [Watchtower](https://github.com/containrrr/watchtower)
 runs and updates any container which has a new image version available.
 While probably not the best for a true production environment,
 as this is just for myself, I don't mind living life dangerously.
 
-## Host OS Updates
+### Host OS Updates
 
 I setup both `apticron` and `unattended-upgrades` on the Ubuntu Server host
 so that I get emails about available package updates, and automatic security
 update reports.
 
-## Backups
+### Backups
 
 As mentioned above, a Duplicati container creates a backup every night and emails
 a report.
 
-# Conclusion
+## Conclusion
 
 {{< figure src="/img/self-host-docker/server_diagram.jpg" alt="Rough diagram of final setup" position="center" style="border-radius: 8px;" caption="Rough diagram of final setup" captionPosition="center" >}}
 
-## Things I'm Happy With
+### Things I'm Happy With
 
 Overall, I'm extremely pleased with how everything turned out. I understand all the
 hype of containers now. Containers make it so easy to quickly run applications
@@ -385,9 +385,9 @@ All in all, my applications now are running on my server in my apartment while b
 accessible from the outside world, while costing nearly the same as before. Everything
 is automatically updated along with nightly off-site backups with email reports.
 
-## Things I'm Not Happy With
+### Things I'm Not Happy With
 
-### Docker MySQL
+#### Docker MySQL
 
 With hosting all my apps on the same stack in the past, they all shared the same
 MySQL server. Now, with Docker, every application has its own MySQL server, as there
@@ -397,7 +397,7 @@ This just seems strange to me, as SQL servers are meant to
 handle multiple databases, and running a bunch of extra instances is a lot of
 unnecessary memory overhead.
 
-### Docker Secrets
+#### Docker Secrets
 
 I feel like Docker doesn't really have a *great* way to manage secrets. Right now, you can
 [create secrets with Docker](https://docs.docker.com/engine/swarm/secrets/),
@@ -408,7 +408,7 @@ Unless you add some shims to your Dockerfiles to support loading values from
 files into environment variables, you're out of luck. This essentially forces you
 to either pass them on the command-line, or put them into environment files.
 
-### Argo Pricing
+#### Argo Pricing
 
 Cloudflare Argo charges $0.10/GB after the first gigabyte of data. This means I
 have be **very** careful in what I upload/download from my server via the tunnels,
@@ -416,7 +416,7 @@ especially with bandwidth heavy stuff like Nextcloud. Unfortunately, really
 solving this problem would require me to use a different service
 which charges differently, or hosting my own solution, which I talk about more below.
 
-## Future Work
+### Future Work
 
 The biggest limitation that bothers me is that Argo Tunnel only works for HTTP traffic.
 This means that I can't run any sort of game servers that work over TCP traffic
@@ -431,7 +431,7 @@ tunneling TCP traffic, and doesn't charge based on bandwidth usage.
 However, I have more faith in Cloudflare as a significantly larger company with a
 long history.
 
-## References
+### References
 
 - https://help.ubuntu.com/lts/serverguide/automatic-updates.html
 - https://www.linode.com/docs/email/postfix/postfix-smtp-debian7/

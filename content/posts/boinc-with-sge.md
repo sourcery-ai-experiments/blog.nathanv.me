@@ -6,7 +6,7 @@ tags = ["High-Performance Computing", "Sun Grid Engine", "BOINC"]
 description = "Getting BOINC to work on a High-Performance Cluster that uses Sun Grid Engine for job scheduling to donate extra compute time"
 +++
 
-# Background
+## Background
 
 Recently, I setup a small High-Performance Computing (HPC) cluster for Iowa State's
 solar car team. This cluster was primarily used for running
@@ -15,7 +15,7 @@ was in the build phase and not actively designing the next car, the cluster
 sat idle the vast majority of the time. We decided that we should donate the extra
 compute time to scientific research.
 
-# Introducing BOINC
+## Introducing BOINC
 
 We decided that BOINC would be the best way to donate our extra compute time.
 In case you're not aware, [BOINC](https://boinc.berkeley.edu/) stands for
@@ -25,7 +25,7 @@ donate extra computational capacity to various scientific research projects and
 is run by University of California, Berkeley. Being designed for home computers
 will prove to be problematic.
 
-# Installing BOINC
+## Installing BOINC
 
 The first challenge was simply installing BOINC. To avoid as many configuration changes
 as possible, we prefer to install applications to our network file share rather than
@@ -49,7 +49,7 @@ cd boinc
 make -j
 ```
 
-# Creating Account(s)
+## Creating Account(s)
 
 In order to use BOINC, you need to create an account with each project you want
 to contribute to and attach your hosts to it. This can be extremely tedious,
@@ -60,7 +60,7 @@ is highly recommended. Once you select some projects, you can also check the opt
 The only issue I've had with BAM, is that my work profile was not being added to new
 hosts by default.
 
-# Configuring SGE
+## Configuring SGE
 
 The next challenge was that BOINC is designed to only be run on a single computer
 and is *not* built around Message Passing Interface (MPI) like most applications that
@@ -70,18 +70,18 @@ single slot per compute node, so that if a BOINC job got scheduled on a node,
 it would be reserved the entire node. Make sure that the user account you will be
 using for BOINC has access to this queue and the compute nodes.
 
-## Important Setting
+### Important Setting
 
 An important setting needs to be set in SGE so that other jobs have higher priority.
 For every other queue that you have, set the BOINC-specific queue to be a subordinate
 with a max slot count as 1. That way, if **any** other jobs come into the queue, they
 will take priority over the BOINC job.
 
-# Starting BOINC
+## Starting BOINC
 
 Next, we need to setup how BOINC will be launched.
 
-## Array Job
+### Array Job
 
 Launching a job across multiple hosts is easy with SGE with array jobs. We can write
 a small Bash script to parse how many slots are available in the BOINC queue
@@ -95,7 +95,7 @@ BOINC_SLOTS=`qstat -g c -q boinc.q | tail -1 | sed -e "s/ [ ]*/ /g" | cut --deli
 qsub -q boinc.q -t 1-${BOINC_SLOTS} -o boinc_out.txt -j y -cwd -N Boinc /home/boinc/runBoinc.sh
 ```
 
-## BOINC Client
+### BOINC Client
 
 Launching the client is trickier. BOINC doesn't like sharing a directory with other
 running instances, so each host needs it's own directory to work out of. Also, we want
@@ -156,13 +156,13 @@ $CLIENT_BASE/boinc_client --dir $DATA_DIR
 
 ```
 
-# Conclusion
+## Conclusion
 
 That's it! You should now be able to run your array job submission script which will
 start a BOINC process on each available host. If any new jobs come in, the BOINC
 jobs will be paused until the entire host is available again.
 
-## References
+### References
 
 - https://boinc.berkeley.edu/wiki/Boinccmd_tool#Miscellaneous
 - http://wiki.gridengine.info/wiki/index.php/Integrating_BOINC_and_Grid_Engine

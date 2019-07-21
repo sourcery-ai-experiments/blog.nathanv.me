@@ -8,7 +8,7 @@ images = ["/img/docker-mysql-to-mariadb/mysql_to_mariadb.jpg"]
 cover = "/img/docker-mysql-to-mariadb/mysql_to_mariadb.jpg"
 +++
 
-# Background
+## Background
 
 Recently, when I setup a number of Docker Compose stacks for myself, I naively
 used MySQL 8 databases. I had heard of MariaDB in the past, and knew it was a
@@ -21,7 +21,7 @@ including myself ***really*** hate Oracle),
 I decided I wanted to swap out my MySQL databases.
 This ended up being more complicated than I initially hoped.
 
-# Challenge
+## Challenge
 
 The challenge was that I had previously used MySQL 8 for my databases.
 This presented the problem that I simply couldn't stop the old MySQL container,
@@ -32,7 +32,7 @@ This meant that I would need to export the data from each database, delete the v
 start a new MariaDB database, and reimport the data. While it sounds simple enough,
 it quickly became very tedious.
 
-# Process
+## Process
 
 The general process was as follows:
 
@@ -66,7 +66,7 @@ The general process was as follows:
 
     `sudo docker exec -i container_name mysql -u username -p database < database_db.sql`
 
-# Automating
+## Automating
 
 After doing this process by hand twice, I quickly decided to write a script to do it
 for me as I use a standard naming convention for all of my Docker Compose stacks and really
@@ -131,7 +131,7 @@ sudo docker exec -i $CONTAINERNAME mysql -u $USERNAME -p$PASSWORD $DATABASE < $F
 #rm $DOCKERDIR/$FILENAME
 ```
 
-# Conclusion
+## Conclusion
 
 With a bit of time and effort, I've now converted all my MySQL databases to MariaDB
 as part of my goal of [ridding myself](https://www.cnbc.com/2018/08/01/amazon-plans-to-move-off-oracle-software-by-early-2020.html) of all Oracle software.
