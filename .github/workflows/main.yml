@@ -1,0 +1,26 @@
+name: Build
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@master
+      with:
+        submodules: true
+    - name: Build site
+      uses: peaceiris/actions-hugo@master
+      if: github.event.deleted == false
+      with:
+        args: --cleanDestinationDir
+    - name: Deploy site
+      uses: peaceiris/actions-gh-pages@master
+      if: success()
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        PUBLISH_BRANCH: gh-pages
+        PUBLISH_DIR: ./public
