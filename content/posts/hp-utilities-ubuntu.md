@@ -71,7 +71,7 @@ hpasmcli
 
 #### Example
 
-```markup
+```
 nathan@zeus:[~]$ sudo hpasmcli
 HPE management CLI for Linux (v2.0)
 Copyright 2015 Hewlett Packard Enterprise Development LP.
@@ -112,7 +112,7 @@ hponcfg
 
 #### Example
 
-```markup
+```
 nathan@zeus:[~]$ sudo hponcfg -h
 HP Lights-Out Online Configuration utility
 Version 5.3.0 Date 3/21/2018 (c) 2005,2018 Hewlett Packard Enterprise Development LP
