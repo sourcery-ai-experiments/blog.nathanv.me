@@ -1,9 +1,6 @@
 [submodule "themes/terminal"]
 	path = themes/terminal
 	url = https://github.com/panr/hugo-theme-terminal.git
-[submodule "public"]
-	path = public
-	url = https://github.com/NathanVaughn/blog.nathanv.me.git
 [submodule "themes/hello-friend"]
 	path = themes/hello-friend
 	url = https://github.com/panr/hugo-theme-hello-friend.git
