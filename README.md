@@ -1,5 +1,11 @@
 # blog.nathanv.me
 
+## Cloning
+
+```
+git clone --recurse-submodules https://github.com/NathanVaughn/blog.nathanv.me.git
+```
+
 ## Branches
 
 ### master

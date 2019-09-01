@@ -121,7 +121,7 @@ Working off some examples, I made a Docker Compose file for each
 of my applications, each in their own folder. For security, I have every app restricted
 to their own network (which Docker Compose will do by default).
 
-```
+```markup
 ~/dockerfiles
 │
 └───app1
@@ -258,7 +258,7 @@ workaround. Simply create the tunnel on your main domain to whatever subdomain y
 want, then just `CNAME` your second domain to the tunnel subdomain.
 
 Example:
-```
+```markup
 Link Shortener (app) -> linkshortener.example.com (Tunnel) -> xmpl.com  (CNAME DNS)
 ```
 
