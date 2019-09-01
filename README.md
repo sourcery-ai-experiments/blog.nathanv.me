@@ -1,28 +1,11 @@
-# blog.nathanv.me-hugo
+# blog.nathanv.me
 
-## Cloning
+## Branches
 
-```
-git clone https://github.com/NathanVaughn/blog.nathanv.me-hugo.git
-git submodule init
-git submodule update
-```
+### master
 
-## Python scripts
+Source of the [Hugo](https://gohugo.io/) site.
 
-### build.py
+### gh-pages
 
-Cleans old version and builds site
-
-```bash
-python .\build.py
-```
-
-### deploy.py
-
-Adds all changes and commits to both Hugo repo and site repo with the first argument
-as the commit message.
-
-```bash
-python .\deploy.py "New post"
-```
+The built HTML code. This is automatically built via GitHub Actions CI.

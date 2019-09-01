@@ -48,7 +48,7 @@ from the host (unless you decide to provide access to specific directories)
 and containers even get their own network interface. Compared to VMs, containers
 have a **much** lower memory footprint, and are super fast to start. Neat!
 
-```
+```markup
 nathan@zeus:[~]$ sudo /usr/bin/landscape-sysinfo
 
   System load:                    0.15
