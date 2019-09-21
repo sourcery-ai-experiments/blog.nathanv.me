@@ -5,6 +5,6 @@
     "remark-preset-lint-recommended",
     "remark-preset-lint-consistent",
     "remark-lint-no-dead-urls",
-    remark-lint-no-url-trailing-slash",
+    "remark-lint-no-url-trailing-slash"
   ]
 }
