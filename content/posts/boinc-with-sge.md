@@ -164,6 +164,6 @@ jobs will be paused until the entire host is available again.
 
 ### References
 
-- [https://boinc.berkeley.edu/wiki/Boinccmd_tool#Miscellaneous](https://boinc.berkeley.edu/wiki/Boinccmd_tool#Miscellaneous)
-- [http://wiki.gridengine.info/wiki/index.php/Integrating_BOINC_and_Grid_Engine](https://web.archive.org/web/20151225051901/http://wiki.gridengine.info/wiki/index.php/Integrating_BOINC_and_Grid_Engine)
-- [https://boinc.berkeley.edu/wiki/Client_configuration_#Command-line_options](https://boinc.berkeley.edu/wiki/Client_configuration_#Command-line_options)
+  - [https://boinc.berkeley.edu/wiki/Boinccmd_tool#Miscellaneous](https://boinc.berkeley.edu/wiki/Boinccmd_tool#Miscellaneous)
+  - [http://wiki.gridengine.info/wiki/index.php/Integrating\_BOINC\_and\_Grid\_Engine](https://web.archive.org/web/20151225051901/http://wiki.gridengine.info/wiki/index.php/Integrating\_BOINC\_and\_Grid\_Engine)
+  - [https://boinc.berkeley.edu/wiki/Client\_configuration_#Command-line\_options](https://boinc.berkeley.edu/wiki/Client\_configuration\_#Command-line_options)

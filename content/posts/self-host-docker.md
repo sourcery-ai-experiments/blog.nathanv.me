@@ -37,7 +37,7 @@ I would move all my applications to my server. I decided to try out Docker and
 containerization first since that's all the rage now. If Docker didn't
 work out, I would try traditional VMs with VSphere, ESXi, Proxmox, or something.
 
-## What are containers?
+## What Are Containers
 
 Docker containers behave a lot like Virtual Machines (VMs). However, under-the-hood,
 they're completely different. Instead of running a full-blown operating system,
@@ -359,7 +359,7 @@ I setup both `apticron` and `unattended-upgrades` on the Ubuntu Server host
 so that I get emails about available package updates, and automatic security
 update reports.
 
-### Backups
+### Automated Backups
 
 As mentioned above, a Duplicati container creates a backup every night and emails
 a report.
@@ -433,5 +433,5 @@ long history.
 
 ### References
 
-- [https://help.ubuntu.com/lts/serverguide/automatic-updates.html](https://help.ubuntu.com/lts/serverguide/automatic-updates.html)
-- [https://www.linode.com/docs/email/postfix/postfix-smtp-debian7/](https://www.linode.com/docs/email/postfix/postfix-smtp-debian7/)
+  - [https://help.ubuntu.com/lts/serverguide/automatic-updates.html](https://help.ubuntu.com/lts/serverguide/automatic-updates.html)
+  - [https://www.linode.com/docs/email/postfix/postfix-smtp-debian7/](https://www.linode.com/docs/email/postfix/postfix-smtp-debian7/)
