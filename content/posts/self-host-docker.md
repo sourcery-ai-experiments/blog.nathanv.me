@@ -433,5 +433,5 @@ long history.
 
 ### References
 
-- https://help.ubuntu.com/lts/serverguide/automatic-updates.html
-- https://www.linode.com/docs/email/postfix/postfix-smtp-debian7/
+- [https://help.ubuntu.com/lts/serverguide/automatic-updates.html](https://help.ubuntu.com/lts/serverguide/automatic-updates.html)
+- [https://www.linode.com/docs/email/postfix/postfix-smtp-debian7/](https://www.linode.com/docs/email/postfix/postfix-smtp-debian7/)
