@@ -36,15 +36,15 @@ it quickly became very tedious.
 
 The general process was as follows:
 
-- Dump the MySQL database of the current database container.
+-   Dump the MySQL database of the current database container.
 
     `sudo docker exec -i container_name mysqldump -u username -p database > database_db.sql`
 
-- Stop the Docker Compose stack.
+-   Stop the Docker Compose stack.
 
     `sudo docker-compose down`
 
-- Change the `docker-compose.yml` file to use MariaDB.
+-   Change the `docker-compose.yml` file to use MariaDB.
 
 ```diff
 -   command: '--default-authentication-plugin=mysql_native_password'
@@ -54,15 +54,15 @@ The general process was as follows:
 +   image: 'mariadb:latest'
 ```
 
-- Delete the old data volume.
+-   Delete the old data volume.
 
     `sudo docker volume rm volume_name`
 
-- Start the modified Docker Compose stack.
+-   Start the modified Docker Compose stack.
 
     `sudo docker-compose up -d`
 
-- Wait for the MariaDB container to become ready, and load in the data.
+-   Wait for the MariaDB container to become ready, and load in the data.
 
     `sudo docker exec -i container_name mysql -u username -p database < database_db.sql`
 
