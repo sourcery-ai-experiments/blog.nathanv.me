@@ -104,7 +104,7 @@ echo "Stopping containers"
 sudo docker-compose down
 
 # -----------------
-# Wait for use to modify compose file
+# Wait for user to modify compose file
 
 read -p "Press enter once you have modified the docker-compose.yml file"
 

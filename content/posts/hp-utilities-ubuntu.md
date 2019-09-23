@@ -71,7 +71,7 @@ hpasmcli
 
 #### Example
 
-```
+```sh
 nathan@zeus:[~]$ sudo hpasmcli
 HPE management CLI for Linux (v2.0)
 Copyright 2015 Hewlett Packard Enterprise Development LP.
@@ -112,7 +112,7 @@ hponcfg
 
 #### Example
 
-```
+```sh
 nathan@zeus:[~]$ sudo hponcfg -h
 HP Lights-Out Online Configuration utility
 Version 5.3.0 Date 3/21/2018 (c) 2005,2018 Hewlett Packard Enterprise Development LP
@@ -276,7 +276,7 @@ sudo ssa -diag -txt -f filename.txt
 
 ## Conclusion
 
-Despite some hiccups, With these utilities installed, I can now modify basically
+Despite some hiccups, with these utilities installed, I can now modify basically
 all of the BIOS and iLO settings without needing a keyboard or monitor. I don't think
 I have any need anymore to go into the BIOS maybe other than maybe modifying the
 RAID array configuration (which would wipe everything).
