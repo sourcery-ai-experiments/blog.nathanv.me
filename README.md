@@ -1,6 +1,6 @@
 # blog.nathanv.me
 
-![Build Status](https://github.com/NathanVaughn/nathanv.me/workflows/Build/badge.svg)
+![Build Status](https://github.com/NathanVaughn/blog.nathanv.me/workflows/Build/badge.svg)
 
 My blog
 
