@@ -1,5 +1,9 @@
 # blog.nathanv.me
 
+![Build Status](https://github.com/NathanVaughn/nathanv.me/workflows/Build/badge.svg)
+
+My blog
+
 ## Cloning
 
 ```
