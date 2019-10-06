@@ -34,3 +34,5 @@ jobs:
       env:
         CLOUDFLARE_ZONE: ${{ secrets.CLOUDFLARE_ZONE }}
         CLOUDFLARE_AUTH_KEY: ${{ secrets.CLOUDFLARE_AUTH_KEY }}
+    - name: Load Site
+      run: curl $(echo $GITHUB_REPOSITORY | cut -d "/" -f 2-) --location --output /dev/null
