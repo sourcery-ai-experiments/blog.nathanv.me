@@ -17,8 +17,6 @@ jobs:
         submodules: true
     - name: Setup Hugo
       uses: peaceiris/actions-hugo@master
-      with:
-        hugo-version: '0.57.2'
     - name: Build Site
       run: hugo --gc --cleanDestinationDir
     - name: Deploy site
