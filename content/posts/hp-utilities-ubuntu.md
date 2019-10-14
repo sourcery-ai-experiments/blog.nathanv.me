@@ -8,7 +8,7 @@ description = "Installing HPE Linux Management Component Pack on Ubuntu on a Gen
 
 ## Background
 
-As mentioned in my ["Self-Hosting with Docker and Argo Tunnel"](../self-host-docker)
+As mentioned in my ["Self-Hosting with Docker and Argo Tunnel"]({{< relref "self-host-docker.md" >}})
 post, I bought a HP DL360 G5 server a little while back. I'm most comfortable with Ubuntu Server,
 so I opted to install that on the sever. I recently learned that HP has utilities
 you can install on Linux to modify and view system-level settings and information, which
