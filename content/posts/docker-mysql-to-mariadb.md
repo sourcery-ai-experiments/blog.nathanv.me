@@ -48,8 +48,8 @@ The general process was as follows:
 
 ```diff
 -   command: '--default-authentication-plugin=mysql_native_password'
-    env_file:
-        - ./.env
+        env_file:
+            - ./.env
 -   image: 'mysql:latest'
 +   image: 'mariadb:latest'
 ```

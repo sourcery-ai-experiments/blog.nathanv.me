@@ -163,7 +163,7 @@ The only limit is a hard cap of 1000 tunnels per account.
 So far so good.
 
 However, Cloudflare's [official instructions](https://developers.cloudflare.com/argo-tunnel/reference/docker/)
-of how to use Argo Tunnel with Docker containers kinda suck and is very manual. No good.
+of how to use Argo Tunnel with Docker containers kind of suck and is very manual. No good.
 I initially tried to use an [nginx reverse proxy](https://github.com/jwilder/nginx-proxy)
 and have a single tunnel coming out of the Docker host, but wasn't able to get it to work.
 Then, I came across [Hera](https://github.com/aschzero/hera).
