@@ -17,7 +17,7 @@ After recently reading about some of MariaDB's
 [features and speed-improvements](https://mariadb.com/kb/en/library/mariadb-vs-mysql-features/)
 over MySQL Community Edition
 (and [many people](https://www.reddit.com/r/sysadmin/search/?q=flair_name%3A%22Rant%22%20oracle&restrict_sr=1)
-including myself ***really*** hate Oracle),
+including myself **_really_** hate Oracle),
 I decided I wanted to swap out my MySQL databases.
 This ended up being more complicated than I initially hoped.
 
@@ -36,15 +36,15 @@ it quickly became very tedious.
 
 The general process was as follows:
 
--   Dump the MySQL database of the current database container.
+- Dump the MySQL database of the current database container.
 
-    `sudo docker exec -i container_name mysqldump -u username -p database > database_db.sql`
+  `sudo docker exec -i container_name mysqldump -u username -p database > database_db.sql`
 
--   Stop the Docker Compose stack.
+- Stop the Docker Compose stack.
 
-    `sudo docker-compose down`
+  `sudo docker-compose down`
 
--   Change the `docker-compose.yml` file to use MariaDB.
+- Change the `docker-compose.yml` file to use MariaDB.
 
 ```diff
 -   command: '--default-authentication-plugin=mysql_native_password'
@@ -54,17 +54,17 @@ The general process was as follows:
 +   image: 'mariadb:latest'
 ```
 
--   Delete the old data volume.
+- Delete the old data volume.
 
-    `sudo docker volume rm volume_name`
+  `sudo docker volume rm volume_name`
 
--   Start the modified Docker Compose stack.
+- Start the modified Docker Compose stack.
 
-    `sudo docker-compose up -d`
+  `sudo docker-compose up -d`
 
--   Wait for the MariaDB container to become ready, and load in the data.
+- Wait for the MariaDB container to become ready, and load in the data.
 
-    `sudo docker exec -i container_name mysql -u username -p database < database_db.sql`
+  `sudo docker exec -i container_name mysql -u username -p database < database_db.sql`
 
 ## Automating
 
@@ -72,7 +72,7 @@ After doing this process by hand twice, I quickly decided to write a script to d
 for me as I use a standard naming convention for all of my Docker Compose stacks and really
 wanted to speed up the process
 
-***WARNING: DON'T USE THIS SCRIPT WITHOUT GOOD BACKUPS***
+**_WARNING: DON'T USE THIS SCRIPT WITHOUT GOOD BACKUPS_**
 
 ```bash
 #!/bin/bash

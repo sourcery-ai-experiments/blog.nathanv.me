@@ -283,6 +283,6 @@ RAID array configuration (which would wipe everything).
 
 ### References
 
--   [https://downloads.linux.hpe.com/SDR/project/mcp/](https://downloads.linux.hpe.com/SDR/project/mcp/)
--   [https://downloads.linux.hpe.com/SDR/keys.html](https://downloads.linux.hpe.com/SDR/keys.html)
--   [https://binaryimpulse.com/2013/09/installing-hp-array-configuration-utility-hp-acu-on-ubuntu-12-04/](https://binaryimpulse.com/2013/09/installing-hp-array-configuration-utility-hp-acu-on-ubuntu-12-04/)
+- [https://downloads.linux.hpe.com/SDR/project/mcp/](https://downloads.linux.hpe.com/SDR/project/mcp/)
+- [https://downloads.linux.hpe.com/SDR/keys.html](https://downloads.linux.hpe.com/SDR/keys.html)
+- [https://binaryimpulse.com/2013/09/installing-hp-array-configuration-utility-hp-acu-on-ubuntu-12-04/](https://binaryimpulse.com/2013/09/installing-hp-array-configuration-utility-hp-acu-on-ubuntu-12-04/)
