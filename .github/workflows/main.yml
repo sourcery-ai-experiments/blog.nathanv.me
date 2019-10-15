@@ -23,7 +23,7 @@ jobs:
       uses: stefanzweifel/git-auto-commit-action@master
       with:
         commit_message: Automatic Markdown beautification
-        branch: ${{ github.head_ref }}
+        branch: $GITHUB_REF
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
