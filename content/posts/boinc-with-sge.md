@@ -63,7 +63,7 @@ hosts by default.
 ## Configuring SGE
 
 The next challenge was that BOINC is designed to only be run on a single computer
-and is *not* built around Message Passing Interface (MPI) like most applications that
+and is _not_ built around Message Passing Interface (MPI) like most applications that
 run on HPC clusters. To get around this, we created a separate queue in our job
 scheduler (Son of Grid Engine (SGE, an open-source fork of Sun Grid Engine)) with a
 single slot per compute node, so that if a BOINC job got scheduled on a node,
@@ -164,6 +164,6 @@ jobs will be paused until the entire host is available again.
 
 ### References
 
--   [https://boinc.berkeley.edu/wiki/Boinccmd_tool#Miscellaneous](https://boinc.berkeley.edu/wiki/Boinccmd_tool#Miscellaneous)
--   [http://wiki.gridengine.info/wiki/index.php/Integrating\_BOINC\_and\_Grid\_Engine](https://web.archive.org/web/20151225051901/http://wiki.gridengine.info/wiki/index.php/Integrating\_BOINC\_and\_Grid\_Engine)
--   [https://boinc.berkeley.edu/wiki/Client\_configuration_#Command-line\_options](https://boinc.berkeley.edu/wiki/Client\_configuration\_#Command-line_options)
+- [https://boinc.berkeley.edu/wiki/Boinccmd_tool#Miscellaneous](https://boinc.berkeley.edu/wiki/Boinccmd_tool#Miscellaneous)
+- [http://wiki.gridengine.info/wiki/index.php/Integrating_BOINC_and_Grid_Engine](https://web.archive.org/web/20151225051901/http://wiki.gridengine.info/wiki/index.php/Integrating_BOINC_and_Grid_Engine)
+- [https://boinc.berkeley.edu/wiki/Client_configuration\_#Command-line_options](https://boinc.berkeley.edu/wiki/Client_configuration_#Command-line_options)

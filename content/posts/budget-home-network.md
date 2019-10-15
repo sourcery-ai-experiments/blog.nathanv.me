@@ -18,12 +18,12 @@ how I've done it.
 
 Here are the components of my home network infrastructure.
 
-### Technicolor Modem - $11.50/Month
+### Technicolor Modem - \$11.50/Month
 
 {{< figure src="/img/budget-home-network/technicolor-modem.png" alt="Some crappy Technicolor (I didn't know they were even still around) modem provided by my ISP." position="center" style="border-radius: 8px;" caption="Some crappy Technicolor (I didn't know they were even still around) modem provided by my ISP." captionPosition="center" >}}
 
-This is modem/router combo provided by my ISP (Mediacom). 
-While I would normally buy my own equipment, 
+This is modem/router combo provided by my ISP (Mediacom).
+While I would normally buy my own equipment,
 since I'm only going to be at this place for a few months,
 I decided to just rent it instead from my ISP instead.
 
@@ -35,11 +35,11 @@ portal to disable it's WiFi, since I just want to use it as a modem, and not a r
 
 {{< figure src="/img/budget-home-network/account_dashboard.jpg" alt="It doesn't work on my account dashboard either." position="center" style="border-radius: 8px;" caption="It doesn't work on my account dashboard either." captionPosition="center" >}}
 
-### TP-Link Archer C1900 - $34.99
+### TP-Link Archer C1900 - \$34.99
 
 {{< image src="/img/budget-home-network/tplink-archer.jpg" alt="TP-Link Archer C1900" position="center" style="border-radius: 8px;" >}}
 
-I managed to snag a refurbished unit in a Newegg flash deal for $34.99. 
+I managed to snag a refurbished unit in a Newegg flash deal for \$34.99.
 
 This is my WiFi access point for my network along with my DHCP server. Unfortunately,
 as mentioned above, since I haven't been able to get into my ISP modem/router,
@@ -55,35 +55,35 @@ up a printer, but it does provide enough amperage to power a Raspberry Pi (see b
 {{< image src="/img/budget-home-network/rpi3.jpg" alt="Raspberry Pi 3 Model B" position="center" style="border-radius: 8px;" >}}
 
 I got a free Raspberry Pi 3 a few years back when Arrow was running a promotion for
-Pi day (March 14), where they were selling Raspberry Pi's for $3.14. Well, their
+Pi day (March 14), where they were selling Raspberry Pi's for \$3.14. Well, their
 website crashed under the load, and the next day they gave a bunch away for free
 to people like me who tried to place an order.
 
-I now have my Pi 3 acting as DNS server for my network with 
-[Pi-hole](https://pi-hole.net) (I really like the 
+I now have my Pi 3 acting as DNS server for my network with
+[Pi-hole](https://pi-hole.net) (I really like the
 [https://dbl.oisd.nl/](https://dbl.oisd.nl/) blocklist.) Thanks to the USB port on my
-router, I just have it sitting physically right next to my router and directly 
+router, I just have it sitting physically right next to my router and directly
 plugged in.
 
-### Netgear GS305 - $19.99
+### Netgear GS305 - \$19.99
 
 {{< image src="/img/budget-home-network/netgear-gs305.jpg" alt="Netgear GS305" position="center" style="border-radius: 8px;" >}}
 
-Not much to say about this. It's a basic 5-port gigabit unmanaged switch. 
+Not much to say about this. It's a basic 5-port gigabit unmanaged switch.
 I've had it for a few years.
 
-### Netgear Powerline 1200 - $79.99
+### Netgear Powerline 1200 - \$79.99
 
 {{< image src="/img/budget-home-network/PL1200_NA_Hero_Transparent.png" alt="Netgear Powerline 1200" position="center" style="border-radius: 8px;" >}}
 
 This one hurt the most to purchase. For best WiFi coverage, I have my router
-sitting on the main floor of my townhouse. My desktop computer and 
+sitting on the main floor of my townhouse. My desktop computer and
 server, however, are both located downstairs.
 As I didn't want to use WiFi for those, there weren't many options
 to get ethernet down into the basement.
 
 1. Run 200ft ethernet cable across and over living room, down staircase, around corner,
-and down hallway.
+   and down hallway.
 2. Punch holes in the floor and run cable.
 3. Powerline adapters.
 
@@ -111,11 +111,11 @@ Quick summary:
 - Netgear Switch: Splitting powerline connection
 
 For $34.99 and $11.50 monthly (and miscellaneous cables), I have a pretty solid
-home network with 2.4 and 5GHz WiFi (though I don't use the 2.4GHz since 
+home network with 2.4 and 5GHz WiFi (though I don't use the 2.4GHz since
 everything these days supports 5GHz AC), an isolated guest network, and network-wide
 ad-blocking via Pi-hole. I also have true gigabit for everything within the network
 (very helpful for my local Nextcloud instance).
-For another $100, I have ethernet in my basement
+For another \$100, I have ethernet in my basement
 for all of my fixed devices (a number I don't like thinking about).
 
 I'm a bit of a statistics nerd, so I would love a way to see which devices
