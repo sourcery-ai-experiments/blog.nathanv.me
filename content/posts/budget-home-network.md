@@ -61,7 +61,7 @@ to people like me who tried to place an order.
 
 I now have my Pi 3 acting as DNS server for my network with
 [Pi-hole](https://pi-hole.net) (I really like the
-[https://dbl.oisd.nl/](https://dbl.oisd.nl/) blocklist.) Thanks to the USB port on my
+[https://dbl.oisd.nl/](https://dbl.oisd.nl/) blocklist). Thanks to the USB port on my
 router, I just have it sitting physically right next to my router and directly
 plugged in.
 
