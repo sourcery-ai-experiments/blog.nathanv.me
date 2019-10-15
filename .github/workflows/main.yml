@@ -20,7 +20,10 @@ jobs:
     - name: Beautify Markdown
       run: npm run beautify
     - name: Commit Changes
-      uses: elstudio/actions-js-build/commit@master
+      uses: stefanzweifel/git-auto-commit-action@master
+      with:
+        commit_message: Automatic Markdown beautification
+        branch: ${{ github.head_ref }}
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
