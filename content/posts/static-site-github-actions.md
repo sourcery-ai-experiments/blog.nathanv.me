@@ -285,7 +285,7 @@ doing deployments, or anything else. I'm excited to see where GitHub and the com
 take the product.
 
 ## References
-- https://help.github.com/en/categories/automating-your-workflow-with-github-actions
-- https://help.github.com/en/articles/events-that-trigger-workflows
-- https://help.github.com/en/articles/contexts-and-expression-syntax-for-github-actions
-- https://github.com/sdras/awesome-actions
+- [https://help.github.com/en/categories/automating-your-workflow-with-github-actions](https://help.github.com/en/categories/automating-your-workflow-with-github-actions)
+- [https://help.github.com/en/articles/events-that-trigger-workflows](https://help.github.com/en/articles/events-that-trigger-workflows)
+- [https://help.github.com/en/articles/contexts-and-expression-syntax-for-github-actions](https://help.github.com/en/articles/contexts-and-expression-syntax-for-github-actions)
+- [https://github.com/sdras/awesome-actions](https://github.com/sdras/awesome-actions)
