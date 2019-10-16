@@ -240,6 +240,7 @@ passed in as environment variables to securely store important tokens.
 ```
 
 To finish it off, I do a `curl` pull of my site to ensure it's working properly.
+This should also make sure Cloudflare refreshes their cache of my site.
 
 The `echo $GITHUB_REPOSITORY | cut -d "/" -f 2-` command is simply taking the
 `GITHUB_REPOSITORY` environment variable, which gives the author and repository name
