@@ -116,7 +116,7 @@ everything these days supports 5GHz AC), an isolated guest network, and network-
 ad-blocking via Pi-hole. I also have true gigabit for everything within the network
 (very helpful for my local Nextcloud instance).
 For another $100, I have ethernet in my basement
-for all of my fixed devices (a number I don't like thinking about).
+for all of my fixed devices (a cost I don't like thinking about).
 
 I'm a bit of a statistics nerd, so I would love a way to see which devices
 are connecting to what domains, how much bandwidth they're using, etc.,
