@@ -256,7 +256,8 @@ the return HTML from being spit out to the console.
 While the above covered how I setup my website with Actions, the workflow for
 my blog is extremely similar. As I don't use my own theme for my blog,
 I don't use any npm scripts. Therefore, to build the site with Hugo,
-I use someone else's [custom action](peaceiris/actions-hugo). The other steps are all the same.
+I use someone else's [custom action](https://github.com/peaceiris/actions-hugo).
+The other steps are all the same.
 
 ## Other Uses
 
