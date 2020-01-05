@@ -138,7 +138,7 @@ what I paid for the entire computer.
 ### Missing Ultra 24 Badge
 
 As you can see in the [old exterior photo](/img/sun-ultra-24-build/from_surplus.jpg), 
-a the bottom, the 
+at the bottom, the
 [Ultra 24 badge](https://www.servethehome.com/wp-content/uploads/2019/01/The-Ultra-EPYC-Cover.jpg) 
 is missing. I'm going to try and 3D print a replacement at some point.
 
@@ -152,7 +152,8 @@ new fan.
 {{< figure src="/img/sun-ultra-24-build/old_fan.jpg" alt="Sun Ultra 24 rear case fan mount" position="center" style="border-radius: 8px;" caption="Sun Ultra 24 rear case fan mount" captionPosition="center" >}}
 
 Thankfully, I was able to go into the BIOS and disable the fan until
-the CPU reaches a pretty high temperature. With the minimal CPU load of this machine,
+the CPU reaches a pretty high temperature. Otherwise, I was just going to unplug it.
+With the minimal CPU load of this machine,
 and the Hyper 212 EVO cooling the processor, the fan has yet to come on.
 
 ### Front Panel Header
@@ -168,8 +169,8 @@ This is the front panel header for my Asus Z97-AR.
 
 {{< figure src="/img/sun-ultra-24-build/asus_z97-ar_header.jpg" alt="Asus Z97-AR front panel header" position="center" style="border-radius: 8px;" caption="Asus Z97-AR front panel header" captionPosition="center" >}}
 
-As you can see, the Ultra 24 has **more** pins than my Asus motherboard. In order to
-rectify this, I bought some 
+As you can see, the Asus motherboard header is **wider** than the Ultra 24.
+In order to rectify this, I bought some
 [jumper wire extensions](https://www.amazon.com/gp/product/B07BVS3FX7) from Amazon
 and used some trial-and-error and help from 
 [this forum post](https://forums.tomshardware.com/threads/front-panel-connector-pin-outs.3236564/) 
