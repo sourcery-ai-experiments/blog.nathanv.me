@@ -46,6 +46,7 @@ except a lot more dust, scratches, and missing parts.
 {{< figure src="/img/sun-ultra-24-build/old_exterior.jpg" alt="Sun Ultra 24 exterior" position="center" style="border-radius: 8px;" caption="Sun Ultra 24 exterior" captionPosition="center" >}}
 
 ### Parts
+
 While I initially was planning on swapping out the components of my desktop into
 this case, I ended up building a server inside of it. I was getting _real_ tired
 of the constant noise from my [HP ProLiant DL 360]({{< relref "self-host-docker.md" >}})
@@ -55,16 +56,16 @@ old i7-4790k with that, and use the old parts from my desktop to build a new ser
 
 [PCPartPicker Part List](https://pcpartpicker.com/list/C7kfmg)
 
-Type|Item|Status|
-:----|:----|:----|
-**CPU** | [Intel Core i7-4790K 4 GHz Quad-Core Processor](https://pcpartpicker.com/product/6vzv6h/intel-cpu-bx80646i74790k) | Already Owned|
-**CPU Cooler** | [Cooler Master Hyper 212 EVO 82.9 CFM Sleeve Bearing CPU Cooler](https://pcpartpicker.com/product/hmtCmG/cooler-master-cpu-cooler-rr212e20pkr2) | Purchased|
-**Motherboard** | [Asus Z97-AR ATX LGA1150 Motherboard](https://pcpartpicker.com/product/VfK7YJ/asus-motherboard-z97ar) | Already Owned|
-**Memory** | [Patriot Viper 3 Low Profile Blue 8 GB (2 x 4 GB) DDR3-1600 Memory](https://pcpartpicker.com/product/bQFPxr/patriot-memory-pvl38g160c0kb) | Already Owned|
-**Memory** | [Patriot Viper 3 Low Profile Black 8 GB (2 x 4 GB) DDR3-1600 Memory](https://pcpartpicker.com/product/kBNp99/patriot-memory-pvl38g160c0k) | Already Owned|
-**Storage** | [Western Digital Caviar Blue 320 GB 3.5" 7200RPM Internal Hard Drive](https://pcpartpicker.com/product/rd7wrH/western-digital-internal-hard-drive-wd3200aajs) | Purchased|
-**Power Supply** | [EVGA BR 450 W 80+ Bronze Certified ATX Power Supply](https://pcpartpicker.com/product/xDMwrH/evga-br-450w-80-bronze-certified-atx-power-supply-100-br-0450-k1) | Purchased|
-**Case**| Sun Ultra 24 | Already Owned|
+| Type             | Item                                                                                                                                                            | Status        |
+| :--------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------ |
+| **CPU**          | [Intel Core i7-4790K 4 GHz Quad-Core Processor](https://pcpartpicker.com/product/6vzv6h/intel-cpu-bx80646i74790k)                                               | Already Owned |
+| **CPU Cooler**   | [Cooler Master Hyper 212 EVO 82.9 CFM Sleeve Bearing CPU Cooler](https://pcpartpicker.com/product/hmtCmG/cooler-master-cpu-cooler-rr212e20pkr2)                 | Purchased     |
+| **Motherboard**  | [Asus Z97-AR ATX LGA1150 Motherboard](https://pcpartpicker.com/product/VfK7YJ/asus-motherboard-z97ar)                                                           | Already Owned |
+| **Memory**       | [Patriot Viper 3 Low Profile Blue 8 GB (2 x 4 GB) DDR3-1600 Memory](https://pcpartpicker.com/product/bQFPxr/patriot-memory-pvl38g160c0kb)                       | Already Owned |
+| **Memory**       | [Patriot Viper 3 Low Profile Black 8 GB (2 x 4 GB) DDR3-1600 Memory](https://pcpartpicker.com/product/kBNp99/patriot-memory-pvl38g160c0k)                       | Already Owned |
+| **Storage**      | [Western Digital Caviar Blue 320 GB 3.5" 7200RPM Internal Hard Drive](https://pcpartpicker.com/product/rd7wrH/western-digital-internal-hard-drive-wd3200aajs)   | Purchased     |
+| **Power Supply** | [EVGA BR 450 W 80+ Bronze Certified ATX Power Supply](https://pcpartpicker.com/product/xDMwrH/evga-br-450w-80-bronze-certified-atx-power-supply-100-br-0450-k1) | Purchased     |
+| **Case**         | Sun Ultra 24                                                                                                                                                    | Already Owned |
 
 I also liberated the 4-port gigabit network card from my ProLiant.
 
@@ -180,14 +181,14 @@ It's ugly but it works.
 
 Here is the pinout I figured out for reference:
 
-Ultra 24|Connection|
-:----|:----|
-Red | Probably +12V|
-Black | Probably GND|
-Green | PWR LED +|
-Blue | PWR LED -|
-Yellow | PWR SW|
-White | PWR SW|
+| Ultra 24 | Connection    |
+| :------- | :------------ |
+| Red      | Probably +12V |
+| Black    | Probably GND  |
+| Green    | PWR LED +     |
+| Blue     | PWR LED -     |
+| Yellow   | PWR SW        |
+| White    | PWR SW        |
 
 The power switch is just shorting two pins, so positive versus negative doesn't matter.
 
