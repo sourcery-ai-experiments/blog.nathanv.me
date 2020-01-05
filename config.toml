@@ -12,10 +12,6 @@ googleAnalytics = "UA-91853319-4"
   centerTheme = true
   showReadingTime = true
 
-[blackfriday]
-  hrefTargetBlank = true
-  noreferrerLinks = true
-
 [languages]
   [languages.en]
     title = "Nathan Vaughn"
