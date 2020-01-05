@@ -1,10 +1,15 @@
-+++
-title = "Integrating BOINC with Sun Grid Engine"
-date = "2019-07-05"
-author = "Nathan Vaughn"
-tags = ["high-performance computing", "Sun Grid Engine", "BOINC", "bash"]
-description = "Getting BOINC to work on a High-Performance Cluster that uses Sun Grid Engine for job scheduling to donate extra compute time"
-+++
+---
+author: Nathan Vaughn
+date: "2019-07-05"
+description: Getting BOINC to work on a High-Performance Cluster that uses Sun Grid
+  Engine for job scheduling to donate extra compute time
+tags:
+- high-performance computing
+- Sun Grid Engine
+- BOINC
+- bash
+title: Integrating BOINC with Sun Grid Engine
+---
 
 ## Background
 

@@ -1,10 +1,14 @@
-+++
-title = "Docker Hub Build Hook to Apply Multiple Image Tags"
-date = "2019-11-23"
-author = "Nathan Vaughn"
-tags = ["Docker", "Docker Hub", "bash"]
-description = "Writing a custom build hook for Docker Hub to apply multiple tags to a Docker image"
-+++
+---
+author: Nathan Vaughn
+date: "2019-11-23"
+description: Writing a custom build hook for Docker Hub to apply multiple tags to
+  a Docker image
+tags:
+- Docker
+- Docker Hub
+- bash
+title: Docker Hub Build Hook to Apply Multiple Image Tags
+---
 
 ## Background
 

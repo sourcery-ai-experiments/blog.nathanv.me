@@ -1,12 +1,17 @@
-+++
-title = "Converting MySQL 8 Docker Containers to MariaDB"
-date = "2019-07-20"
-author = "Nathan Vaughn"
-tags = ["Docker", "MySQL", "MariaDB", "bash"]
-description = "Replacing existing MySQL 8 containers in Docker Compose stacks with MariaDB"
-images = ["/img/docker-mysql-to-mariadb/mysql_to_mariadb.jpg"]
-cover = "/img/docker-mysql-to-mariadb/mysql_to_mariadb.jpg"
-+++
+---
+author: Nathan Vaughn
+cover: /img/docker-mysql-to-mariadb/mysql_to_mariadb.jpg
+date: "2019-07-20"
+description: Replacing existing MySQL 8 containers in Docker Compose stacks with MariaDB
+images:
+- /img/docker-mysql-to-mariadb/mysql_to_mariadb.jpg
+tags:
+- Docker
+- MySQL
+- MariaDB
+- bash
+title: Converting MySQL 8 Docker Containers to MariaDB
+---
 
 ## Background
 

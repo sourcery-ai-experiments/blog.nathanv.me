@@ -1,11 +1,13 @@
-+++
-title = "Building a Home Network on a Budget"
-date = "2019-10-14"
-author = "Nathan Vaughn"
-tags = ["home-networking"]
-description = "This is the first time I've lived somewhere where I can setup my own network. I just wanted to write up how I've done it."
-cover = "/img/budget-home-network/cover.jpg"
-+++
+---
+author: Nathan Vaughn
+cover: /img/budget-home-network/cover.jpg
+date: "2019-10-14"
+description: This is the first time I've lived somewhere where I can setup my own
+  network. I just wanted to write up how I've done it.
+tags:
+- home-networking
+title: Building a Home Network on a Budget
+---
 
 ## Background
 

@@ -1,10 +1,15 @@
-+++
-title = "Deploying a Static Site with GitHub Actions"
-date = "2019-10-15"
-author = "Nathan Vaughn"
-tags = ["GitHub", "GitHub Actions", "continuous delivery", "Hugo"]
-description = "How I used GitHub Actions to completely automate the building and deployment of my personal site (and this blog)"
-+++
+---
+author: Nathan Vaughn
+date: "2019-10-15"
+description: How I used GitHub Actions to completely automate the building and deployment
+  of my personal site (and this blog)
+tags:
+- GitHub
+- GitHub Actions
+- continuous delivery
+- Hugo
+title: Deploying a Static Site with GitHub Actions
+---
 
 ## Background
 

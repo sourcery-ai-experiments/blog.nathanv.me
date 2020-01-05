@@ -1,5 +1,8 @@
 ---
-title: "{{ replace .Name "-" " " | title }}"
+author: Nathan Vaughn
 date: {{ .Date }}
-draft: true
+description: Placeholder
+tags:
+- Placeholder
+title: "{{ replace .Name "-" " " | title }}"
 ---
