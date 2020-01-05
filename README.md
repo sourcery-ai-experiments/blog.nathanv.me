@@ -13,7 +13,6 @@ git clone --recurse-submodules https://github.com/NathanVaughn/blog.nathanv.me.g
 
 ```bash
 git pull --recurse-submodules
-git submodule update --remote --recursive
 ```
 
 ## Branches
