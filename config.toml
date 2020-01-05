@@ -4,6 +4,12 @@ theme = "hello-friend"
 paginate = 5
 googleAnalytics = "UA-91853319-4"
 
+[markup]
+  defaultMarkdownHandler = "blackfriday"
+  [markup.blackFriday]
+    hrefTargetBlank = true
+    noreferrerLinks = true
+
 [params]
   contentTypeName = "posts"
   themeColor = "red"
