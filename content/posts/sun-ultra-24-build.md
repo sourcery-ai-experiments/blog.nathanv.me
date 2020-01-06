@@ -101,11 +101,11 @@ that ServeTheHome did with their power supply.
 
 {{< figure src="/img/sun-ultra-24-build/new_power_supply.jpg" alt="New power supply installed" position="center" style="border-radius: 8px;" caption="New power supply installed" captionPosition="center" >}}
 
-### Motherboard Rubber Standoff
+### Motherboard Rubber Spacer
 
 Unfortunately, I didn't get a picture of this, but behind the motherboard are
-two rubber standoffs. Well, with a new Hyper 212 EVO installed, one of these
-rubber standoffs interferes with the mounting bracket. Thankfully, it was easily
+two rubber spacers. Well, with a new Hyper 212 EVO installed, one of these
+rubber spacers interferes with the mounting bracket. Thankfully, it was easily
 ripped off.
 
 ### Front Panel Connector Cables
@@ -199,5 +199,10 @@ Overall, I'm happy with the build. Despite all the problems, it has ended up wor
 well, and it's nearly dead-silent. My only complaint is the power LED is 
 incredibly bright, especially at night. I had some problems transferring my data
 from my old server to it, but that's beyond the scope of this post.
+
+I'm very glad I didn't transfer desktop into this case, with the number of problems
+I encountered. How tight the case is, the lack of cable management,
+no 2.5" drive support (for my SSD),
+only one 5.25" bay, etc. would have all been major challenges.
 
 {{< figure src="/img/sun-ultra-24-build/new_home.jpg" alt="Post-build computer" position="center" style="border-radius: 8px;" caption="The computer in it's new home" captionPosition="center" >}}
