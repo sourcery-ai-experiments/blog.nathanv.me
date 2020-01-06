@@ -133,7 +133,7 @@ with all the drive sleds, or they were removed at some point. Either way, if I e
 want to add more hard drives, I'll need to source 
 [some from eBay](https://www.ebay.com/itm/Lot-of-5-Sun-Microsystems-HDD-Hot-Swap-3-5-Hard-Drive-Disk-Tray-Caddy-20-screw/153755065494) 
 or something. I haven't purchased any yet, since the cost of them would nearly equal
-what I paid for the entire computer.
+what I paid for the original computer.
 
 ### Missing Ultra 24 Badge
 
