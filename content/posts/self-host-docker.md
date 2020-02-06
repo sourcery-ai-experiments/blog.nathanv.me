@@ -26,7 +26,7 @@ I decided to move my apps to be hosted on-premise.
 
 ## Decision to Use Docker
 
-Previously, my \$5/month Linode VPS only had 1GB of RAM, so memory was at a premium.
+Previously, my $5/month Linode VPS only had 1GB of RAM, so memory was at a premium.
 Because of this, I exclusively used applications built on a LAMP stack
 so they could share each other's stack.
 While this did help with memory, security wasn't great, and incompatibilities
@@ -343,7 +343,7 @@ While I probably _should_ stop all containers before doing this, in a low
 usage-scenario like mine, I've never had any issues. I chose to use Backblaze B2
 versus AWS S3 or Google Cloud because I've been a big fan of their
 service for a long time, and their pricing is really good
-(\$0.005/GB/month with the first 10GB free).
+($0.005/GB/month with the first 10GB free).
 
 ## Automation
 
@@ -413,7 +413,7 @@ to either pass them on the command-line, or put them into environment files.
 
 #### Argo Pricing
 
-Cloudflare Argo charges \$0.10/GB after the first gigabyte of data. This means I
+Cloudflare Argo charges $0.10/GB after the first gigabyte of data. This means I
 have be **very** careful in what I upload/download from my server via the tunnels,
 especially with bandwidth heavy stuff like Nextcloud. Unfortunately, really
 solving this problem would require me to use a different service
