@@ -11,7 +11,7 @@ title: Replacing Mailgun
 ## Background
 
 For the past few years, I've used [Mailgun](https://www.mailgun.com) to send and
-receive email for my `nathanv.me` domain. I initionally signed up Mailgun because it
+receive email for my `nathanv.me` domain. I intentionally signed up Mailgun because it
 was part of the
 [GitHub Student Developer Pack](https://education.github.com/pack/offers)
 and it worked great. I could send email from applications and my personal
