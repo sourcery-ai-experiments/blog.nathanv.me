@@ -19,7 +19,7 @@ GMail account using SMTP credentials and forward
 any inbound mail to my GMail account, all in the free tier. This allowed me to send
 receive email to and from the `@nathanv.me` domain,
 all while never actually having an actual email account for it. I really liked this,
-since it gave me vanity email address, `nathan@nathanv.me`
+since it gave me the vanity email address, `nathan@nathanv.me`
 that I could put on my resume.
 However, just a few days ago, I received this email from Mailgun:
 
