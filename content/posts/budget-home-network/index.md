@@ -1,6 +1,6 @@
 ---
 author: Nathan Vaughn
-cover: /img/budget-home-network/cover.jpg
+cover: /posts/budget-home-network/img/cover.jpg
 date: "2019-10-14"
 description: This is the first time I've lived somewhere where I can setup my own
   network. I just wanted to write up how I've done it.
@@ -22,7 +22,7 @@ Here are the components of my home network infrastructure.
 
 ### Technicolor Modem - $11.50/Month
 
-{{< figure src="/img/budget-home-network/technicolor-modem.png" alt="Some crappy Technicolor (I didn't know they were even still around) modem provided by my ISP." position="center" style="border-radius: 8px;" caption="Some crappy Technicolor (I didn't know they were even still around) modem provided by my ISP." captionPosition="center" >}}
+{{< figure src="img/technicolor-modem.png" alt="Some crappy Technicolor (I didn't know they were even still around) modem provided by my ISP." position="center" style="border-radius: 8px;" caption="Some crappy Technicolor (I didn't know they were even still around) modem provided by my ISP." captionPosition="center" >}}
 
 This is modem/router combo provided by my ISP (Mediacom).
 While I would normally buy my own equipment,
@@ -33,13 +33,13 @@ Unfortunately, despite
 my best efforts, I have yet to figure out how to even login to the web management
 portal to disable it's WiFi, since I just want to use it as a modem, and not a router.
 
-{{< figure src="/img/budget-home-network/homewifi.jpg" alt="The online control panel doesn't seem to work, and I don't care enough to call support." position="center" style="border-radius: 8px;" caption="The online control panel doesn't seem to work, and I don't care enough to call support." captionPosition="center" >}}
+{{< figure src="img/homewifi.jpg" alt="The online control panel doesn't seem to work, and I don't care enough to call support." position="center" style="border-radius: 8px;" caption="The online control panel doesn't seem to work, and I don't care enough to call support." captionPosition="center" >}}
 
-{{< figure src="/img/budget-home-network/account_dashboard.jpg" alt="It doesn't work on my account dashboard either." position="center" style="border-radius: 8px;" caption="It doesn't work on my account dashboard either." captionPosition="center" >}}
+{{< figure src="img/account_dashboard.jpg" alt="It doesn't work on my account dashboard either." position="center" style="border-radius: 8px;" caption="It doesn't work on my account dashboard either." captionPosition="center" >}}
 
 ### TP-Link Archer C1900 - $34.99
 
-{{< image src="/img/budget-home-network/tplink-archer.jpg" alt="TP-Link Archer C1900" position="center" style="border-radius: 8px;" >}}
+{{< image src="img/tplink-archer.jpg" alt="TP-Link Archer C1900" position="center" style="border-radius: 8px;" >}}
 
 I managed to snag a refurbished unit in a Newegg flash deal for $34.99.
 
@@ -54,7 +54,7 @@ up a printer, but it does provide enough amperage to power a Raspberry Pi (see b
 
 ### Raspberry Pi 3 Model B - Free
 
-{{< image src="/img/budget-home-network/rpi3.jpg" alt="Raspberry Pi 3 Model B" position="center" style="border-radius: 8px;" >}}
+{{< image src="img/rpi3.jpg" alt="Raspberry Pi 3 Model B" position="center" style="border-radius: 8px;" >}}
 
 I got a free Raspberry Pi 3 a few years back when Arrow was running a promotion for
 Pi day (March 14), where they were selling Raspberry Pi's for $3.14. Well, their
@@ -69,14 +69,14 @@ plugged in.
 
 ### Netgear GS305 - $19.99
 
-{{< image src="/img/budget-home-network/netgear-gs305.jpg" alt="Netgear GS305" position="center" style="border-radius: 8px;" >}}
+{{< image src="img/netgear-gs305.jpg" alt="Netgear GS305" position="center" style="border-radius: 8px;" >}}
 
 Not much to say about this. It's a basic 5-port gigabit unmanaged switch.
 I've had it for a few years.
 
 ### Netgear Powerline 1200 - $79.99
 
-{{< image src="/img/budget-home-network/PL1200_NA_Hero_Transparent.png" alt="Netgear Powerline 1200" position="center" style="border-radius: 8px;" >}}
+{{< image src="img/PL1200_NA_Hero_Transparent.png" alt="Netgear Powerline 1200" position="center" style="border-radius: 8px;" >}}
 
 This one hurt the most to purchase. For best WiFi coverage, I have my router
 sitting on the main floor of my townhouse. My desktop computer and
@@ -100,7 +100,7 @@ connection to my desktop and server.
 
 ## Diagram
 
-{{< figure src="/img/budget-home-network/network_diagram.jpg" alt="Diagram of my home network." position="center" style="border-radius: 8px;" caption="Diagram of my home network." captionPosition="center" >}}
+{{< figure src="img/network_diagram.jpg" alt="Diagram of my home network." position="center" style="border-radius: 8px;" caption="Diagram of my home network." captionPosition="center" >}}
 
 ## Conclusion
 

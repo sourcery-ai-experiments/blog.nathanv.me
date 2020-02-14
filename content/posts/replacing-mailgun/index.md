@@ -23,11 +23,11 @@ since it gave me the vanity email address, `nathan@nathanv.me`
 that I could put on my resume.
 However, just a few days ago, I received this email from Mailgun:
 
-{{< figure src="/img/replacing-mailgun/mailgun-email.jpg" alt="Mailgun email" position="center" style="border-radius: 8px;" caption="Mailgun plan changes" captionPosition="center" >}}
+{{< figure src="img/mailgun-email.jpg" alt="Mailgun email" position="center" style="border-radius: 8px;" caption="Mailgun plan changes" captionPosition="center" >}}
 
 Okay... does this affect me at all?
 
-{{< figure src="/img/replacing-mailgun/mailgun-plans.jpg" alt="Mailgun plans" position="center" style="border-radius: 8px;" caption="<i>Crap...</i>" captionPosition="center" >}}
+{{< figure src="img/mailgun-plans.jpg" alt="Mailgun plans" position="center" style="border-radius: 8px;" caption="<i>Crap...</i>" captionPosition="center" >}}
 
 As you can see in the picture above, inbound emails are no longer included in the free
 plan (and now costs $75/month) and after 3 months I'll have to actually pay for the
@@ -62,7 +62,7 @@ another option I considered was using Google Domain's free inbound email forward
 However, this only works if you set the domain's name servers to Google's, so they
 can setup the records.
 
-{{< figure src="/img/replacing-mailgun/google-domains-email-forwarding.jpg" alt="Google Domains email forwarding" position="center" style="border-radius: 8px;" caption="Google Domains email forwarding" captionPosition="center" >}}
+{{< figure src="img/google-domains-email-forwarding.jpg" alt="Google Domains email forwarding" position="center" style="border-radius: 8px;" caption="Google Domains email forwarding" captionPosition="center" >}}
 
 Unfortunately, I really like Cloudflare for DNS and caching. While I think I could just
 swap the name server to Google, setup the email forward, and then swap it back to
@@ -88,13 +88,13 @@ and permissions, I gave up and went with ForwardEmail and SendGrid.
 I choose SendGrid for outbound emails as it was part of the GitHub Student Developer
 Pack. It was very simple to setup with just a few `CNAME` records to setup DKIM/SPF.
 
-{{< figure src="/img/replacing-mailgun/sendgrid_dns.jpg" alt="SendGrid dNS" position="center" style="border-radius: 8px;" caption="SendGrid DNS" captionPosition="center" >}}
+{{< figure src="img/sendgrid_dns.jpg" alt="SendGrid dNS" position="center" style="border-radius: 8px;" caption="SendGrid DNS" captionPosition="center" >}}
 
 Setting up ForwardEmail was a little bit harder. There are a lot more
 [DNS records](https://forwardemail.net/en/faq#how-do-i-get-started-and-set-up-email-forwarding)
 you need to setup.
 
-{{< figure src="/img/replacing-mailgun/fordwardemail_dns.jpg" alt="ForwardEmail DNS" position="center" style="border-radius: 8px;" caption="ForwardEmail DNS" captionPosition="center" >}}
+{{< figure src="img/fordwardemail_dns.jpg" alt="ForwardEmail DNS" position="center" style="border-radius: 8px;" caption="ForwardEmail DNS" captionPosition="center" >}}
 
 The actual DNS records makes sense. I understand why they need
 a `MX` record for the incoming mail servers and a 
@@ -120,7 +120,7 @@ change in the future.
 
 As always, it was DNS.
 
-{{< figure src="/img/replacing-mailgun/its_always_dns.png" alt="DNS Haiku" position="center" style="border-radius: 8px;" caption="It was DNS" captionPosition="center" >}}
+{{< figure src="img/its_always_dns.png" alt="DNS Haiku" position="center" style="border-radius: 8px;" caption="It was DNS" captionPosition="center" >}}
 
 ## References
 - [https://www.mailgun.com](https://www.mailgun.com)

@@ -1,10 +1,11 @@
 ---
 author: Nathan Vaughn
-cover: /img/docker-mysql-to-mariadb/mysql_to_mariadb.jpg
+cover: img/mysql_to_mariadb.jpg
+userelativecover: true
 date: "2019-07-20"
 description: Replacing existing MySQL 8 containers in Docker Compose stacks with MariaDB
 images:
-- /img/docker-mysql-to-mariadb/mysql_to_mariadb.jpg
+- /posts/docker-mysql-to-mariadb/img/mysql_to_mariadb.jpg
 tags:
 - Docker
 - MySQL

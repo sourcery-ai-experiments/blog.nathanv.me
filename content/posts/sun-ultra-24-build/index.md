@@ -1,14 +1,15 @@
 ---
 author: Nathan Vaughn
-cover: /img/sun-ultra-24-build/new_home.jpg
+cover: img/new_home.jpg
 date: "2020-01-05"
 description: Building a server inside an old Sun Ultra 24 case
 images:
-- /img/sun-ultra-24-build/new_home.jpg
+- /posts/sun-ultra-24-build/new_home.jpg
 tags:
 - pc building
 - self-hosting
 title: Sun Ultra 24 Server Build
+userelativecover: true
 ---
 
 ## Background
@@ -26,7 +27,7 @@ decided to purchase that instead for two reasons.
 2. It has standard ATX parts, while a Mac Pro was going to require liberal application
 of a Dremel.
 
-{{< figure src="/img/sun-ultra-24-build/from_surplus.jpg" alt="Sun Ultra 24 from surplus" position="center" style="border-radius: 8px;" caption="My Sun Ultra 24 after taking it home from surplus." captionPosition="center" >}}
+{{< figure src="img/from_surplus.jpg" alt="Sun Ultra 24 from surplus" position="center" style="border-radius: 8px;" caption="My Sun Ultra 24 after taking it home from surplus." captionPosition="center" >}}
 
 ## Build
 
@@ -41,15 +42,15 @@ I kind of forgot to take pictures before I gutted the case, so below is
 what a Sun Ultra 24 is supposed to look like. Mine looked about the same,
 except a lot more dust, scratches, and missing parts.
 
-{{< figure src="/img/sun-ultra-24-build/old_insides.jpg" alt="Brand-new Sun Ultra 24 insides" position="center" style="border-radius: 8px;" caption="Brand-new Sun Ultra 24 insides" captionPosition="center" >}}
+{{< figure src="img/old_insides.jpg" alt="Brand-new Sun Ultra 24 insides" position="center" style="border-radius: 8px;" caption="Brand-new Sun Ultra 24 insides" captionPosition="center" >}}
 
-{{< figure src="/img/sun-ultra-24-build/old_exterior.jpg" alt="Sun Ultra 24 exterior" position="center" style="border-radius: 8px;" caption="Sun Ultra 24 exterior" captionPosition="center" >}}
+{{< figure src="img/old_exterior.jpg" alt="Sun Ultra 24 exterior" position="center" style="border-radius: 8px;" caption="Sun Ultra 24 exterior" captionPosition="center" >}}
 
 ### Parts
 
 While I initially was planning on swapping out the components of my desktop into
 this case, I ended up building a server inside of it. I was getting _real_ tired
-of the constant noise from my [HP ProLiant DL 360]({{< relref "self-host-docker.md" >}})
+of the constant noise from my [HP ProLiant DL 360]({{< relref "self-host-docker" >}})
 and thought it would be best to build a "new" machine. The perfect opportunity came
 during Black Friday this year with a Ryzen 7 2700x for $159.00. I decided replace my
 old i7-4790k with that, and use the old parts from my desktop to build a new server.
@@ -73,7 +74,7 @@ I also liberated the 4-port gigabit network card from my ProLiant.
 
 Here's the result, since I also forgot to take pictures during the build.
 
-{{< figure src="/img/sun-ultra-24-build/new_insides.jpg" alt="Post-build computer" position="center" style="border-radius: 8px;" caption="My 'new' Sun Ultra 24" captionPosition="center" >}}
+{{< figure src="img/new_insides.jpg" alt="Post-build computer" position="center" style="border-radius: 8px;" caption="My 'new' Sun Ultra 24" captionPosition="center" >}}
 
 I know there's a mess of power supply cables at the top, but there's no window
 on this case so I don't care.
@@ -99,7 +100,7 @@ the power supply only fits one direction. Thankfully, I didn't have
 [the problem](https://www.servethehome.com/introducing-the-ultra-epyc-amd-powered-sun-ultra-24-workstation/5/#attachment_32156) 
 that ServeTheHome did with their power supply.
 
-{{< figure src="/img/sun-ultra-24-build/new_power_supply.jpg" alt="New power supply installed" position="center" style="border-radius: 8px;" caption="New power supply installed" captionPosition="center" >}}
+{{< figure src="img/new_power_supply.jpg" alt="New power supply installed" position="center" style="border-radius: 8px;" caption="New power supply installed" captionPosition="center" >}}
 
 ### Motherboard Rubber Spacer
 
@@ -124,7 +125,7 @@ slot covers. Since I don't like missing pieces, I bought
 [some spares](https://www.amazon.com/gp/product/B07TXBGGDM) on Amazon,
 but unfortunately they don't quite match.
 
-{{< figure src="/img/sun-ultra-24-build/new_pcie_slots.jpg" alt="Mismatched PCIe slot covers" position="center" style="border-radius: 8px;" caption="Mismatched PCIe slot covers" captionPosition="center" >}}
+{{< figure src="img/new_pcie_slots.jpg" alt="Mismatched PCIe slot covers" position="center" style="border-radius: 8px;" caption="Mismatched PCIe slot covers" captionPosition="center" >}}
 
 ### Missing Drive Sleds
 
@@ -137,7 +138,7 @@ what I paid for the original computer.
 
 ### Missing Ultra 24 Badge
 
-As you can see in the [old exterior photo](/img/sun-ultra-24-build/from_surplus.jpg), 
+As you can see in the [old exterior photo](/img/from_surplus.jpg), 
 at the bottom, the
 [Ultra 24 badge](https://www.servethehome.com/wp-content/uploads/2019/01/The-Ultra-EPYC-Cover.jpg) 
 is missing. I'm going to try and 3D print a replacement at some point.
@@ -149,7 +150,7 @@ the rear case fan is _bloody_ loud, which defeated the entire purpose of this pr
 This fan has a very weird mount which doesn't make it easy to just replace with a 
 new fan. 
 
-{{< figure src="/img/sun-ultra-24-build/old_fan.jpg" alt="Sun Ultra 24 rear case fan mount" position="center" style="border-radius: 8px;" caption="Sun Ultra 24 rear case fan mount" captionPosition="center" >}}
+{{< figure src="img/old_fan.jpg" alt="Sun Ultra 24 rear case fan mount" position="center" style="border-radius: 8px;" caption="Sun Ultra 24 rear case fan mount" captionPosition="center" >}}
 
 Thankfully, I was able to go into the BIOS and disable the fan until
 the CPU reaches a pretty high temperature. Otherwise, I was just going to unplug it.
@@ -163,11 +164,11 @@ This was the worst thing by far. I hadn't realized that the front panel header
 
 This is the front panel header for the Sun Ultra 24.
 
-{{< figure src="/img/sun-ultra-24-build/old_header.jpg" alt="Sun Ultra 24 front panel header" position="center" style="border-radius: 8px;" caption="Sun Ultra 24 front panel header" captionPosition="center" >}}
+{{< figure src="img/old_header.jpg" alt="Sun Ultra 24 front panel header" position="center" style="border-radius: 8px;" caption="Sun Ultra 24 front panel header" captionPosition="center" >}}
 
 This is the front panel header for my Asus Z97-AR.
 
-{{< figure src="/img/sun-ultra-24-build/asus_z97-ar_header.jpg" alt="Asus Z97-AR front panel header" position="center" style="border-radius: 8px;" caption="Asus Z97-AR front panel header" captionPosition="center" >}}
+{{< figure src="img/asus_z97-ar_header.jpg" alt="Asus Z97-AR front panel header" position="center" style="border-radius: 8px;" caption="Asus Z97-AR front panel header" captionPosition="center" >}}
 
 As you can see, the Asus motherboard header is **wider** than the Ultra 24.
 In order to rectify this, I bought some
@@ -176,7 +177,7 @@ and used some trial-and-error and help from
 [this forum post](https://forums.tomshardware.com/threads/front-panel-connector-pin-outs.3236564/) 
 to connect everything.
 
-{{< figure src="/img/sun-ultra-24-build/new_header.jpg" alt="New front panel header connection" position="center" style="border-radius: 8px;" caption="New front panel header connection" captionPosition="center" >}}
+{{< figure src="img/new_header.jpg" alt="New front panel header connection" position="center" style="border-radius: 8px;" caption="New front panel header connection" captionPosition="center" >}}
 
 It's ugly but it works. 
 
@@ -205,4 +206,4 @@ I encountered. How tight the case is, the lack of cable management,
 no 2.5" drive support (for my SSD),
 only one 5.25" bay, etc. would have all been major challenges.
 
-{{< figure src="/img/sun-ultra-24-build/new_home.jpg" alt="Post-build computer" position="center" style="border-radius: 8px;" caption="The computer in it's new home" captionPosition="center" >}}
+{{< figure src="img/new_home.jpg" alt="Post-build computer" position="center" style="border-radius: 8px;" caption="The computer in it's new home" captionPosition="center" >}}
