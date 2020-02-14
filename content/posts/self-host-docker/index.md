@@ -73,7 +73,7 @@ nathan@zeus:[~]$ sudo /usr/bin/landscape-sysinfo
   IP address for br-3780ddef1e2f: 192.168.64.1
 ```
 
-{{< figure src="img/docker_vs_vm.png" alt="Docker vs VM diagram" position="center" style="border-radius: 8px;" caption="Docker vs VM diagram (Image from https://blog.docker.com/2018/08/containers-replacing-virtual-machines/)" captionPosition="center" >}}
+{{< figure src="img/docker_vs_vm.png" alt="Docker vs VM diagram" position="center" style="border-radius: 8px;" caption="Docker vs VM diagram (from [https://blog.docker.com/2018/08/containers-replacing-virtual-machines/](https://blog.docker.com/2018/08/containers-replacing-virtual-machines/))" captionPosition="center" >}}
 
 ## Docker Setup
 
