@@ -8,7 +8,7 @@ images:
 - img/TBD.jpg
 tags:
 - cycling
-title: Fixing a 1973 Schwinn Varisty Bicycle
+title: Fixing a 1973 Schwinn Varsity Bicycle
 userelativecover: true
 ---
 
@@ -80,7 +80,7 @@ around the rim of the wheel so that the spokes don't puncture the tube.
 {{< figure src="img/rim-tape-example.jpg" alt="Rim Tape Example" position="center" style="border-radius: 8px;" caption="Rim Tape Example (from [parktool.com](parktool.com))" captionPosition="center" >}}
 
 When I was changing the tires on the bike, I didn't realize I would need this and
-my local bike shop was closed, so I subsituted some basic electrical tape from Wal-Mart.
+my local bike shop was closed, so I substituted some basic electrical tape from Wal-Mart.
 
 ### Handlebar Endcaps
 
