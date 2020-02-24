@@ -177,7 +177,7 @@ want to pay $120/yr and not be utilizing 98% of it.
 
 ## Conclusion
 
-While I have a few complaints about OneDrive (primarily, how there is no way to exlcude 
+While I have a few complaints about OneDrive (primarily, how there is no way to exclude 
 any folders or filetypes), I'm exceptionally happy. It just ***works***. It's built-in
 to Windows directly, the files-on-demand feature is magical, and the 
 pricing is reasonable. While I am stepping outside of the sacred Google ecosystem,
