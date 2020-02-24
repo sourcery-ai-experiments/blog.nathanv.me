@@ -1,12 +1,15 @@
 ---
 author: Nathan Vaughn
-cover: /posts/budget-home-network/img/cover.jpg
+cover: img/cover.jpg
 date: "2019-10-14"
 description: This is the first time I've lived somewhere where I can setup my own
   network. I just wanted to write up how I've done it.
+images:
+- /posts/budget-home-network/img/cover.jpg
 tags:
 - home-networking
 title: Building a Home Network on a Budget
+userelativecover: true
 ---
 
 ## Background

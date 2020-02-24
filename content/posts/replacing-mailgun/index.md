@@ -15,8 +15,8 @@ receive email for my `nathanv.me` domain. I intentionally signed up Mailgun beca
 was part of the
 [GitHub Student Developer Pack](https://education.github.com/pack/offers)
 and it worked great. I could send email from applications and my personal
-GMail account using SMTP credentials and forward
-any inbound mail to my GMail account, all in the free tier. This allowed me to send
+Gmail account using SMTP credentials and forward
+any inbound mail to my Gmail account, all in the free tier. This allowed me to send
 receive email to and from the `@nathanv.me` domain,
 all while never actually having an actual email account for it. I really liked this,
 since it gave me the vanity email address, `nathan@nathanv.me`
@@ -103,8 +103,8 @@ I'm very confused why they want you to add a `TXT` record for SPF, as I thought
 it was only needed for *sending* emails which this service doesn't do.
 ImprovMX [explains this](https://improvmx.com/guides/improvmx-spf-support/) for
 their similar service. ForwardEmail has 
-[a guide](https://forwardemail.net/en/faq#how-to-send-mail-as-using-gmail) 
-on how to "Send Mail As" with GMail, but my understanding of that is it is still
+[a guide](https://forwardemail.net/en/faq#how-to-send-mail-as-using-gmail)
+on how to "Send Mail As" with Gmail, but my understanding of that is it is still
 being sent by Google's email servers, so I still don't understand why this is needed. 
 If someone can explain this better, please leave a comment below.
 
