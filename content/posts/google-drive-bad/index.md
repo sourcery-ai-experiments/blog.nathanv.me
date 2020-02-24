@@ -180,11 +180,11 @@ want to pay $120/yr and not be utilizing 98% of it.
 While I have a few complaints about OneDrive (primarily, how there is no way to exlcude 
 any folders or filetypes), I'm exceptionally happy. It just ***works***. It's built-in
 to Windows directly, the files-on-demand feature is magical, and the 
-pricing is reasonable. While, I am stepping outside of the sacred Google ecosystem,
-it really hasn't been an issue. Google Drive isn't as tied into other Google services
-as much as say Gmail and Calendar and Contacts. I still use Google Drive actually
-for my Pixel backup, since that's built-in to the phone (and it has really saved
-my ass recently).
+pricing is reasonable. While I am stepping outside of the sacred Google ecosystem,
+it really hasn't been an issue. Google Drive isn't tied into other Google services
+as much as say Gmail and Calendar and Contacts. The only thing I
+still use Google Drive for, is my Pixel phone backup,
+since that's built-in to the phone (and it has really saved my ass recently).
 
 {{< figure src="img/pixel-backup.png" alt="Google Pixel Backup" position="center" style="border-radius: 8px;" caption="Google Pixel Backup" captionPosition="center" >}}
 
