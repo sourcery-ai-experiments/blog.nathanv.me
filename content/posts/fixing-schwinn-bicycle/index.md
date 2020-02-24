@@ -97,6 +97,10 @@ I liked the most.
 
 ### Shifter Cable
 
+### Handlebar Tape
+
+### Water Bottle Cage
+
 ## Tools
 
 ### WD-40
@@ -109,14 +113,14 @@ I liked the most.
 
 ### Wire Brush
 
+### Air Pump
+
 ## Process
 
 ## Results
 
 ## Future Work
 
-### Paint
-
-### Handlebar Tape
+## Further Disassembly
 
 ## Conclusion
