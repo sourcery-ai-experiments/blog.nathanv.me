@@ -214,7 +214,11 @@ and just tightening it down really hard in order to get it roll straight.
 ### More Work
 
 After reassembling the bike and taking it home, I quickly realized that the rear shifter 
-wouldn't shift worth a damn. The bike has 2 gears in the front and 5 in the back.
+wouldn't shift worth a damn (I also taught myself to use the shifter.
+There's no dials to spin like I'm used to on mountain bikes,
+but levers you pull to manually move the chain between gears. You just listen and feel
+for the right spot).
+The bike has 2 gears in the front and 5 in the back.
 While the front shifter worked alright, the rear required a truly ridiculous amount of
 strength to shift more than one gear. I had never worked on a bicycle
 derailleur before, but after putting on my engineer's thinking cap and looking at it
@@ -266,7 +270,7 @@ whenever I park the bike so they don't get stolen.
 
 {{< figure src="img/night-lights.jpg" alt="Night lights" position="center" style="border-radius: 8px;" caption="I think it looks pretty good at night." captionPosition="center" >}}
 
-Yes, I'm aware that the rear light is basically point straight at the tire.
+Yes, I'm aware that the rear light is basically pointing straight at the tire.
 I'm working on 3D printing parts to replace the existing reflectors with
 mounts I can put these lights on instead.
 
@@ -290,7 +294,7 @@ looking particularly great, it lowers the chance of it getting stolen while on c
 
 ### Further Disassembly
 
-This summer I'll have more time and tools to work on the bike, so I'd like to 
+This summer I'll have more time and tools to work on the bike, so I'd like to
 disassemble some more of the bearings and brake assembly to clean them and
 give them a good lube.
 I will have a power washer available, so I'd really like to use that clean a lot 
