@@ -7,3 +7,8 @@
 .post-content li > a {
   word-break: break-all;
 }
+
+/* Fix image centering */
+figure.center img {
+  margin: auto;
+}
