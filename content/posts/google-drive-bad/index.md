@@ -42,7 +42,7 @@ folder to be inside the Google Drive sync folder.)
 This was a huge pain point for myself. Games like to use the user's Documents folder
 as a location to save settings and gamesaves.
 
-{{< figure src="img/documents-games.png" alt="Game save folders gnerated in my Documents" position="center" style="border-radius: 8px;" caption="I didn't create any of these folders manually." captionPosition="center" >}}
+{{< figure src="img/documents-games.png" alt="Game save folders generated in my Documents" position="center" style="border-radius: 8px;" caption="I didn't create any of these folders manually." captionPosition="center" >}}
 
 Some games I play either aren't on Steam, or don't support 
 [Steam's cloud saves](https://support.steampowered.com/kb_article.php?ref=6736-QEIG-8941), 
@@ -52,8 +52,8 @@ Accidentally losing game saves or having to manually download
 files from the Google Drive website was getting really annoying.
 
 I then discovered that [Nextcloud](https://nextcloud.com/) lets you sync 
-*any folder(s) you want* on your system. 
-I was so excited, I immediately setup my own Nextloud
+*any folder(s) you want* on your system.
+I was so excited, I immediately setup my own Nextcloud
 server and moved all of my files to it. This worked great, but had a major limitation
 described in the next section.
 
@@ -69,12 +69,12 @@ is quickly downloaded to be used. This is great for saving space as files that
 are not used often can be removed locally and only retrieved when needed.
 Applications don't notice the difference and work seamlessly with it. See
 [VFS for Git](https://github.com/microsoft/VFSForGit) which is a very similar
-technology develped by Microsoft for Git.
+technology developed by Microsoft for Git.
 
 When you sync the Google Drive folder,
 you must download *EVERYTHING* or exclude specific top-level directories. 
 This means, if for example I don't want
-to sync my 20GB of ISO files to my laptop, I need to put them in a seperate
+to sync my 20GB of ISO files to my laptop, I need to put them in a separate
 top-level folder and exclude those. While not terribly difficult to do, it made me
 consciously think about how my folders were organized with respect to file size so
 that I could exclude certain ones on my laptop which doesn't have as much
@@ -104,7 +104,7 @@ I recently had to help them restore their Documents folder after their desktop
 computer died and we had to reinstall Windows.
 
 It was a ***nightmare***. Because of how Google Drive
-treats seperate computers as mentioned before, getting Google Drive to restore the 
+treats separate computers as mentioned before, getting Google Drive to restore the
 Documents folder and not just try to backup a brand new, empty, copy was frustrating.
 Then, once that got situated, the Backup and Sync program would create empty folders,
 but not actually download the files in them, and claim everything was synced. Of course,
@@ -121,7 +121,7 @@ why not try that?". I did and wow was I impressed.
 
 Most importantly for me, it natively syncs the Documents, Pictures, and Desktop folders.
 
-{{< figure src="img/onedrive-folders.png" alt="OneDrive sync folders" position="center" style="border-radius: 8px;" caption="I created a 'My Files' folder to distingusgh my actual documents from the Documents folder which is filled with stuff from programs." captionPosition="center" >}}
+{{< figure src="img/onedrive-folders.png" alt="OneDrive sync folders" position="center" style="border-radius: 8px;" caption="I created a 'My Files' folder to distinguish my actual documents from the Documents folder which is filled with stuff from programs." captionPosition="center" >}}
 
 It supports a virtual file system (called "Files On Demand")
 so files that aren't used within a certain number of days are removed locally.
@@ -140,7 +140,7 @@ At the time of writing, 5GB is free, 100GB is $2/month,
 and 1TB is $70/yr with Office included. While less generous than
 Google Drive's free 15GB, I have no problem paying $2/month.
 
-Lastly, a really cool feature that isn't well advertised is that if a computer
+A really cool feature that isn't well advertised is that if a computer
 connected to your OneDrive is online, [you can browse it's *entire* filesystem 
 from the web and download files from it](https://support.office.com/en-us/article/use-onedrive-to-fetch-files-on-a-pc-70761550-519c-4d45-b780-5a613b2f8822?ui=en-US&rs=en-US&ad=US).
 This is super handy if you're on the go, 
@@ -151,6 +151,9 @@ and need to download some file that you forgot to put in the OneDrive folder.
 Additionally, if you use OneDrive with Office, your documents get auto-saving.
 
 {{< figure src="img/office-autosave.png" alt="Office Autosave" position="center" style="border-radius: 8px;" caption="No more losing work in Office from forgetting to save and crashes." captionPosition="center" >}}
+
+Lastly, I just think the document browser and built-in PDF viewer are faster, cleaner
+and easier to use than Google Drive, but that is more personal preference.
 
 ## Other Options
 
@@ -177,7 +180,7 @@ want to pay $120/yr and not be utilizing 98% of it.
 
 ## Conclusion
 
-While I have a few complaints about OneDrive (primarily, how there is no way to exclude 
+While I have a few complaints about OneDrive (primarily, how there is no way to exclude
 any folders or filetypes), I'm exceptionally happy. It just ***works***. It's built-in
 to Windows directly, the files-on-demand feature is magical, and the 
 pricing is reasonable. While I am stepping outside of the sacred Google ecosystem,
