@@ -1,7 +1,7 @@
 ---
 author: Nathan Vaughn
 cover: img/fun-in-the-sun.jpg
-date: "2019-02-20"
+date: "2020-02-26"
 description: Repairing an old 27" 1973 Schwinn Varsity 10-speed bicycle to rideable condition
 images:
 - /posts/fixing-schwinn-bicycle/img/fun-in-the-sun.jpg
