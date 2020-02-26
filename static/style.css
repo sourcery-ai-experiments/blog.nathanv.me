@@ -9,6 +9,13 @@
 }
 
 /* Fix image centering */
-figure.center img {
+figure.center img,
+figure.center video {
   margin: auto;
+}
+
+/* Apply max width to video */
+video {
+  display: block;
+  max-width: 100%;
 }
