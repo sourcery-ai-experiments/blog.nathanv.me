@@ -117,7 +117,7 @@ I went to my local bike shop (again) and got some new orange grip tape that actu
 matches really closely to the original. I also paid the shop to put it on for me
 because I didn't trust my own abilities to wrap it well.
 
-TODO IMAGE
+{{< figure src="img/new-grip-tape.png" alt="Orange grip tape" position="center" style="border-radius: 8px;" caption="I'm pretty sure this is what I bought at my bike shop." captionPosition="center" >}}
 
 ### Water Bottle Cage
 
@@ -139,7 +139,7 @@ orange-red, it looks close enough.
 
 I just went to Walmart and grabbed whatever they had.
 
-TODO IMAGE
+{{< figure src="img/chain-lube.png" alt="Chain lube" position="center" style="border-radius: 8px;" caption="The lightning bolt makes it go faster." captionPosition="center" >}}
 
 ### Tire Levers
 
@@ -162,13 +162,13 @@ crescent wrenches. Nothing special about these at all.
 
 I also got a basic metal wire brush during my Walmart run to help clean off gunk.
 
-TODO IMAGE
+{{< figure src="img/wire-brush.png" alt="Wire brush" position="center" style="border-radius: 8px;" caption="Generic wire brush" captionPosition="center" >}}
 
 ### Air Pump
 
 Lastly, while at Walmart I got a Bell air pump.
 
-{{< figure src="img/bell-air-pump.png" alt="Bell air pump" position="center" style="border-radius: 8px;" caption="I bought an air pump something like this." captionPosition="center" >}}
+{{< figure src="img/bell-air-pump.png" alt="Bell air pump" position="center" style="border-radius: 8px;" caption="I bought an air pump that's something like this." captionPosition="center" >}}
 
 ## Process
 
@@ -205,11 +205,11 @@ position, it was rubbing against the frame really badly on the front left of the
 We ended up having to move the left side of the wheel pretty far forward in its slot
 and just tightening it done really hard in order to get it roll straight.
 
-TODO IMAGE
+{{< figure src="img/rear-wheel-alignment.jpg" alt="Rear wheel alignment" position="center" style="border-radius: 8px;" caption="I added to two blue lines to show that the wheel is not centered between the rear two forks. You can also tell by how the brake assembly is a bit tilted to the left." captionPosition="center" >}}
 
-TODO IMAGE
+{{< figure src="img/rear-tire-rubbing.jpg" alt="Rear tire rubbing" position="center" style="border-radius: 8px;" caption="It was hard to get my camera in a position to show it well, but you can kind of see where the tire was rubbing on the frame closest to the camera in the past." captionPosition="center" >}}
 
-TODO IMAGE
+{{< figure src="img/rear-wheel-mount.jpg" alt="Rear wheel mount" position="center" style="border-radius: 8px;" caption="In order to get the wheel to track straight, we had to bring the left side very far forward. A few ugga duggas were used to keep it nice and snug. I swear there is some material holding it on." captionPosition="center" >}}
 
 ### More Work
 
@@ -238,26 +238,72 @@ At this point, the bike was working pretty well.
 
 {{< figure src="img/fun-in-less-sun.jpg" alt="Bike in the sun" position="center" style="border-radius: 8px;" caption="I was starting to ride the bike to class now." captionPosition="center" >}}
 
+### Final Work
+
 I decided to also get the grip tape changed
 and add a water bottle holder for the sake of longer rides in the future.
 
-## Results
+{{< figure src="img/new-handlebar-tape.jpg" alt="New handlebar tape" position="center" style="border-radius: 8px;" caption="The new handlebar tape matches really close and the bike shop did a great job wrapping it." captionPosition="center" >}}
+
+When I bought the water bottle cage, I totally forgot that mountain bikes have holes
+you normally screw it into. My road bike had no such holes so I had to get creative.
+
+{{< figure src="img/water-bottle-cage-mounted.jpg" alt="Water bottle cage mounted" position="center" style="border-radius: 8px;" caption="Two hose clamps slipped under the shifting lines hold it nice and snug." captionPosition="center" >}}
+
+Now, I know what you're thinking: "Won't that damage the paint?". Yes, yes it will, 
+unless I put some electrical tape underneath of it. However, the paint is already so
+beat and rusted that I truly don't care.
 
 Finally, for the sake of safety when I ride at night,
 I got some little silicon rechargeable LED lights
 that wrap around the handlebars and frame.
 
-TODO IMAGE
+{{< figure src="img/schwinn-lights.png" alt="Schwinn lights" position="center" style="border-radius: 8px;" caption="The Schwinn brand lights I got at Walmart." captionPosition="center" >}}
 
 I like them a lot. They've got three modes: solid bright, solid dim, and blinking dim.
-They recharge via MicroUSB and they come on and off super quick. I take them off
+They recharge via MicroUSB and they come on and off super quick, so I take them off
 whenever I park the bike so they don't get stolen.
+
+{{< figure src="img/night-lights.jpg" alt="Night lights" position="center" style="border-radius: 8px;" caption="I think it looks pretty good at night." captionPosition="center" >}}
+
+Yes, I'm aware that the rear light is basically point straight at the tire.
+I'm working on 3D printing parts to replace the existing reflectors with
+mounts I can put these lights on instead.
+
+## Results
+
+{{< figure src="img/fun-in-the-sun.jpg" alt="Final result" position="center" style="border-radius: 8px;" caption="It looks really bright orange in the sun." captionPosition="center" >}}
+
+I think the bike looks pretty good in it's own special patina way.
+
+{{< figure src="img/schwinn-badge.jpg" alt="Schwinn badge" position="center" style="border-radius: 8px;" caption="The Schwinn badge is in surprisingly good shape." captionPosition="center" >}}
+
+{{< figure src="img/rusty-paint.jpg" alt="Rusty paint" position="center" style="border-radius: 8px;" caption="The Schwinn logo on the side though isn't doing so well." captionPosition="center" >}}
+
+I don't have any plans to repaint the bike. For starters, spending the time and money
+to properly disassemble the whole thing, strip all the paint, clean off the rust,
+and repaint it would exceed the value of the bike itself. Also, why would I put in
+the effort for such a low-end crapped out bike anyways? Lastly, with the bike not
+looking particularly great, it lowers the chance of it getting stolen while on campus.
 
 ## Future Work
 
 ### Further Disassembly
 
+This summer I'll have more time and tools to work on the bike, so I'd like to 
+disassemble some more of the bearings and brake assembly to give them a good lube.
+I will have a power washer available, so I'd really like to use that clean a lot 
+of the gunk off.
+
 ### Painting Over Phone Number
+
+A previous owner was so kind as to scratch their phone number into the frame of the 
+bike. To make it even better, they started on the side, then decided against it
+and started over on the top.
+
+{{< figure src="img/old-phone-number.jpg" alt="Rusty paint" position="center" style="border-radius: 8px;" caption="The phone number is 10 digits???" captionPosition="center" >}}
+
+I want to get a file and a bit of close-enough spray paint to cover over it.
 
 ## Conclusion
 
