@@ -152,7 +152,7 @@ Additionally, if you use OneDrive with Office, your documents get auto-saving.
 
 {{< figure src="img/office-autosave.png" alt="Office Autosave" position="center" style="border-radius: 8px;" caption="No more losing work in Office from forgetting to save and crashes." captionPosition="center" >}}
 
-Lastly, I just think the document browser and built-in PDF viewer are faster, cleaner
+Lastly, I just think the document browser and built-in PDF viewer are faster, cleaner,
 and easier to use than Google Drive, but that is more personal preference.
 
 ## Other Options
@@ -186,7 +186,7 @@ to Windows directly, the files-on-demand feature is magical, and the
 pricing is reasonable. While I am stepping outside of the sacred Google ecosystem,
 it really hasn't been an issue. Google Drive isn't tied into other Google services
 as much as say Gmail and Calendar and Contacts. The only thing I
-still use Google Drive for, is my Pixel phone backup,
+still use Google Drive for is my Pixel phone backup
 since that's built-in to the phone (and it has really saved my ass recently).
 
 {{< figure src="img/pixel-backup.png" alt="Google Pixel Backup" position="center" style="border-radius: 8px;" caption="Google Pixel Backup" captionPosition="center" >}}

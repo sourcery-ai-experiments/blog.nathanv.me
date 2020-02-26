@@ -127,7 +127,7 @@ water bottle cage.
 {{< figure src="img/water-bottle-cage.png" alt="Water bottle cage" position="center" style="border-radius: 8px;" caption="A water bottle cage pretty similar to what I purchased." captionPosition="center" >}}
 
 While the water bottle cage I got is a very bright red and the bike is more of an 
-orange-red, but it looks close enough.
+orange-red, it looks close enough.
 
 ## Tools
 
