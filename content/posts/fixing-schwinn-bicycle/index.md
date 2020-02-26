@@ -28,13 +28,13 @@ the bike looked neglected.
 {{< figure src="img/old-tires.jpg" alt="Old bike tires" position="center" style="border-radius: 8px;" caption="I'm pretty sure this was the original tire that came with the bike from the factory." captionPosition="center" >}}
 
 Since I got the bike for the wonderful price of free,
-I decided to keep it, and to fix it up. I hadn't owned a bicycle in many years
+I decided to keep it and fix it up. I hadn't owned a bicycle in many years
 and frankly didn't know much about bike maintenance, but I thought this would be
-a good project to learn with without investing much money.
+a good project to learn with without investing too much money.
 
 ## Project Goals
 
-To begin with, I immediately decided that I wanted to simply repair the bike, and not
+To begin with, I immediately decided that I wanted to simply repair the bike and not
 restore it. The major reasons for this were that I wanted to save money and make the
 bike what I wanted. Also, the Varsity line of bicycles from Schwinn aren't exactly
 rare or collectible, so I didn't feel bad at all for not restoring it.
@@ -61,7 +61,7 @@ tires. The reason for this was that I currently live in Iowa, and we actually ha
 snow here, so I wanted some tread on the tires. Also, while I could have gotten tires
 that more closely matched the original ones with gum walls
 (such as [these](https://www.amazon.com/TAC-Two-Pack-27x1-1-Select/dp/B077J86YR2)),
-I decided no to. To me at least, that rubber just looks more 
+I decided not to. To me at least, that rubber just looks more
 "plastic-y" and not as good quality.
 
 {{< figure src="img/continental-tire.png" alt="Continental Ride Tour Tire" position="center" style="border-radius: 8px;" caption="Continental Ride Tour tire" captionPosition="center" >}}
@@ -127,7 +127,7 @@ water bottle cage.
 {{< figure src="img/water-bottle-cage.png" alt="Water bottle cage" position="center" style="border-radius: 8px;" caption="A water bottle cage pretty similar to what I purchased." captionPosition="center" >}}
 
 While the water bottle cage I got is a very bright red and the bike is more of an 
-orange-red, it looks close enough.
+orange-red, but it looks close enough.
 
 ## Tools
 
@@ -199,13 +199,13 @@ lube everything up.
 
 {{< figure src="img/dirty-bike.jpg" alt="Dirty bicycle" position="center" style="border-radius: 8px;" caption="This was <i>after</i> trying to clean it." captionPosition="center" >}}
 
-During this whole process, we discovered that the frame of the bike is
+During this whole ordeal, we discovered that the frame of the bike is
 more than likely bent. When we first re-attached the rear wheel in a normal
 position, it was rubbing against the frame really badly on the front left of the tire.
 We ended up having to move the left side of the wheel pretty far forward in its slot
-and just tightening it done really hard in order to get it roll straight.
+and just tightening it down really hard in order to get it roll straight.
 
-{{< figure src="img/rear-wheel-alignment.jpg" alt="Rear wheel alignment" position="center" style="border-radius: 8px;" caption="I added to two blue lines to show that the wheel is not centered between the rear two forks. You can also tell by how the brake assembly is a bit tilted to the left." captionPosition="center" >}}
+{{< figure src="img/rear-wheel-alignment.jpg" alt="Rear wheel alignment" position="center" style="border-radius: 8px;" caption="I added the two blue lines to show that the wheel is not centered between the rear two forks. You can also tell by how the brake assembly is tilted a bit to the left." captionPosition="center" >}}
 
 {{< figure src="img/rear-tire-rubbing.jpg" alt="Rear tire rubbing" position="center" style="border-radius: 8px;" caption="It was hard to get my camera in a position to show it well, but you can kind of see where the tire was rubbing on the frame closest to the camera in the past." captionPosition="center" >}}
 
@@ -215,8 +215,8 @@ and just tightening it done really hard in order to get it roll straight.
 
 After reassembling the bike and taking it home, I quickly realized that the rear shifter 
 wouldn't shift worth a damn. The bike has 2 gears in the front and 5 in the back.
-While the front shifter worked alright, it required a truly ridiculous amount of
-strength to shift more than one gear in the rear. I had never worked on a bicycle
+While the front shifter worked alright, the rear required a truly ridiculous amount of
+strength to shift more than one gear. I had never worked on a bicycle
 derailleur before, but after putting on my engineer's thinking cap and looking at it
 and playing with for about 10 minutes, I realized the problem. The cable was far too
 loose. So, I pulled out my pliers, loosened the screw at the end of the cable, and
@@ -226,7 +226,7 @@ and wouldn't budge.
 {{< figure src="img/rear-cable-frayed.jpg" alt="Rear shifter cable frayed" position="center" style="border-radius: 8px;" caption="You can see at the bottom that it was frayed pretty bad." captionPosition="center" >}}
 
 So I bought a new cable and figured out how to install it. The old cable was a tough
-bastard that didn't want to go out without a fight.
+bastard that didn't want to come out without a fight.
 
 {{< figure src="img/rear-cable-removal.jpg" alt="Rear shifter cable removal" position="center" style="border-radius: 8px;" caption="It went out swinging." captionPosition="center" >}}
 
@@ -243,7 +243,7 @@ At this point, the bike was working pretty well.
 I decided to also get the grip tape changed
 and add a water bottle holder for the sake of longer rides in the future.
 
-{{< figure src="img/new-handlebar-tape.jpg" alt="New handlebar tape" position="center" style="border-radius: 8px;" caption="The new handlebar tape matches really close and the bike shop did a great job wrapping it." captionPosition="center" >}}
+{{< figure src="img/new-handlebar-tape.jpg" alt="New handlebar tape" position="center" style="border-radius: 8px;" caption="The new handlebar tape matches really closely and the bike shop did a great job wrapping it." captionPosition="center" >}}
 
 When I bought the water bottle cage, I totally forgot that mountain bikes have holes
 you normally screw it into. My road bike had no such holes so I had to get creative.
@@ -270,13 +270,13 @@ Yes, I'm aware that the rear light is basically point straight at the tire.
 I'm working on 3D printing parts to replace the existing reflectors with
 mounts I can put these lights on instead.
 
-## Results
+## Result
 
 {{< figure src="img/fun-in-the-sun.jpg" alt="Final result" position="center" style="border-radius: 8px;" caption="It looks really bright orange in the sun." captionPosition="center" >}}
 
 I think the bike looks pretty good in it's own special patina way.
 
-{{< figure src="img/schwinn-badge.jpg" alt="Schwinn badge" position="center" style="border-radius: 8px;" caption="The Schwinn badge is in surprisingly good shape." captionPosition="center" >}}
+{{< figure src="img/schwinn-badge.jpg" alt="Schwinn badge" position="center" style="border-radius: 8px;" caption="The front Schwinn badge is in surprisingly good shape." captionPosition="center" >}}
 
 {{< figure src="img/rusty-paint.jpg" alt="Rusty paint" position="center" style="border-radius: 8px;" caption="The Schwinn logo on the side though isn't doing so well." captionPosition="center" >}}
 
@@ -291,7 +291,8 @@ looking particularly great, it lowers the chance of it getting stolen while on c
 ### Further Disassembly
 
 This summer I'll have more time and tools to work on the bike, so I'd like to 
-disassemble some more of the bearings and brake assembly to give them a good lube.
+disassemble some more of the bearings and brake assembly to clean them and
+give them a good lube.
 I will have a power washer available, so I'd really like to use that clean a lot 
 of the gunk off.
 
@@ -303,7 +304,7 @@ and started over on the top.
 
 {{< figure src="img/old-phone-number.jpg" alt="Rusty paint" position="center" style="border-radius: 8px;" caption="The phone number is 10 digits???" captionPosition="center" >}}
 
-I want to get a file and a bit of close-enough spray paint to cover over it.
+I want to get a file and a bit of close-enough spray paint to cover it.
 
 ## Conclusion
 
@@ -321,8 +322,9 @@ a friend and I could both easily work together. I was just going with the
 Amazon's choice and they happened to come in a pack of four.
 
 I'm really thrilled with how the bike has turned out. I probably spent around
-~$150-$200 on this at the end of it all. Could I have gotten a better bike on craigslist
-for less? Probably. However, it was a fun project that I'm proud of and I got to learn
+~$150-$200 on this at the end of it all. Could I have gotten a better bike from
+craigslist or a pawn shop for what I'm using it for, for less?
+Almost certainly. However, it was a fun project that I'm proud of and I got to learn
 a lot about bicycles and bike maintenance during it. It may look ugly as sin,
-but it's mechanically pretty sound and I have the satisfaction of doing almost all
+but it's mechanically pretty sound and I have the satisfaction of having done almost all
 of the work on it myself.
