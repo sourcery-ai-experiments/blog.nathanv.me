@@ -191,8 +191,9 @@ wouldn't come off easily while I was going to replace that as well, so I decided
 just leave it on.
 
 After replacing the tubes and tires, we changed out the brake pads and handlebar
-endcaps. The endcaps being a bit a tricky as one of the existing ones did not have a
-screw and was just press-fit. It took quite a bit of patience and prying to get it out.
+endcaps. The endcaps ended up being a bit a tricky as one of the
+existing ones did not have a screw and was just press-fit.
+It took quite a bit of patience and prying to get it out.
 
 Lastly, we tried to clean the bike as much as reasonably possible and 
 lube everything up.
@@ -282,7 +283,7 @@ I think the bike looks pretty good in it's own special patina way.
 
 {{< figure src="img/schwinn-badge.jpg" alt="Schwinn badge" position="center" style="border-radius: 8px;" caption="The front Schwinn badge is in surprisingly good shape." captionPosition="center" >}}
 
-{{< figure src="img/rusty-paint.jpg" alt="Rusty paint" position="center" style="border-radius: 8px;" caption="The Schwinn logo on the side though isn't doing so well." captionPosition="center" >}}
+{{< figure src="img/rusty-paint.jpg" alt="Rusty paint" position="center" style="border-radius: 8px;" caption="The Schwinn logo on the side isn't doing so well, though." captionPosition="center" >}}
 
 I don't have any plans to repaint the bike. For starters, spending the time and money
 to properly disassemble the whole thing, strip all the paint, clean off the rust,
