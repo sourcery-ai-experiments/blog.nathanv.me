@@ -307,7 +307,7 @@ A previous owner was so kind as to scratch their phone number into the frame of 
 bike. To make it even better, they started on the side, then decided against it
 and started over on the top.
 
-{{< figure src="img/old-phone-number.jpg" alt="Rusty paint" position="center" style="border-radius: 8px;" caption="The phone number is 10 digits???" captionPosition="center" >}}
+{{< figure src="img/old-phone-number.jpg" alt="Rusty paint" position="center" style="border-radius: 8px;" caption="The phone number is 11 digits???" captionPosition="center" >}}
 
 I want to get a file and a bit of close-enough spray paint to cover it.
 
