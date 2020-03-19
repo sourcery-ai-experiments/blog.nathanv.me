@@ -6,3 +6,10 @@ tags:
 - Placeholder
 title: "{{ replace .Name "-" " " | title }}"
 ---
+
+## Background
+
+## Conclusion
+
+## References
+- []()
