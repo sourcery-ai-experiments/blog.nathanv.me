@@ -50,7 +50,7 @@ except a lot more dust, scratches, and missing parts.
 
 While I initially was planning on swapping out the components of my desktop into
 this case, I ended up building a server inside of it. I was getting _real_ tired
-of the constant noise from my [HP ProLiant DL 360]({{ relref "self-host-docker" }})
+of the constant noise from my [HP ProLiant DL 360]({{< relref "self-host-docker" >}})
 and thought it would be best to build a "new" machine. The perfect opportunity came
 during Black Friday this year with a Ryzen 7 2700x for $159.00. I decided replace my
 old i7-4790k with that, and use the old parts from my desktop to build a new server.
