@@ -223,7 +223,7 @@ The bike has 2 gears in the front and 5 in the back.
 While the front shifter worked alright, the rear required a truly ridiculous amount of
 strength to shift more than one gear. I had never worked on a bicycle
 derailleur before, but after putting on my engineer's thinking cap and looking at it
-and playing with for about 10 minutes, I realized the problem. The cable was far too
+and playing with it for about 10 minutes, I realized the problem. The cable was far too
 loose. So, I pulled out my pliers, loosened the screw at the end of the cable, and
 gave it a good yank to tighten it up. Or so I tried to. It was frayed at the end
 and wouldn't budge.
