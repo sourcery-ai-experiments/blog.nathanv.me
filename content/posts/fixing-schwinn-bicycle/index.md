@@ -77,7 +77,7 @@ box they left at my door.
 If you were like me and didn't know what rim tape was, it's just tape that you put
 around the rim of the wheel so that the spokes don't puncture the tube.
 
-{{< figure src="img/rim-tape-example.jpg" alt="Rim tape example" position="center" style="border-radius: 8px;" caption="Rim tape example (from [parktool.com](parktool.com))" captionPosition="center" >}}
+{{< figure src="img/rim-tape-example.jpg" alt="Rim tape example" position="center" style="border-radius: 8px;" caption="Rim tape example (from [parktool.com](https://www.parktool.com/))" captionPosition="center" >}}
 
 When I was changing the tires on the bike, I didn't realize I would need this and
 my local bike shop was closed, so I substituted some basic electrical tape from Walmart.
