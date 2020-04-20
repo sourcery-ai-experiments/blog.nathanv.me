@@ -17,8 +17,8 @@ that both modify Flask's `url_for` function.
 ## Problem
 
 However, these two packages are not made to work together. Flask-CDN overrides the
-`url_for` function in the context of templates. One that function is called,
-it applies its processing, and then calls Flask's underlying `url_for` function.
+`url_for` function in the context of templates. Once that function is called,
+it applies its processing and then calls Flask's underlying `url_for` function.
 Flask-Static-Digest works similarly, but instead defines a new
 function `static_url_for`. This function still ends up calling `url_for`.
 
@@ -30,7 +30,7 @@ so that I could combine the features of both.
 {{< figure src="img/desired-diagram.svg" alt="How I want it to work." position="center" style="border-radius: 8px;" caption="How I want it to work." captionPosition="center" >}}
 
 I really wanted to avoid editing code of the dependencies if at all possible,
-so I tried to see if I could get Flask-Static-Digest import Flask-CDN while making it
+so I tried to see if I could get Flask-Static-Digest to import Flask-CDN while making it
 *think* it was importing Flask.
 
 ## Solution
