@@ -104,7 +104,6 @@ sys.modules["flask"] = flask_real_import
 static_digest = FlaskStaticDigest()
 ```
 
-
 ## Conclusion
 
 While this trick can be very useful, it can also very dangerous and easy to break stuff.
