@@ -138,7 +138,7 @@ what I paid for the original computer.
 
 ### Missing Ultra 24 Badge
 
-As you can see in the [old exterior photo](/img/from_surplus.jpg), 
+As you can see in the [old exterior photo](img/from_surplus.jpg), 
 at the bottom, the
 [Ultra 24 badge](https://www.servethehome.com/wp-content/uploads/2019/01/The-Ultra-EPYC-Cover.jpg) 
 is missing. I'm going to try and 3D print a replacement at some point.
