@@ -21,6 +21,6 @@ figure.center video {
 }
 
 /* Hide stray bullet from TOC */
-#TableOfContents>ul {
+#TableOfContents > ul {
   list-style: none;
 }
