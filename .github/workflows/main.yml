@@ -23,12 +23,12 @@ jobs:
       run: hugo --gc --cleanDestinationDir
 
     - name: Deploy Site
-      uses: peaceiris/actions-gh-pages@v2
+      uses: peaceiris/actions-gh-pages@v3.6.1
       if: success()
-      env:
-        ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-        PUBLISH_BRANCH: gh-pages
-        PUBLISH_DIR: ./public
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_branch: gh-pages
+        publish_dir: ./public
 
     - name: Purge Cache
       uses: nathanvaughn/actions-cloudflare-purge@master
