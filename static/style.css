@@ -19,3 +19,8 @@ figure.center img,
 figure.center video {
   margin: auto;
 }
+
+/* Hide stray bullet from TOC */
+#TableOfContents > ul {
+  list-style: none;
+}

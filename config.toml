@@ -12,11 +12,10 @@ googleAnalytics = "UA-91853319-4"
 
 [params]
   contentTypeName = "posts"
-  themeColor = "red"
+  defaultTheme = "dark"
   showMenuItems = 2
-  fullWidthTheme = false
-  centerTheme = true
   showReadingTime = true
+  toc = true
 
 [languages]
   [languages.en]
@@ -25,11 +24,7 @@ googleAnalytics = "UA-91853319-4"
     subtitle = "Adventures in programming and tech"
     # default open graph image
     images = ["img/favicon.png"]
-    keywords = ["programming", "tech"]
-    copyright = ""
-    menuMore = "Show more"
-    readMore = "Read more"
-    readOtherPosts = "Read other posts"
+    keywords = ["programming", "tech", "Nathan", "Vaughn", "blog"]
 
     [languages.en.params.logo]
       logoText = "nathanv@blog"

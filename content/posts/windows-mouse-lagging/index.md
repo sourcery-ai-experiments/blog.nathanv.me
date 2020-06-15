@@ -11,8 +11,11 @@ title: "Windows Mouse Lagging"
 
 For a while lately, I've been dealing with a very frustrating issue on my Windows 10
 desktop and laptop. Whenever I would turn on my computer, the mouse cursor
-would lag horribly for around 20 seconds (unfortunately, it's difficult
-to reproduce and actually get a screen recording of). Weirdly, the mouse would almost
+would lag horribly for around 20 seconds.
+
+{{< video src="vid/mouse-lag.mp4" alt="Mouse lag" position="center" style="border-radius: 8px;" caption="Apologies for the poor recording, it's difficult to get with screen capture software." >}}
+
+Weirdly, the mouse would almost
 always return to normal after pressing `Ctrl+Alt+Del` or `Ctrl+Shift+Esc` (which opens
 Task Manager). While I'm not familiar with how Windows works, I know that `Ctrl+Alt+Del`
 produces a kernel interrupt which may be why it fixes it. I don't know
