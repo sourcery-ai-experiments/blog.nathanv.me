@@ -1,7 +1,10 @@
 ---
 author: Nathan Vaughn
 date: "2020-06-19"
+cover: img/dynamodb-dummies.png
 description: An introductory guide to using AWS DynamoDB
+images:
+- /posts/dynamodb-for-dummies/img/dynamodb-dummies.png
 tags:
 - AWS
 - DynamoDB
@@ -168,14 +171,15 @@ Everything above really covers all the basics of DynamoDB. The core functionalit
 pretty straight-forward.
 
 However, DynamoDB has more functionality. Another major feature is secondary indexes.
-Sometimes, you just need to lookup values based off another column.
-Maybe it's a username instead of the normal user ID. This is where secondary indexes
-come in.
+Sometimes, you just need to look up values based on another attribute.
+Maybe it's a username instead of the normal user ID.
+Secondary indexes let you query by attributes other than what you normally can.
 
 #### Global Secondary Index
 
 The first option is a Global Secondary Index. This is the most flexible option.
 It does not need to be defined at table creation and there is no limit on data size.
+It behaves just like an additional partition key.
 However, it uses additional read and write capacity units, so will cost you more.
 Additionally, a major caveat is that it is *not* read-consistent. What this means,
 is that if you write data to a global secondary index, and then immediately
@@ -187,7 +191,10 @@ It will eventually propagate, but it is not guaranteed to be immediate.
 The other option is a Local Secondary Index. This is a lot more restrictive, but
 can make sense for the right use-case. It *has* to be defined at table creation
 (can't update the schema later), each hash key can't contain more than 10GB of data,
-and it shares the read and write capacity units of the underlying table.
+and it shares the read and write capacity units of the underlying table. It also
+can *only* be used on tables with a partition key and sort key, as it
+behaves like an additional sort key. You still need to use the original
+partition key.
 It also optionally allows you enable read and write consistency if desired.
 
 ## Conclusion
