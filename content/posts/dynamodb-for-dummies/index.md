@@ -9,6 +9,7 @@ tags:
 - AWS
 - DynamoDB
 title: "DynamoDB for Dummies"
+userelativecover: true
 ---
 
 ## Background
