@@ -50,7 +50,6 @@ I give it 4/5 stars, primarily for being such a good value.
 - Alexa integration is relatively useless
 - While waterproof, water hitting the screen triggers presses, which is incredibly obnoxious
 
-
 ## Detailed Review
 
 To start with, I really like this thing. It does so much well, for only $25.
