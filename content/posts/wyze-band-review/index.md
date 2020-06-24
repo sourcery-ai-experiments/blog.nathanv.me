@@ -8,6 +8,8 @@ images:
 tags:
 - Wyze
 - wearables
+- health
+- review
 title: Wyze Band Review
 userelativecover: true
 ---
