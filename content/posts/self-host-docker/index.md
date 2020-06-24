@@ -50,7 +50,7 @@ from the host (unless you decide to provide access to specific directories)
 and containers even get their own network interface. Compared to VMs, containers
 have a **much** lower memory footprint, and are super fast to start. Neat!
 
-```
+```txt
 nathan@zeus:[~]$ sudo /usr/bin/landscape-sysinfo
 
   System load:                    0.15
@@ -123,7 +123,7 @@ Working off some examples, I made a Docker Compose file for each
 of my applications, each in their own folder. For security, I have every app restricted
 to their own network (which Docker Compose will do by default).
 
-```
+```txt
 ~/dockerfiles
 │
 └───app1
@@ -261,7 +261,7 @@ want, then just `CNAME` your second domain to the tunnel subdomain.
 
 Example:
 
-```
+```txt
 Link Shortener (app) -> linkshortener.example.com (Tunnel) -> xmpl.com  (CNAME DNS)
 ```
 
