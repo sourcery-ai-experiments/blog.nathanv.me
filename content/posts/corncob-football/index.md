@@ -85,7 +85,6 @@ out to:
 
 [Source.](https://www.digitaldutch.com/atmoscalc/)
 
-
 ### Coefficient of Drag
 
 A crucial number in determining the trajectory of a flying object is it's
@@ -270,7 +269,7 @@ to be a bit conservative, so the actual results may even be farther!
 ### Catching Feasibility
 
 An important question you may be wondering is "How feasible is it to actually
-_catch_ a corncob flying at you?" Well, as an engineering student, I can't
+*catch* a corncob flying at you?" Well, as an engineering student, I can't
 catch a regular football to save my life. I was also unable to convince
 any of friends to stand in a field and let me throw corncobs at them, and
 I doubt I could catch any 80 mph corncobs thrown at me. Therefore, I'll
@@ -320,26 +319,25 @@ Overall, analysis has shown that corncobs replacing footballs is an incredible
 idea and should be considered by the NCAA.
 
 ## References
-- https://github.com/NathanVaughn/corncob-football
-- https://www.sportsrec.com/6560043/what-is-the-official-size-of-the-nfl-football
-- https://www.sportsrec.com/6938474/maximum-speed-of-a-football
-- https://youtu.be/tVoqA-LKGb4?t=206
-- https://www.ncsasports.org/football/recruiting-guidelines
-- http://www.collegegridirons.com/comparisons.htm
-- https://developers.google.com/maps/documentation/elevation/start
-- https://www.digitaldutch.com/atmoscalc/
-- http://users.df.uba.ar/sgil/physics_paper_doc/papers_phys/fluids/drag_football.pdf
-- https://grabcad.com/library/american-football-5
-- https://www.grc.nasa.gov/WWW/K-12/airplane/dragco.html
-- https://www.grc.nasa.gov/www/k-12/airplane/flteqs.html
-- https://www.topendsports.com/sport/gridiron/longest-throw.htm
-- https://www.researchgate.net/publication/303010127_Azospirillum_brasilense_promotes_increment_in_corn_production
-- https://www.nefbfoundation.org/Images/FOUndation/Educators/Enriching-Activities/Corn-Calculations.pdf
-- https://free3d.com/3d-model/cornoncob-v01--775846.html
-- https://en.wikipedia.org/wiki/Fermi_problem
-- https://www.teamrankings.com/nfl/stat/pass-attempts-per-game
-- https://www.iowacorn.org/education/faqs
-- https://www.agmrc.org/media/cms/budgetsheets_sweetcorn2FINAL_697315E3311E0.pdf
+- [https://www.sportsrec.com/6560043/what-is-the-official-size-of-the-nfl-football](https://www.sportsrec.com/6560043/what-is-the-official-size-of-the-nfl-football)
+- [https://www.sportsrec.com/6938474/maximum-speed-of-a-football](https://www.sportsrec.com/6938474/maximum-speed-of-a-football)
+- [https://youtu.be/tVoqA-LKGb4?t=206](https://youtu.be/tVoqA-LKGb4?t=206)
+- [https://www.ncsasports.org/football/recruiting-guidelines](https://www.ncsasports.org/football/recruiting-guidelines)
+- [http://www.collegegridirons.com/comparisons.htm](http://www.collegegridirons.com/comparisons.htm)
+- [https://developers.google.com/maps/documentation/elevation/start](https://developers.google.com/maps/documentation/elevation/start)
+- [https://www.digitaldutch.com/atmoscalc/](https://www.digitaldutch.com/atmoscalc/)
+- [http://users.df.uba.ar/sgil/physics_paper_doc/papers_phys/fluids/drag_football.pdf](http://users.df.uba.ar/sgil/physics_paper_doc/papers_phys/fluids/drag_football.pdf)
+- [https://grabcad.com/library/american-football-5](https://grabcad.com/library/american-football-5)
+- [https://www.grc.nasa.gov/WWW/K-12/airplane/dragco.html](https://www.grc.nasa.gov/WWW/K-12/airplane/dragco.html)
+- [https://www.grc.nasa.gov/www/k-12/airplane/flteqs.html](https://www.grc.nasa.gov/www/k-12/airplane/flteqs.html)
+- [https://www.topendsports.com/sport/gridiron/longest-throw.htm](https://www.topendsports.com/sport/gridiron/longest-throw.htm)
+- [https://www.researchgate.net/publication/303010127_Azospirillum_brasilense_promotes_increment_in_corn_production](https://www.researchgate.net/publication/303010127_Azospirillum_brasilense_promotes_increment_in_corn_production)
+- [https://www.nefbfoundation.org/Images/FOUndation/Educators/Enriching-Activities/Corn-Calculations.pdf](https://www.nefbfoundation.org/Images/FOUndation/Educators/Enriching-Activities/Corn-Calculations.pdf)
+- [https://free3d.com/3d-model/cornoncob-v01--775846.html](https://free3d.com/3d-model/cornoncob-v01--775846.html)
+- [https://en.wikipedia.org/wiki/Fermi_problem](https://en.wikipedia.org/wiki/Fermi_problem)
+- [https://www.teamrankings.com/nfl/stat/pass-attempts-per-game](https://www.teamrankings.com/nfl/stat/pass-attempts-per-game)
+- [https://www.iowacorn.org/education/faqs](https://www.iowacorn.org/education/faqs)
+- [https://www.agmrc.org/media/cms/budgetsheets_sweetcorn2FINAL_697315E3311E0.pdf](https://www.agmrc.org/media/cms/budgetsheets_sweetcorn2FINAL_697315E3311E0.pdf)
 
 [Code](https://github.com/NathanVaughn/blog.nathanv.me/tree/master/content/posts/corncob-football/code/)
 
