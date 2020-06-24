@@ -79,6 +79,7 @@ of every US college football stadium is around 285 meters.
 
 With the average elevation, we can now determine the standard air density. This comes
 out to:
+
 - Density: 1.19183 kg/m<sup>3</sup>
 - Temperature: 286.297 K
 - Pressure: 97947.8 Pa
@@ -112,6 +113,7 @@ drag force imparted on the football.
 [Source.](https://www.grc.nasa.gov/WWW/K-12/airplane/dragco.html)
 
 Parameters:
+
 - External Analysis
     - Exclude cavities without flow conditions
     - Exclude internal space
@@ -305,6 +307,7 @@ this would be around a million and a half dollar stimulus to the Iowa corn econo
 ## Conclusion
 
 Pros:
+
 - Longer passes
 - More Hail Mary's
 - More environmentally friendly
@@ -313,7 +316,8 @@ Pros:
 - No "deflategate" scandals
 
 Cons:
--   None
+
+- None
 
 Overall, analysis has shown that corncobs replacing footballs is an incredible
 idea and should be considered by the NCAA.
