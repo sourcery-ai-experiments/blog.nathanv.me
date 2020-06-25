@@ -334,8 +334,9 @@ at the same time, both should support it.
 Yes, it's waterproof (up to about 50 meters). No, that doesn't mean you should wear
 it while swimming/showering/diving. You see, with the touchscreen, nearly any
 water pressure causes the Band to think it was just touched. Which will cause
-it to provide vibration feedback, which is insanely obnoxious. Also,
-it's real fun in the shower to see the Band just scrolling through screens and
+it to trigger Alexa, which is insanely obnoxious. It makes it completely
+unusable underwater. Also, it's real fun in the shower to see the
+Band just scrolling through screens and
 things being activated while the water is hitting it. So while "waterproof",
 I make sure to always take it off while swimming or showering. About the only
 thing the waterproof rating is good for is maybe outside in the rain, or accidentally
