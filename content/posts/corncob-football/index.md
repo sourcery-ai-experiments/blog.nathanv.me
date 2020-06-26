@@ -265,15 +265,15 @@ Thrown at 85 degrees, a corncob will fly for 7.89 seconds, landing 26.95 meters 
 ```
 
 These results are very promising. At an optimal 45 degree angle, a good throw
-could chunk a corncob over 150 meters, 138.76% farther! And our analysis has tended
-to be a bit conservative, so the actual results may even be farther!
+could chuck a corncob over 150 meters, 138.76% farther! And our analysis has tended
+to be a bit conservative, so the actual results may even be better!
 
 ### Catching Feasibility
 
 An important question you may be wondering is "How feasible is it to actually
 *catch* a corncob flying at you?" Well, as an engineering student, I can't
 catch a regular football to save my life. I was also unable to convince
-any of friends to stand in a field and let me throw corncobs at them, and
+any of my friends to stand in a field and let me throw corncobs at them, and
 I doubt I could catch any 80 mph corncobs thrown at me. Therefore, I'll
 consider this as "equivalent".
 
@@ -290,7 +290,7 @@ plays about 12 games every season. In each game, about 40 passes are attempted.
 [Source.](https://www.teamrankings.com/nfl/stat/pass-attempts-per-game)
 Just actual games comes out to shy of a quarter million corncobs. Accounting
 for practice is pretty difficult, so let's just make a wild guess that for
-every attempted pass in a game, 100 were practiced. So our total comes out
+every attempted pass in a game, 100 were practiced (probably a bit conservative). So our total comes out
 to 24 million corncobs needed annually.
 
 Iowa produces 2.7 billion bushels of corn each year on 13.5 million acres.
