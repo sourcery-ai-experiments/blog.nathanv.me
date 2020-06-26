@@ -1,12 +1,16 @@
 ---
 author: Nathan Vaughn
+cover: img/corncob_cfd.png
 date: "2020-06-24"
 description: A humorous analysis of the practicality of using a corncob as a football
+images:
+- /posts/corncob-football/img/corncob_cfd.png
 tags:
 - humor
 - CFD
 - SOLIDWORKS
 title: Feasibility of Using a Corncob as a Football
+userelativecover: true
 ---
 
 ## Background
