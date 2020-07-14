@@ -23,7 +23,7 @@ jobs:
       run: hugo --gc --cleanDestinationDir
 
     - name: Deploy Site
-      uses: peaceiris/actions-gh-pages@v3.6.2
+      uses: peaceiris/actions-gh-pages@v3.6.3
       if: success()
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
