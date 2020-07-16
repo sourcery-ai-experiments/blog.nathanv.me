@@ -148,6 +148,9 @@ and need to download some file that you forgot to put in the OneDrive folder.
 
 {{< figure src="img/onedrive-remote-pcs.png" alt="OneDrive remote PCs" position="center" style="border-radius: 8px;" caption="Browsing a folder on my computer that isn't in OneDrive and synced." captionPosition="center" >}}
 
+***Update:*** Microsoft has [decided to remove this feature](https://www.ghacks.net/2020/07/14/microsoft-retires-onedrives-fetch-files-feature/)
+as of July 31, 2020.
+
 Additionally, if you use OneDrive with Office, your documents get auto-saving.
 
 {{< figure src="img/office-autosave.png" alt="Office Autosave" position="center" style="border-radius: 8px;" caption="No more losing work in Office from forgetting to save and crashes." captionPosition="center" >}}

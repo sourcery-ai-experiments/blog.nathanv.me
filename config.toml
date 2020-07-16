@@ -16,6 +16,7 @@ googleAnalytics = "UA-91853319-4"
   showMenuItems = 2
   showReadingTime = true
   toc = true
+  rssFullText = true
 
 [languages]
   [languages.en]
