@@ -12,7 +12,7 @@ jobs:
     
     steps:
     - name: Checkout Code
-      uses: actions/checkout@v2.3.2
+      uses: actions/checkout@v2
       with:
         submodules: true
 
@@ -23,7 +23,7 @@ jobs:
       run: hugo --gc --cleanDestinationDir
 
     - name: Deploy Site
-      uses: peaceiris/actions-gh-pages@v3.6.4
+      uses: peaceiris/actions-gh-pages@v3
       if: success()
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
