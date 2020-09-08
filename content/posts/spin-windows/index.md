@@ -3,6 +3,8 @@ author: Nathan Vaughn
 date: "2020-09-08"
 cover: img/cover.png
 description: How to install the Spin model checker on Windows
+images:
+- /posts/spin-windows/img/cover.png
 tags:
 - Windows
 title: Spin Model Checker on Windows
