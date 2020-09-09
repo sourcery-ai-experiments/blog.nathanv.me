@@ -22,19 +22,19 @@ binaries available, so I think this is way easier.
 
 ## Prerequisites
 
-You'll need the following software installed
+You'll need the following software installed:
 
 - [7zip](https://www.7-zip.org/)
 
-The following will make life easier
+The following will make life easier:
 
 - [Git for Windows](https://git-scm.com/download/win)
 - [Everything](https://www.voidtools.com/)
 
 ## Downloading/Extracting Spin
 
-First, go to Spin [GitHub page](https://github.com/nimble-code). If you have
-Git already installed, you can just clone this. Or, if you'd like,
+First, go to the Spin [GitHub page](https://github.com/nimble-code). If you 
+already have Got installed, you can just clone this. Or, if you'd like,
 you can go to `Bin` directory, and click on the latest version of
 `spin<ver>_windows64.exe.gz`. Click "Download" on the right side to get
 only this file.
@@ -71,12 +71,12 @@ which is needed to run this file.
 
 If you have installed Git for Windows,
 it likely already has Tcl/Tk installed
-(or any other programs you may have that come with it, not just Git).
-An easy way to check, is to open up Everything, and look for `wish.exe` .
+(or another program may have installed it).
+An easy way to check is to open up Everything, and look for `wish.exe`.
 
-{{< figure src="img/everything_wish.jpg" alt="wish.exe showing up in Everything" position="center" style="border-radius: 8px;" caption="Tcl/tk is often included with Git for Windows" captionPosition="center" >}}
+{{< figure src="img/everything_wish.jpg" alt="wish.exe showing up in Everything" position="center" style="border-radius: 8px;" caption="Tcl/Tk is often included with Git for Windows" captionPosition="center" >}}
 
-All you need to do is right-click on `ispin.tcl`, say "Open With",
+All you need to do is right-click on `ispin.tcl`, choose "Open With",
 and select the `wish.exe` you found. Make sure to set
 "Always use this app to open .tcl files".
 
