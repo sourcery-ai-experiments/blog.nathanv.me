@@ -18,7 +18,7 @@ formal verification tool *somehow* on my Windows computer. I couldn't find
 a good guide, so this is what I figured out.
 
 While you *can* do this with WSL or Cygwin, Spin now has prebuilt Windows
-binaries available, so I think this is way easier.
+binaries available, so I think this is easier.
 
 ## Prerequisites
 
@@ -49,6 +49,13 @@ Inside the directory it extracted into will be an executable. Rename this to `sp
 Now, if you only want the command-line version of Spin, you're basically done.
 You'll just need to use the full path to the `spin.exe` executable (unless you
 [add Spin to your PATH](https://www.howtogeek.com/118594/how-to-edit-your-system-path-for-easy-command-line-access/)).
+
+## gcc
+
+Next, Spin needs a `gcc` compiler in order to turn your Promela code into C.
+The easiest way to get this is with [MinGW](https://osdn.net/projects/mingw/releases/)
+which is a project that has ported `gcc` to Windows. Just download
+and run the installer.
 
 ## GUI
 
