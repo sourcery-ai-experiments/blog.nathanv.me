@@ -33,8 +33,8 @@ The following will make life easier:
 
 ## Downloading/Extracting Spin
 
-First, go to the Spin [GitHub page](https://github.com/nimble-code). If you 
-already have Got installed, you can just clone this. Or, if you'd like,
+First, go to the Spin [GitHub page](https://github.com/nimble-code/Spin). If you 
+already have Git installed, you can just clone this. Or, if you'd like,
 you can go to `Bin` directory, and click on the latest version of
 `spin<ver>_windows64.exe.gz`. Click "Download" on the right side to get
 only this file.
