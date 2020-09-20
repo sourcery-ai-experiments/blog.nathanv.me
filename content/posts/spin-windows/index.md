@@ -49,6 +49,7 @@ Inside the directory it extracted into will be an executable. Rename this to `sp
 Now, if you only want the command-line version of Spin, you're basically done.
 You'll just need to use the full path to the `spin.exe` executable (unless you
 [add Spin to your PATH](https://www.howtogeek.com/118594/how-to-edit-your-system-path-for-easy-command-line-access/)).
+If you want to use spin with the GUI, you ***MUST*** add it to your PATH.
 
 ## gcc
 
