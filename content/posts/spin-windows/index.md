@@ -48,8 +48,8 @@ Once that's downloaded, use 7zip to extract the archive.
 Inside the directory it extracted into will be an executable. Rename this to `spin.exe`.
 Now, if you only want the command-line version of Spin, you're basically done.
 You'll just need to use the full path to the `spin.exe` executable (unless you
-[add Spin to your PATH](https://www.howtogeek.com/118594/how-to-edit-your-system-path-for-easy-command-line-access/)).
-If you want to use spin with the GUI, you ***MUST*** add it to your PATH.
+[add `spin.exe` to your PATH](https://www.howtogeek.com/118594/how-to-edit-your-system-path-for-easy-command-line-access/)).
+If you want to use Spin with the GUI, you ***MUST*** add it to your PATH.
 
 ## gcc
 
@@ -64,8 +64,7 @@ You may need to [add `C:\MinGW\bin\` to your PATH](https://www.howtogeek.com/118
 
 ## GUI
 
-Now, you're probably here to learn how to get the GUI to work on Windows, since
-the above was pretty straight forward.
+Now, if you'd like to use the GUI, complete the following steps.
 
 First, you'll need to download
 [`ispin.tcl`](https://github.com/nimble-code/Spin/blob/master/optional_gui/ispin.tcl)
@@ -74,8 +73,7 @@ this is to right-click "Raw" and then "Save link as".
 
 {{< figure src="img/download_ispin.jpg" alt="Download the GUI file for Spin" position="center" style="border-radius: 8px;" caption="Download the GUI file for Spin" captionPosition="center" >}}
 
-Place this file in the *same* directory as `spin.exe`. It will not work otherwise.
-
+Save this wherever you like.
 The next problem is getting [Tcl/Tk](https://www.tcl.tk/) installed,
 which is needed to run this file.
 
