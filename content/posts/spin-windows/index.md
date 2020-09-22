@@ -57,6 +57,9 @@ Next, Spin needs a `gcc` compiler in order to turn your Promela code into C.
 The easiest way to get this is with [MinGW](https://osdn.net/projects/mingw/releases/)
 which is a project that has ported `gcc` to Windows. Just download
 and run the installer, and select the base MinGW package (this includes GCC).
+
+{{< figure src="img/mingw_install.jpg" alt="Install the base MinGW package" position="center" style="border-radius: 8px;" caption="Install the base MinGW package" captionPosition="center" >}}
+
 You may need to add `C:\MinGW\bin\` to your path after it installs GCC.
 
 ## GUI
