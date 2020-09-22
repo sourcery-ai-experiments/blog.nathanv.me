@@ -60,7 +60,7 @@ and run the installer, and select the base MinGW package (this includes GCC).
 
 {{< figure src="img/mingw_install.jpg" alt="Install the base MinGW package" position="center" style="border-radius: 8px;" caption="Install the base MinGW package" captionPosition="center" >}}
 
-You may need to add `C:\MinGW\bin\` to your path after it installs GCC.
+You may need to [add `C:\MinGW\bin\` to your PATH](https://www.howtogeek.com/118594/how-to-edit-your-system-path-for-easy-command-line-access/) after it installs GCC.
 
 ## GUI
 
