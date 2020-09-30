@@ -18,7 +18,7 @@ formal verification tool *somehow* on my Windows computer. I couldn't find
 a good guide, so this is what I figured out.
 
 While you *can* do this with WSL, Spin has prebuilt Windows
-binaries available, so I think this is easier that trying to get
+binaries available, so I think this is easier than trying to get
 X11 working ([as of Sept 2020](https://devblogs.microsoft.com/commandline/whats-new-in-the-windows-subsystem-for-linux-september-2020/#gui-apps)).
 
 ## Prerequisites
@@ -100,14 +100,14 @@ Now, the GUI needs to know where `spin.exe` is. There are two options.
 
 1. [Add `spin.exe` to your PATH](https://www.howtogeek.com/118594/how-to-edit-your-system-path-for-easy-command-line-access/). **Recommended**
 2. Edit `ispin.tcl` on line 19 to replace
-    ```bash
-    set SPIN    spin   ;# essential
-    ```
-    with something like
-    ```bash
-    set SPIN	"C:/Program\ Files\ \(x86\)/spin650_windows64/bin/spin";# essential
-    ```
-    to point where ever you put `spin.exe`. Make sure properly escape the Windows path characters.
+   ```bash
+   set SPIN    spin   ;# essential
+   ```
+   with something like
+   ```bash
+   set SPIN	"C:/Program\ Files\ \(x86\)/spin650_windows64/bin/spin";# essential
+   ```
+   to point where ever you put `spin.exe`. Make sure properly escape the Windows path characters.
 
 The next problem is getting [Tcl/Tk](https://www.tcl.tk/) installed,
 which is needed to run this file.
