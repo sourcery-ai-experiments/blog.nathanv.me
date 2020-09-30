@@ -56,7 +56,7 @@ Once that's downloaded, use [7zip](https://www.7-zip.org/) to extract the archiv
 
 Inside the directory it extracted into will be an executable. Rename this to `spin.exe`.
 
-## gcc
+## GCC
 
 Next, Spin needs the GCC compiler in order to turn your Promela code into a C verifier.
 The easiest way to get this is with [MinGW](http://www.mingw.org/)
