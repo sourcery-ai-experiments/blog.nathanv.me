@@ -10,6 +10,8 @@ tags:
 title: "Stop Using So Many Domain Names"
 ---
 
+## Rant
+
 One thing that frustrates me endlessly is major companies' obsession with using
 countless domain names for public-facing websites and services.
 What do I mean by this? Companies should be using one root domain
