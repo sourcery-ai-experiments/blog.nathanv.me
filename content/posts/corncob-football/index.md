@@ -92,7 +92,7 @@ out to:
 
 ### Coefficient of Drag
 
-A crucial number in determining the trajectory of a flying object is it's
+A crucial number in determining the trajectory of a flying object is its
 "coefficient of drag". This is a unitless coefficient that represents how much
 drag an object experiences. This is a very difficult number to calculate,
 and is usually found experimentally.
