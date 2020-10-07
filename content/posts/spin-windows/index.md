@@ -58,7 +58,7 @@ Inside the directory it extracted into will be an executable. Rename this to `sp
 
 ## GCC
 
-Next, Spin needs the GCC compiler in order to turn your Promela code into a C verifier.
+Next, Spin needs the GCC compiler in order to compile the generated C verifier.
 The easiest way to get this is with [MinGW](http://www.mingw.org/)
 which is a project that has ported GCC to Windows.
 Download and run [the installer](https://osdn.net/projects/mingw/releases/),
