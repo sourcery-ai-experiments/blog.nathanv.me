@@ -85,7 +85,6 @@ gfx.ms
 globalsign.com
 globalsign.net
 identrust.com
-identrust.com
 letsencrypt.org
 live.com
 live.net
@@ -106,7 +105,6 @@ msftconnecttest.com
 msftidentity.com
 msidentity.com
 msn.com
-msocdn.com
 msocdn.com
 mstea.ms
 o365weve.com
@@ -140,6 +138,7 @@ windows.com
 windows.net
 windowsazure.com
 windowsupdate.com
+xbox.com
 xboxlive.com
 xboxservices.com
 ```
