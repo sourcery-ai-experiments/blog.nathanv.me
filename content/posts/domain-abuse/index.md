@@ -172,6 +172,7 @@ chromecast.com
 web.dev
 googlemail.com
 googleapis.com
+googlesource.com
 doubleclick.net
 google-analytics.com (only domain with a dash?)
 googleadservices.com
@@ -182,6 +183,7 @@ gvt1.com
 ggpht.com
 chromium.org
 crbug.com
+crrev.com
 ```
 
 (I'm ignoring their public cloud domains like `appspot.com` and `firebase.com`).
