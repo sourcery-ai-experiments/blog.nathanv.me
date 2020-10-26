@@ -5,7 +5,7 @@ description: How to deal with an extremely strange Python file permission issue
 tags:
 - Python
 - Windows
-title: Fixing Weird a Python Permission Issue
+title: Fixing a Weird Python Permission Issue
 ---
 
 ## Introduction
