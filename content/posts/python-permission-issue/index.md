@@ -29,6 +29,9 @@ the 0-byte folder itself.
 
 {{< figure src="img/folder_size.jpg" alt="Windows dialog showing folder size." position="center" style="border-radius: 8px;" caption="The folder is completely empty. Deselecting the read-only checkbox does not affect anything." captionPosition="center" >}}
 
+And to make it still stranger, I could delete this folder fine
+in File Explorer under my regular user account, just not programmatically.
+
 ## Solution
 
 Unfortunately, I don't know enough about the NTFS filesystem and Windows to understand
