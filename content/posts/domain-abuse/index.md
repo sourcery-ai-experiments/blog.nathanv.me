@@ -167,6 +167,7 @@ domains.google
 googleblog.com
 blog.google
 blogspot.com
+blogger.com
 android.com
 chromecast.com
 web.dev
@@ -178,6 +179,7 @@ google-analytics.com (only domain with a dash?)
 googleadservices.com
 googletagmanager.com
 googleusercontent.com
+googlevideo.com
 gstatic.com
 gvt1.com
 ggpht.com
@@ -189,6 +191,6 @@ crrev.com
 (I'm ignoring their public cloud domains like `appspot.com` and `firebase.com`).
 
 In conclusion, please use just one root domain for public services.
-It decreases phishing potential, promoted brand consistency,
+It decreases phishing potential, promotes brand consistency,
 and makes it easier for regular users to identify
 official sites.
