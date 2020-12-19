@@ -1,8 +1,8 @@
 {{ if .Get "src" }}
   <figure class="center" >
-    <a href="{{ .Get "src" | safeURL }}" target="_blank">
-      <img src="{{ .Get "src" | safeURL }}" {{ with .Get "alt" }} alt="{{ . | plainify }}" {{ end }} style="border-radius: 8px;" />
-    </a>
+    <audio controls>
+        <source src="{{ .Get "src" | safeURL }}" type="{{ .Get "type" }}">
+    </audio>
     {{ if .Get "caption" }}
       <figcaption class="center" {{ with .Get "captionStyle" }} style="{{ . | safeCSS }}" {{ end }}>{{ .Get "caption" | markdownify }}</figcaption>
     {{ end }}

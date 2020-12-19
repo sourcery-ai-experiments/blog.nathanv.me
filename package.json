@@ -4,7 +4,8 @@
   "description": "My blog",
   "main": "README.md",
   "scripts": {
-    "build": "hugo"
+    "build": "hugo --gc --cleanDestinationDir",
+    "serve": "hugo serve"
   },
   "repository": {
     "type": "git",

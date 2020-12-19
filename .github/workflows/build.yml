@@ -35,7 +35,7 @@ jobs:
       run: npm install
 
     - name: Build Site
-      run: hugo --gc --cleanDestinationDir
+      run: npm run build
 
     - name: Deploy Site
       uses: peaceiris/actions-gh-pages@v3
