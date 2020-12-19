@@ -242,7 +242,7 @@ tub.
 
 {{< figure src="img/top-keycaps-removed.jpg" alt="All of the top keycaps removed" caption="This is after removing all the top keycaps. Note: I took this picture *after* cleaning. The keycap on the numpad <kbd>+</kbd> key should actually be on the stem for right <kbd>Ctrl</kbd>." >}}
 
-Be careful when removing the spacebar, and numpad <kbd>+</kbd> and <kbd>Enter</bkd>
+Be careful when removing the spacebar, and numpad <kbd>+</kbd> and <kbd>Enter</kbd>
 keys, as they have stabilizers. The stabilizers for the two numpad keys have a slight
 bend in them as well that follows the curve of the keycap, so remember this
 when putting the keycaps back on.
