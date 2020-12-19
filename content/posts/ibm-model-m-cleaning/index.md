@@ -345,7 +345,7 @@ up yet due to USPS delays, but it should make using the keyboard a bit easier an
 more universal while not modifying the guts.
 
 Lastly, with my specific keyboard not having any lock lights,
-knowing whether <kbd>Num Lock</kbd> or <kbd>Caps Lock</kbd> is on can frustrating.
+knowing whether <kbd>Num Lock</kbd> or <kbd>Caps Lock</kbd> is on can be frustrating.
 For this, I've found the program
 [TrayStatus](https://www.traystatus.com/) works wonderfully,
 by adding customizable icons in the Windows system tray.
