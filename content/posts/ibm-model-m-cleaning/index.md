@@ -285,7 +285,11 @@ towels to run through the spaces.
 
 ### Result
 
-Reassembly is straightforward, just do everything in reverse.
+Reassembly is straightforward, just do everything in reverse. Put the keycaps
+back on, put the controller back in, reattach the ribbon cables, put the backplate
+back in, reattach the grounding strap, flip it over, and put the bolts back in.
+I did find that a few keys were a little finnicky after cleaning. Taking
+off the keycaps on the affected keys and reseating them did the trick.
 
 I'm extremely pleased with the result. While not perfect, it's way better than
 I originally got it, and looks absolutely magnificent.
