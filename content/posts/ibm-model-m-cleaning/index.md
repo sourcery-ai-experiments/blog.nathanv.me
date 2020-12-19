@@ -9,7 +9,7 @@ tags:
 - IBM
 - Model M
 - mechanical keyboards
-title: "IBM Model M cleaning"
+title: "IBM Model M Cleaning"
 userelativecover: true
 ---
 
