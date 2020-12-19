@@ -247,7 +247,7 @@ keys, as they have stabilizers. The stabilizers for the two numpad keys have a s
 bend in them as well that follows the curve of the keycap, so remember this
 when putting the keycaps back on.
 
-{{< figure src="img/stabilizier.jpg" alt="Numpad key stabilizer" caption="The stabilizer matches the curve of the keycap so it is directional" >}}
+{{< figure src="img/stabilizer.jpg" alt="Numpad key stabilizer" caption="The stabilizer matches the curve of the keycap so it is directional" >}}
 
 For all the keycaps in my tub, I filled it with warm soapy water and let them soak
 for an hour.
@@ -347,7 +347,7 @@ more universal while not modifying the guts.
 Lastly, with my specific keyboard not having any lock lights,
 knowing whether <kbd>Num Lock</kbd> or <kbd>Caps Lock</kbd> is on can frustrating.
 For this, I've found the program
-[TrayStatus](https://www.traystatus.com/) works wonderfully for this,
+[TrayStatus](https://www.traystatus.com/) works wonderfully,
 by adding customizable icons in the Windows system tray.
 
 {{< figure src="img/tray-lock-lights.jpg" alt="TrayStatus virtual lock lights on the far left"  caption="TrayStatus virtual lock lights on the far left" >}}
@@ -357,7 +357,7 @@ by adding customizable icons in the Windows system tray.
 I love this keyboard. It's loud, fun to type on, and built like a tank.
 It's survived over 30 years in a university environment, and ready for 30 more.
 While it may not be my daily driver, and too loud for office use, I fully plan on using
-it frequently and  expect to be able to pass this down to my grandchildren.
+it frequently and expect to be able to pass this down to my grandchildren.
 They sure don't build 'em like they used to.
 
 ## References
