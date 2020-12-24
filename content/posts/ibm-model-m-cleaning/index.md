@@ -260,7 +260,7 @@ The grime came right off with just a wipe of paper towel.
 
 {{< figure src="img/dirty-keycap-bath.jpg" alt="Dirty keycap water after soaking" caption="This water was clean when I put the keycaps in" >}}
 
-To reassemble, I found it easier to put the keycaps with stabilizer on the spring first,
+To reassemble, I found it easier to put the keycaps with stabilizers on the spring first,
 then feed the stabilizer into its slot rather than the other way around.
 
 ### Baseplate
@@ -300,8 +300,8 @@ I originally got it, and looks absolutely magnificent.
 
 ## Review
 
-Here's my thoughts on the keyboard. Mind you, I usually typed on Cherry MX Blues and
-Browns prior. I don't have the time or money to be a true keyboard aficionado like
+Here's my thoughts on the keyboard. Mind you, I've only typed on Cherry MX Blue and
+Brown switches prior. I don't have the time or money to be a true keyboard aficionado like
 some on [/r/MechanicalKeyboards](https://www.reddit.com/r/MechanicalKeyboards).
 
 {{< figure src="img/reddit-rant.jpg" alt="/u/SolitaryEgg has some strong feeling towards the /r/MechanicalKeyboards community" caption="/u/SolitaryEgg has some strong feeling towards the /r/MechanicalKeyboards community" >}}
@@ -311,10 +311,11 @@ some on [/r/MechanicalKeyboards](https://www.reddit.com/r/MechanicalKeyboards).
 Overall, I like the board a lot. The tactileness of the switches is lovely, though
 I usually bottom out keycaps anyways. The switches are far heavier than I was used to
 with Blues and at first left my fingers feeling tired after lots of typing.
+They do have a certain "sponginess" to them because of the spring.
 
 ### Sound
 
-The sound of the Model is definitely lower-pitched than Cherry switches, but a lot
+The sound of the Model M is definitely lower-pitched than Cherry switches, but a lot
 more "pingy", which makes sense as the keys are directly connected to a spring.
 I recorded samples of each for you to compare.
 
