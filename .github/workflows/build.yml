@@ -17,25 +17,11 @@ jobs:
       with:
         submodules: true
 
-    - name: Setup NPM
-      uses: actions/setup-node@v2.1.4
-
     - name: Setup Hugo
       uses: peaceiris/actions-hugo@v2
 
-    - name: Cache Node Modules
-      uses: actions/cache@v2
-      id: cache-npm
-      with:
-        path: node_modules
-        key: npm-${{ hashFiles('**/package-lock.json') }}
-
-    - name: Install Node Dependencies
-      if: steps.cache-npm.outputs.cache-hit != 'true'
-      run: npm install
-
     - name: Build Site
-      run: npm run build
+      run: hugo --gc --cleanDestinationDir
 
     - name: Deploy Site
       uses: peaceiris/actions-gh-pages@v3
