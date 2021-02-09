@@ -1,7 +1,7 @@
 ---
 author: Nathan Vaughn
-date: "2020-12-31"
-description: A deep dive in how I started my own SAAS business
+date: "2022-02-14"
+description: A deep dive in how I started my own SaaS business
 tags:
 - Linkspring
 - serverless
@@ -124,6 +124,31 @@ clear choice. I mean, I *wanted* so badly to use a SQL database backend,
 (and I nearly threw in the towel at one point)
 but it was going to triple my operating costs. I needed to learn about NoSQL databases,
 and it's pricing is cheap.
+
+For Python packages and Flask extensions, the major ones are
+[Flask-Login](https://flask-login.readthedocs.io/en/latest/),
+[Flask-Caching](https://flask-caching.readthedocs.io/en/latest/),
+[pynamodb](https://pynamodb.readthedocs.io/en/latest/), and
+[boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html).
+Flask-Login, pretty obviously, helps handle the authentication of pages
+and the user session. As there are no passwords on Linkspring, OAuth
+sign-in is handled by a separate library. Flask-Caching is another major
+dependency, as this handles all the server-side caching. Pynamodb is a
+Python ORM that I use to help interact with the DynamoDB that I use to
+store persistent information. Lastly, I use the boto3 library to interact with
+[S3](https://aws.amazon.com/s3/) to store images and
+[SNS](https://aws.amazon.com/sns/) to send internal application notifications.
+
+In order to get all of this work with a serverless environment, I used
+the confusingly-namd [Serverless](https://www.serverless.com/) framework.
+This has been a double-edged sword. While it has made a lot of stuff very easy
+(like packaging and deployments), and has a rich plugin ecosystem, updates to
+it and it's plugin *constantly* breaks things. I've lost track how many times
+now that bugs are introduced or behavior is changed or features are removed
+that break my CI/CD pipeline. I have automated tests for dependency updates
+so it's not breaking my production environment, but it's frustrating
+every few weeks when I have to figure out why my tests/builds are failing
+when I didn't change any code.
 
 ### Front-end
 
