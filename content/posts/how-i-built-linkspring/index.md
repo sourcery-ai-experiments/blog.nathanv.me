@@ -98,6 +98,17 @@ store persistent information. Lastly, I use the boto3 library to interact with
 
 TODO serverless
 
+In order to get this Flask application to work on serverless infrastructure,
+I used the confusingly-named
+[Serverless Framework](https://www.serverless.com/open-source/)
+along with the [Serverless-WSGI](https://github.com/logandk/serverless-wsgi) and
+[Serverless-Python-Requirements](https://github.com/UnitedIncome/serverless-python-requirements)
+plugins. The framework helps automate deployments of serverless applications to
+a variety of cloud platforms, and has a rich plugin ecosystem to add additional
+functionality. The WSGI plugin packages Python applications to work in a serverless
+environment, while the requirements plugin packages all the dependencies to work
+correctly.
+
 In terms of the cloud back-end, I chose to go with AWS. While I could have built
 Linkspring with nearly any cloud provider (they all basically offer the major services
 I needed), I chose to go with AWS primarily because their
@@ -182,11 +193,12 @@ Beautifies
 
 ## Thoughts
 
+### Serverless Framework
+
+The Serverless Framework has been a double-edged sword.
 
 ### CDN
 
 ### Database Consistency
 
 ### Caching
-
-### Issues
