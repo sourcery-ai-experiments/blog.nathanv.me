@@ -7,6 +7,7 @@ images:
 - /posts/no-so-budget-home-network/img/cover.jpg
 tags:
 - home-networking
+- Docker
 title: Building a Home Network on a Not-So-Budget
 userelativecover: true
 ---
