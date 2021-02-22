@@ -3,6 +3,7 @@ languageCode = "en-us"
 theme = "hello-friend"
 paginate = 5
 googleAnalytics = "UA-91853319-4"
+enableGitInfo = true
 
 [markup]
   defaultMarkdownHandler = "blackfriday"
@@ -23,6 +24,8 @@ googleAnalytics = "UA-91853319-4"
     title = "Nathan Vaughn"
     description = "Adventures in programming and tech"
     subtitle = "Adventures in programming and tech"
+    lastModDisplay = "Last Modified:"
+
     # default open graph image
     images = ["img/favicon.png"]
     keywords = ["programming", "tech", "Nathan", "Vaughn", "blog"]
