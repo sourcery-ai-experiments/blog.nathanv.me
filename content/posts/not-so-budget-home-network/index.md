@@ -14,7 +14,7 @@ userelativecover: true
 
 ## Background
 
-After graduating college, I'm move into an apartment more permanently than 3-4 months
+After graduating college, I've moved into an apartment more permanently than 3-4 months
 at a time in the past. Because of this, I finally built myself a small
 [homelab](https://www.reddit.com/r/homelab/) in a proper server rack,
 which I've been wanting to do for a long time. This is sort of a follow-up to
@@ -28,19 +28,19 @@ my ISP. Instead, the internet is provided by my apartment complex through
 [Spectrum Community Solutions](https://www.spectrum.com/communitysolutions/home).
 Only WiFi is available, and I have to go into a web portal and manually add
 the MAC address of every device I have to my account so that they can connect.
-Even after doing this, many of devices would still just refuse to connect:
+Even after doing this, many of my devices would still just refuse to connect:
 
 {{< figure src="img/failed-to-connect.png" alt="Failed to connect to network message on Android" caption="My phone would almost always fail to connect" >}}
 
-This was infuriating to say the least. I found the 5mbps guest WiFi more reliable.
+This was infuriating to say the least and I found the 5mbps guest WiFi more reliable.
 The good news is, my apartment has a WiFi router in it, and it's plugged into the wall.
 
-{{< figure src="img/wifi-before.png" alt="Diagram of apartment WiFi as provided" caption="Small diagram of apartment WiFi as it is provided" >}}
+{{< figure src="img/wifi-before.png" alt="Diagram of apartment WiFi as provided" caption="Small diagram of apartment WiFi as it was provided" >}}
 
 With a bit of experimentation, I discovered that just unplugging the Spectrum WiFi
 access point, and plugging the wall jack directly into my laptop resulted in an
 internet connection! No Spectrum authentication bullshit, and it was full gigabit
-both ways (better than the 300mbps promised number)! So as to not disturb the internet
+both ways (better than the 300mbps promised)! So as to not disturb the internet
 for my neighbors, I put a switch between the wall jack and the Spectrum WiFi access
 point so that I could connect my own devices via Ethernet. I did have to go out
 and buy a PoE switch, as the existing access point was PoE and I didn't own a
@@ -140,9 +140,9 @@ I got this for free a few years ago. It's older and not grey like the newer
 productions of this model. My switch is like the picture above and is a butt-ugly
 vomit brown/green color. I did spend $14.95 on a
 [Noctua NF-A4x20 FLX](https://www.amazon.com/dp/B072JK9GX6)
-fan to replace the 40mm fan inside with to be a bit quieter.
+fan to replace the original 40mm fan to make it quieter.
 
-{{< figure src="img/tl-sg1024-fan-swap.jpg" alt="TL-SG1024 taken apart with a new fan installed" caption="The result of my fan-swapping surgery. Unfortunately wasn't able to unplug the old fan, so had to cut the wires and use the provided [3M Scotchlok butt connectors](https://www.amazon.com/dp/B01K3HZ2IO)" >}}
+{{< figure src="img/tl-sg1024-fan-swap.jpg" alt="TL-SG1024 taken apart with a new fan installed" caption="The result of my fan-swapping surgery. Unfortunately I wasn't able to unplug the old fan, so had to cut the wires and use the provided [3M Scotchlok butt connectors](https://www.amazon.com/dp/B01K3HZ2IO)" >}}
 
 ### CyberPower OR500LCDRM1U - $164.95
 
@@ -151,11 +151,11 @@ fan to replace the 40mm fan inside with to be a bit quieter.
 To power everything, I purchased this 1U UPS for my networking equipment.
 My desktop computer is already on a different UPS.
 I specifically choose this one as it's shallower
-than many other options. My rack is pretty shallow and some of the other qU UPS's
+than many other options. My rack is pretty shallow and some of the other 1U UPS's
 available would only give an inch or two of clearance in the back, while
 this is closer to 6.
 
-It only supports up to 300W, but works fine for me. Under a normal load, I'm only
+It only supports up to 300W, but that works fine for me. Under a normal load, I'm only
 using around 25% capacity (75W), and even with full CPU usage on my primary server,
 the load then is around 50% (150W). Under normal conditions, this gives me nearly
 30 minutes of runtime off the battery.
@@ -166,7 +166,7 @@ that lets you see statuses, run tests, and setup alerts.
 
 {{< figure src="img/powerpanel.jpg" alt="Screenshot of the PowerPanel software" caption="PowerPanel interface" >}}
 
-I also created a Dockerfile for this software as I couldn't find a pre-made one that
+I created a Dockerfile for this software as I couldn't find a pre-made one that
 was updated. It's attached here if you want it:
 
 - [Dockerfile](files/Dockerfile)
@@ -179,7 +179,7 @@ was updated. It's attached here if you want it:
 
 Last but not least is the rack itself. I was able to snag this on Craigslist for $50
 with everything included. I'm not sure what brand the rack itself is,
-but the shelves come from Navepoint. It included two shelves, a blanking plate,
+but the shelves come from Navepoint. It included the two shelves, a blanking plate,
 a cable routing blank, all the original hardware, and the previous owner made a nice
 little wood base for it. It's all in spotless condition too. Not a single scratch.
 
@@ -197,7 +197,7 @@ software RAID in Ubuntu. Everything on it runs in a Docker container.
 If you're wondering how all the web apps are accessed, here's a short explanation:
 
 **Internally**: DNS is setup on my pfSense DNS resolver such that every subdomain of
-`nathanv.app` resolves to my main server running Traefik: `zeus.nathanv.home`.
+`nathanv.app` resolves to my main server running Traefik.
 This acts a reverse proxy to all web apps. Legitimate HTTPS certificates are obtained
 via Let's Encrypt and DNS challenge.
 
@@ -213,9 +213,9 @@ For authentication, I replaced Cloudflare Access with
 [Keycloak](https://www.keycloak.org/) and
 [Traefik Forward Auth](https://github.com/thomseddon/traefik-forward-auth).
 Most applications authenticate against Keycloak with either SAML or Open ID Connect
-(OIDC) (basically OAuth2). The applications that don't inherently have authentication,
-or are sensitive and could use a second layer (Netdata, PHPMyAdmin, etc.) are protected
-with Traefik Forward Auth, which authenticates against Keycloak via OIDC.
+(OIDC) (basically OAuth2). The applications that don't inherently have authentication
+(Netdata, etc.), or are sensitive and could use a second layer (PHPMyAdmin, etc.)
+are protected with Traefik Forward Auth, which authenticates against Keycloak via OIDC.
 
 ## Conclusion
 
@@ -232,7 +232,9 @@ like Velcro straps and color-coded cables. Call it $750. I now realize that's
 a lot of money. I am extremely pleased how it's turned out, though, and don't
 forsee any changes for the near future. There is a large hole on the
 second shelf, and that's intended to be room for a modem if/when I move
-out of this apartment complex and have my own internet connection.
+out of this apartment complex and have my own internet connection. Maybe
+I'll find a use for my Raspberry Pi and put it there since it's been retired
+from running Pi-hole.
 
 It also looks pretty cool in the dark.
 
