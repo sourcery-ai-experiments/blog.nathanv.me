@@ -24,7 +24,7 @@ enableGitInfo = true
     title = "Nathan Vaughn"
     description = "Adventures in programming and tech"
     subtitle = "Adventures in programming and tech"
-    lastModDisplay = "Last Modified:"
+    # lastModDisplay = "Last Modified:"
 
     # default open graph image
     images = ["img/favicon.png"]
