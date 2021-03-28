@@ -240,4 +240,4 @@ It also looks pretty cool in the dark.
 *Full Disclosure:* **After** I originally posted this article, Traefik Labs 
 reached out to me  and sent me a swag bag free of charge.
 
-{{< figure src="img/traefk-swag.jpg" alt="Traefik t-shirt and stickers" caption="Traefik Swag Bag" >}}
+{{< figure src="img/traefik-swag.jpg" alt="Traefik t-shirt and stickers" caption="Traefik Swag Bag" >}}
