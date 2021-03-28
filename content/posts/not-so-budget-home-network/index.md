@@ -167,11 +167,8 @@ that lets you see statuses, run tests, and setup alerts.
 {{< figure src="img/powerpanel.jpg" alt="Screenshot of the PowerPanel software" caption="PowerPanel interface" >}}
 
 I created a Dockerfile for this software as I couldn't find a pre-made one that
-was updated. It's attached here if you want it:
+was updated. See [powerpanel-business-docker](https://github.com/NathanVaughn/powerpanel-business-docker).
 
-- [Dockerfile](files/Dockerfile)
-- [install.exp](files/install.exp) (needed for the Dockerfile)
-- [docker-compose.yml](files/docker-compose.yml)
 
 ### 6U Rack - $50
 
@@ -230,7 +227,7 @@ Quick summary:
 In total, I've spent $688.34 on this project, before the small stuff
 like Velcro straps and color-coded cables. Call it $750. I now realize that's
 a lot of money. I am extremely pleased how it's turned out, though, and don't
-forsee any changes for the near future. There is a large hole on the
+foresee any changes for the near future. There is a large hole on the
 second shelf, and that's intended to be room for a modem if/when I move
 out of this apartment complex and have my own internet connection. Maybe
 I'll find a use for my Raspberry Pi and put it there since it's been retired
@@ -239,3 +236,8 @@ from running Pi-hole.
 It also looks pretty cool in the dark.
 
 {{< figure src="img/rack-dark.jpg" alt="Server rack with status lights shining in the dark" >}}
+
+*Full Disclosure:* **After** I originally posted this article, Traefik Labs 
+reached out to me  and sent me a swag bag free of charge.
+
+{{< figure src="img/traefk-swag.jpg" alt="Traefik t-shirt and stickers" caption="Traefik Swag Bag" >}}
