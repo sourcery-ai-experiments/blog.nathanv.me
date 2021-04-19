@@ -8,6 +8,7 @@ images:
 tags:
 - AWS
 - DynamoDB
+- serverless
 title: "DynamoDB for Dummies"
 userelativecover: true
 ---
