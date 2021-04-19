@@ -20,18 +20,18 @@ It can highly beneficial to reduce the size of these in a final build, especiall
 in a serverless environment. AWS Lambda functions for instance only allow a 
 [maximum extracted size of 250MB](https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-limits.html),
 so this is over 1/5th of that alone. Additionally, a smaller package size also
-can [dramatically increase](https://mikhail.io/serverless/coldstarts/aws/#does-package-size-matter)
+can [dramatically improve](https://mikhail.io/serverless/coldstarts/aws/#does-package-size-matter)
 the cold-start time of a function.
 
 Jack over at [blog.cubieserver.de](https://blog.cubieserver.de/) has an excellent
 [blog post](https://blog.cubieserver.de/2020/building-a-minimal-boto3-lambda-layer/)
 on how to strip down boto3 to the essentials, using a tool he wrote to facilitate
-layers in Lambda (don't worry if you don't know what that is). My application
-([Linkspring](https://lksg.me)) is built with the confusingly-named
+layers in Lambda functions. My application
+([Linkspring](https://lksg.me)) however is built with the confusingly-named
 [serverless](https://www.serverless.com/) and 
 [serverless-python-requirements](https://www.npmjs.com/package/serverless-python-requirements)
-libraries.
-I was able to adapt his instructions to work with this stack.
+libraries. I was able to adapt his instructions to work with this stack and want
+to share for anyone else.
 
 ## Solution
 
