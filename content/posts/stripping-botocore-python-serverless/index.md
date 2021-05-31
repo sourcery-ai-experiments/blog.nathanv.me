@@ -1,7 +1,7 @@
 ---
 author: Nathan Vaughn
 date: "2021-04-19"
-description: 
+description: Shave 50MB off your AWS Lambda functions with just a ~~little bit~~ lot of configuration
 tags:
 - AWS
 - Python
