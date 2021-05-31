@@ -23,13 +23,13 @@ on my own domain name. For example,
 instead of `docker pull ghcr.io/nathanvaughn/webtrees` 
 it would be `docker pull cr.nthnv.me/webtrees`.
 
-
 Part of this is my constant desire to host non-critical services myself 
 (by critical, I mean like email, calendar, git, etc.), part is a desire to remove
 my dependence on Docker Hub (I don't fully trust their ability to stay around forever,
 given them locking more features  behind paid tiers, 
-adding more aggressive rate limits, etc. Additionally, outages are extremely disruptive,
-due to how the Docker client works\*, and uses `index.docker.io` as the default registry.
+adding more aggressive rate limits, etc.). Additionally, outages are extremely disruptive,
+due to how the Docker client works\* and it using `index.docker.io` 
+as the default registry.
 
 \* Whenever you try to build a Docker image that bases off another image with `FROM`,
 Docker will *always* try to fetch the hash of the tag you have used to see if there's
@@ -338,7 +338,7 @@ The options inside the configuration are extensive,
 so I'm not going to go over all of them. The full documentation is available 
 [here](https://access.redhat.com/documentation/en-us/red_hat_quay/3/html/manage_red_hat_quay/quay-schema).
 
-Another important option is enabling non-superuser creation. 
+An important option is enabling non-superuser creation. 
 If you have it setup as I do to only allow sign-ins through an external 
 authentication provider, Quay needs to create an account the first time a user signs in.
 You should allow account creation, and restrict sign-ins at your identity provider.
@@ -552,7 +552,9 @@ volumes:
 ```
 
 That's it! Assuming you configured everything correctly, Clair will automatically
-start scanning images already pushed to Quay, and any new images.
+start scanning images already pushed to Quay and any new images.
+
+{{< figure src="img/quay-vulns.png" alt="Vulnerabilities for a container image shown in the web UI" >}}
 
 If you get any "unable to analyze image" messages in Quay, this likely means
 there is a version mismatch between Quay and Clair. I would *highly* recommend
