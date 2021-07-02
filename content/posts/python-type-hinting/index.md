@@ -70,7 +70,7 @@ def add_two(val: float) -> float:
 add_two("eggs")
 ```
 
-Now if we run a static analysis such as
+Now if we run a static analysis tool such as
 [`pyright`](https://github.com/microsoft/pyright) 
 (the engine behind [Pylance](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance)),
 we can see our potentional type issue while never having to actually execute our code.
@@ -99,7 +99,7 @@ add_two(123)
 0 error, 0 warnings, 0 infos
 ```
 
-Even though the type hint is an `float` and `123` is a `float`, `pyright` is smart
+Even though the type hint is an `float` and `123` is an `int`, `pyright` is smart
 enough to know that this is fine, as an `int` can always be turned into a `float`.
 
 # Multiple Types
