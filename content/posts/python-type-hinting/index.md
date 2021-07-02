@@ -269,7 +269,7 @@ temp.py
 1 error, 0 warnings, 0 infos
 ```
 
-You can see that `Literal` acts a builtin `Union`. You don't need to do 
+You can see that `Literal` acts a built-in `Union`. You don't need to do 
 `Union[Literal["choice1"], Literal["choice2"]]`.
 
 # Classes
@@ -408,7 +408,7 @@ self.model : str = "5000"
 self.model = "5000" # type: str
 ```
 
-# Overrrides
+# Overrides
 
 Sometimes, you can't avoid that `pyright` is just wrong about something, or that 
 some 3rd party library isn't type correctly. A bit of a contrived
@@ -469,13 +469,13 @@ can be a bit difficult. You could click through every single file in
 VS Code with Pylance, *or* you could setup an automated job to check every pull request
 or commit as part of testing. `pyright` already returns an exit code of `0`
 for no issues, and other values for problems. This makes it work great for 
-CI (continous integration) where an exit code of non-zero is almost always 
+CI (continuous integration) where an exit code of non-zero is almost always 
 considered a failure.
 
 You can pretty easily install the `pyright` tool with `npm`. You will need to also
 install all of your Python requirements as well.
 
-Github Actions example:
+GitHub Actions example:
 ```yml
 name: Type Checking
 
@@ -571,7 +571,7 @@ add_two("eggs")
 ```
 
 Lastly, but most annoyingly, you may have to interact with certain libraries, 
-(particualrly ones based on auto-generated code)
+(particularly ones based on auto-generated code)
 *cough* 
 [protobuf](https://github.com/protocolbuffers/protobuf/issues/2638#issuecomment-495003625) 
 *cough*
@@ -583,13 +583,13 @@ that define the type hints, or find a library that does it for you
 
 # Conclusion
 
-This is really just stratching the surface of type hinting. There's a ton of tricks,
+This is really just scratching the surface of type hinting. There's a ton of tricks,
 and lots of different ways you can type hint stuff for more complex functions
 and data structures. I highly recommend looking through the 
 [`typing` library documentation](https://docs.python.org/3/library/typing.html) 
 to learn more. For example, 
 [`typing.NewType`](https://docs.python.org/3/library/typing.html#newtype) to make
-"pseduo" types which can be helpful for things like units. Or 
+"pseudo" types which can be helpful for things like units. Or 
 [`typing.TypedDict`](https://docs.python.org/3/library/typing.html#typing.TypedDict)
 to type very specific dictionary formats.
 
