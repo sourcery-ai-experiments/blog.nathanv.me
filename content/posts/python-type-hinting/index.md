@@ -24,6 +24,7 @@ Generally in compiled languages like C, a variable can only ever be one type, an
 your compiler will refuse to compile your code if this isn't followed.
 
 ```c
+int var;
 var = 123
 var = "spam"
 // this will cause a compilation error
@@ -73,7 +74,8 @@ add_two("eggs")
 Now if we run a static analysis tool such as
 [`pyright`](https://github.com/microsoft/pyright) 
 (the engine behind [Pylance](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance)),
-we can see our potentional type issue while never having to actually execute our code.
+we can see our protentional type issue (of adding a number to a string)
+while never having to actually execute our code.
 
 ```bash
 # output shortened for clarity
@@ -99,7 +101,7 @@ add_two(123)
 0 error, 0 warnings, 0 infos
 ```
 
-Even though the type hint is an `float` and `123` is an `int`, `pyright` is smart
+Even though the type hint is a `float` and `123` is an `int`, `pyright` is smart
 enough to know that this is fine, as an `int` can always be turned into a `float`.
 
 # Multiple Types
@@ -123,11 +125,11 @@ print_info({"foo": "bar"}) # Given data is:
                            # foo: bar
 ```
 
-In this example, there's a lot of things going on. First `typing.Union` with 
+In this example, there are a lot of things going on. First, `typing.Union` with 
 square brackets is how we specify that an argument may be any of the given types.
 Additionally, now the return type hint is `None` as the function doesn't return any
 values. While this isn't strictly necessary, as a lack of a `return` statement 
-implies None, I like to add it to be more specific. So what happens if we run `pyright`?
+implies None, I like to add it to be more explicit. So what happens if we run `pyright`?
 
 ```bash
 > pyright temp.py
@@ -137,14 +139,14 @@ implies None, I like to add it to be more specific. So what happens if we run `p
 
 Once again, no errors. This also shows another interesting thing. `pyright` is smart 
 enough to realize that code nested under `isinstance()` restricts the variable
-to be of that type. Without this intelligence, it would complain that in
-`for key, value in data.items():`, `data` could be a string and does not have a
+to be of that type. Without this intelligence, it would complain that in the line
+`for key, value in data.items():`, `data` could be a string and does not have an
 `.items()` method.
 
 # Any
 
 Now let's say your function doesn't have different `print` statements based
-on the type of the variable, it can handle anything. This can convientenly be typed
+on the type of the variable, it can handle anything. This can conveniently be typed
 with `typing.Any`.
 
 ```python
@@ -159,13 +161,14 @@ print_info({"foo": "bar"}) # Given data is {"foo": "bar"}
 
 This tells your type checker that literally any type is a valid input. Use with caution,
 but this is safe to use for functions that just print something, 
-or convert it to a string, since any Python variable should be able to do this[1].
+or convert it to a string, since any Python variable should be able to do 
+this[[1]](#footnotes).
 
 # Overloads
 
 Let's say your function doesn't return `None`, but rather returns the type it was given.
-You would think that you put a `Union` on the argument and another `Union` on the return
-value.
+You would think that you would put a `Union` on the argument and another `Union` 
+on the return value, like so.
 
 ```python
 from typing import Union
@@ -243,7 +246,7 @@ with all the possible input types.
 
 Next, how about a function that only accepts a specific list of arguments?
 You don't want to put a blanket `float` or `str` type, so you can be more specific
-with `typing.Literal`[2].
+with `typing.Literal`[[2]](#footnotes).
 
 ```python
 from typing import Literal
@@ -292,7 +295,8 @@ print(car.tank) # 20
 However, in some cases (mainly in return types), the variable for a type hint
 may actually be defined *after* the type hint itself, which causes an issue.
 Type hints are evaluated before code is ever executed, so you can run into possible
-`NameError`s. A simple demonstration is to flip the order of the function and class:
+`NameError`s for undefined variables. 
+A simple demonstration of this is to flip the order of the function and class:
 
 ```python
 def add_gas(car: Car) -> None:
@@ -373,9 +377,9 @@ type hint functions without actually needing to import other files.
 
 Thus far, we've been talking about how to type hint function arguments 
 and return values. What about type hinting variables or class attributes? 
-Well, you can do that with the same `:` syntax before the assignment. 
-This is great to help prevent accidentally changing the type of a variable to
-something unexpected.
+Well, you can do that with the same `:` syntax before the assignment of the variable
+or attribute. This is great to help prevent accidentally changing the type 
+of a variable to something unexpected.
 
 ```python
 from typing import Union
@@ -411,10 +415,12 @@ self.model = "5000" # type: str
 # Overrides
 
 Sometimes, you can't avoid that `pyright` is just wrong about something, or that 
-some 3rd party library isn't type correctly. A bit of a contrived
+some 3rd party library isn't typed correctly. This is a bit of a contrived
 example, but here's such an instance:
 
 ```python
+# based on this example:
+# http://docs.peewee-orm.com/en/latest/peewee/quickstart.html#model-definition
 import peewee as pw
 
 db = pw.SqliteDatabase("people.db")
@@ -577,7 +583,7 @@ Lastly, but most annoyingly, you may have to interact with certain libraries,
 *cough*
 that don't support type-hints, which can make working with them a hell 
 of `# type: ignore` statements. If you're determined, you can create 
-[stub files](https://google.github.io/pytype/developers/type_stubs.html)[3]
+[stub files](https://google.github.io/pytype/developers/type_stubs.html)[[3]](#footnotes)
 that define the type hints, or find a library that does it for you 
 (for example, [mypy-protobuf](https://github.com/dropbox/mypy-protobuf)).
 
@@ -587,14 +593,15 @@ This is really just scratching the surface of type hinting. There's a ton of tri
 and lots of different ways you can type hint stuff for more complex functions
 and data structures. I highly recommend looking through the 
 [`typing` library documentation](https://docs.python.org/3/library/typing.html) 
-to learn more. For example, 
+to learn more. For example, you can use 
 [`typing.NewType`](https://docs.python.org/3/library/typing.html#newtype) to make
 "pseudo" types which can be helpful for things like units. Or 
 [`typing.TypedDict`](https://docs.python.org/3/library/typing.html#typing.TypedDict)
 to type very specific dictionary formats.
 
 I truly hope this helps improve your Python code and make you a better programmer.
-It certainly has for me.
+It certainly has helped me reduce the errors in my code without needing to 
+actually run it.
 
 # Footnotes
 
