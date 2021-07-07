@@ -74,7 +74,7 @@ add_two("eggs")
 Now if we run a static analysis tool such as
 [`pyright`](https://github.com/microsoft/pyright) 
 (the engine behind [Pylance](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance)),
-we can see our protentional type issue (of adding a number to a string)
+we can see our potential type issue (of adding a number to a string)
 while never having to actually execute our code.
 
 ```bash
