@@ -128,8 +128,7 @@ print_info({"foo": "bar"}) # Given data is:
 In this example, there are a lot of things going on. First, `typing.Union` with 
 square brackets is how we specify that an argument may be any of the given types.
 Additionally, now the return type hint is `None` as the function doesn't return any
-values. While this isn't strictly necessary, as a lack of a `return` statement 
-implies None, I like to add it to be more explicit. So what happens if we run `pyright`?
+values. So what happens if we run `pyright`?
 
 ```bash
 > pyright temp.py
