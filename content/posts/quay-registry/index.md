@@ -484,6 +484,26 @@ extra for vulnerability scanning, and this is integrated directly into Quay for 
 
 {{< figure src="img/quay-tags.png" alt="List of tags showing vulnerabilities in the Quay interface" caption="You can see the little pie chart of vulnerabilities for each tag" >}}
 
+Before you get started, Clair has a habit of writing a LOT of data to the log.
+I highly recommend modifying your Docker `daemon.json` to limit the size
+of the log files. Documentation for that is 
+[here](https://docs.docker.com/config/containers/logging/json-file/). Example:
+
+``` json
+{
+  "log-driver": "json-file",
+  "log-opts": {
+    "max-size": "100m",
+    "max-file": "3" 
+  }
+}
+```
+
+I had my `daemon.json` file set to the default (empty) settings. I found out the
+hard way that this will allow a single log file to grow infinitely.
+
+{{< figure src="img/clair-log.png" alt="A 270GB log file" caption="It took me forever to figure out why my server was constantly hammering the disk" >}}
+
 To setup Clair, you first need to configure Quay.
 Relaunch the Quay configurator and enable 
 vulnerability scanning. You also want to generate a pre-shared key (PSK). 
@@ -564,7 +584,7 @@ only way to downgrade Quay is to wipe the database and start over.
 
 In the [Clair documentation](https://quay.github.io/clair/concepts/authentication.html),
 they mention Quay integration, but I have not figured this out, so I've stuck
-with the pre-shared keys. 
+with the pre-shared keys.
 
 Lastly, I'm not sure where the "official" images for Clair are. There are 3 different
 repositories on `quay.io` alone that seem semi-official.
