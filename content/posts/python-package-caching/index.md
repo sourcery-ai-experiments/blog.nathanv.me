@@ -101,7 +101,7 @@ An example implementation for Azure Pipelines:
   inputs:
     targetType: inline
     script: |
-        <insert script here>
+      <insert script here>
   env:
     PIP_CACHE_DIR: $(Agent.TempDirectory)/.pip
   displayName: Install pip packages
