@@ -25,8 +25,8 @@ your compiler will refuse to compile your code if this isn't followed.
 
 ```c
 int var;
-var = 123
-var = "spam"
+var = 123;
+var = "spam";
 // this will cause a compilation error
 ```
 
@@ -559,7 +559,7 @@ to your existing functions to strictly type them as well.
 
 Additionally, type checking is only as good as the type hints that you, the programmer,
 write. If you're lazy and don't write type hints for your functions, there's (currently)
-no way for a type checker to be able to validate that there won't be able any 
+no way for a type checker to be able to validate that there won't be any 
 type issues.
 
 ```python

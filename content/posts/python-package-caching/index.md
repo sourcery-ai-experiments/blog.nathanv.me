@@ -118,7 +118,7 @@ An example implementation for GitHub Actions:
   with:
     path: ${{ runner.temp }}/.pip
     key: python-${{ runner.os }}-${{ hashFiles('**/requirements**.txt') }}
-    restoreKeys: |
+    restore-keys: |
       python-${{ runner.os }}
       python
 
