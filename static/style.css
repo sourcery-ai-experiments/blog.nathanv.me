@@ -8,6 +8,11 @@
   word-break: break-all;
 }
 
+/* Allow inline code to be word broken */
+.post-content code {
+  word-break: break-all;
+}
+
 /* Apply max width to video */
 video {
   display: block;
@@ -18,9 +23,4 @@ video {
 figure.center img,
 figure.center video {
   margin: auto;
-}
-
-/* Hide stray bullet from TOC */
-#TableOfContents > ul {
-  list-style: none;
 }

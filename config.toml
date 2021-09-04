@@ -6,10 +6,15 @@ googleAnalytics = "UA-91853319-4"
 enableGitInfo = true
 
 [markup]
-  defaultMarkdownHandler = "blackfriday"
-  [markup.blackFriday]
-    hrefTargetBlank = true
-    noreferrerLinks = true
+  defaultMarkdownHandler = "goldmark"
+
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      footnote = true
+
+  [markup.highlight]
+    lineNos = true
+    style = "dracula"
 
 [params]
   contentTypeName = "posts"

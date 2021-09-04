@@ -161,7 +161,7 @@ print_info({"foo": "bar"}) # Given data is {"foo": "bar"}
 This tells your type checker that literally any type is a valid input. Use with caution,
 but this is safe to use for functions that just print something, 
 or convert it to a string, since any Python variable should be able to do 
-this[[1]](#footnotes).
+this [^1].
 
 # Overloads
 
@@ -245,7 +245,7 @@ with all the possible input types.
 
 Next, how about a function that only accepts a specific list of arguments?
 You don't want to put a blanket `float` or `str` type, so you can be more specific
-with `typing.Literal`[[2]](#footnotes).
+with `typing.Literal`[^2].
 
 ```python
 from typing import Literal
@@ -582,7 +582,7 @@ Lastly, but most annoyingly, you may have to interact with certain libraries,
 *cough*
 that don't support type-hints, which can make working with them a hell 
 of `# type: ignore` statements. If you're determined, you can create 
-[stub files](https://google.github.io/pytype/developers/type_stubs.html)[[3]](#footnotes)
+[stub files](https://google.github.io/pytype/developers/type_stubs.html)[^3]
 that define the type hints, or find a library that does it for you 
 (for example, [mypy-protobuf](https://github.com/dropbox/mypy-protobuf)).
 
@@ -604,11 +604,11 @@ actually run it.
 
 # Footnotes
 
-1. Yes, in some extremely rare cases, this is not the case. One would have to override
+[^1]: Yes, in some extremely rare cases, this is not the case. One would have to override
    the `__str__` or `__repr__` functions of the type's class to raise an exception.
-2. Only available in Python 3.8+, 
+[^2]: Only available in Python 3.8+, 
    though [typing-extensions](https://pypi.org/project/typing-extensions/) helps
    backport this functionality to older versions.
-3. [Ironic](https://tenor.com/view/ironic-starwars-chode-gif-5274592) that Google
+[^3]: [Ironic](https://tenor.com/view/ironic-starwars-chode-gif-5274592) that Google
    has an article explaining the benefits of static type analysis for Python, 
    but their own protobuf library doesn't support it.
