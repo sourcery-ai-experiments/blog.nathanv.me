@@ -9,7 +9,7 @@
 }
 
 /* Allow inline code to be word broken */
-.post-content code {
+.post-content p code {
   word-break: break-all;
 }
 

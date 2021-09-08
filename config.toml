@@ -12,6 +12,10 @@ enableGitInfo = true
     [markup.goldmark.extensions]
       footnote = true
 
+    [markup.goldmark.renderer]
+      # needed for superscript
+      unsafe = true
+
   [markup.highlight]
     lineNos = true
     style = "dracula"
