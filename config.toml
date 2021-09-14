@@ -17,7 +17,7 @@ enableGitInfo = true
       unsafe = true
 
   [markup.highlight]
-    lineNos = true
+    # lineNos = true
     style = "dracula"
 
 [params]
