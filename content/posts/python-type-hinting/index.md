@@ -10,7 +10,7 @@ title: Python Type Hinting
 userelativecover: true
 ---
 
-# What is Type Hinting
+## What is Type Hinting
 
 Python is a dynamically typed language. This basically means that a variable
 can be any type (a `float`, `str`, `dict` etc.) and can change at any time. 
@@ -59,7 +59,7 @@ introduced the concept of type hinting. These are basically annotations in your
 code that help static analysis tools check for errors before they occur, by indicating
 what types a variable is expected to be.
 
-# Basic Usage
+## Basic Usage
 
 Taking our example from before, the function expects a variable that is a number,
 and returns a new number. With type hints, this looks like:
@@ -104,7 +104,7 @@ add_two(123)
 Even though the type hint is a `float` and `123` is an `int`, `pyright` is smart
 enough to know that this is fine, as an `int` can always be turned into a `float`.
 
-# Multiple Types
+## Multiple Types
 
 Now, what if we have a function that can accept multiple types? 
 Take a look at this more complicated example:
@@ -142,7 +142,7 @@ to be of that type. Without this intelligence, it would complain that in the lin
 `for key, value in data.items():`, `data` could be a string and does not have an
 `.items()` method.
 
-# Any
+## Any
 
 Now let's say your function doesn't have different `print` statements based
 on the type of the variable, it can handle anything. This can conveniently be typed
@@ -163,7 +163,7 @@ but this is safe to use for functions that just print something,
 or convert it to a string, since any Python variable should be able to do 
 this [^1].
 
-# Overloads
+## Overloads
 
 Let's say your function doesn't return `None`, but rather returns the type it was given.
 You would think that you would put a `Union` on the argument and another `Union` 
@@ -241,7 +241,7 @@ print(b["foo"]) # bar
 Note here that you still need to create a `Union` in the actual function declaration
 with all the possible input types.
 
-# Literals
+## Literals
 
 Next, how about a function that only accepts a specific list of arguments?
 You don't want to put a blanket `float` or `str` type, so you can be more specific
@@ -274,7 +274,7 @@ temp.py
 You can see that `Literal` acts a built-in `Union`. You don't need to do 
 `Union[Literal["choice1"], Literal["choice2"]]`.
 
-# Classes
+## Classes
 
 You're also completely free to use a class as a type hint:
 
@@ -372,7 +372,7 @@ This is a magic variable which is always `False` when code is run by the Python
 interpreter, but `True` for type checkers. This is a great way to be able to
 type hint functions without actually needing to import other files.
 
-# Variables
+## Variables
 
 Thus far, we've been talking about how to type hint function arguments 
 and return values. What about type hinting variables or class attributes? 
@@ -411,7 +411,7 @@ self.model : str = "5000"
 self.model = "5000" # type: str
 ```
 
-# Overrides
+## Overrides
 
 Sometimes, you can't avoid that `pyright` is just wrong about something, or that 
 some 3rd party library isn't typed correctly. This is a bit of a contrived
@@ -466,7 +466,7 @@ Use with great caution, as this effectively hide all warnings of any kind from P
 or `pyright` for that line. I generally consider this a last resort as nearly always,
 I've typed something poorly, or there is a legitimate possible bug.
 
-# Red Squiggly Driven Development
+## Red Squiggly Driven Development
 
 Hopefully by now, you can see the value of type hinting your Python code. Now,
 trying to make sure your code doesn't have any possible type issues in a large codebase
@@ -548,7 +548,7 @@ have been removed
 (see [my previous post]({{< relref "vs-code-extensions#python-type-hint" >}}) 
 for how to turn on the red squiggles).
 
-# Caveats
+## Caveats
 
 To begin with, type hints are nothing but mere suggestions. The Python interpreter
 does nothing to actually enforce them, they are solely for the sake of the programmer.
@@ -586,7 +586,7 @@ of `# type: ignore` statements. If you're determined, you can create
 that define the type hints, or find a library that does it for you 
 (for example, [mypy-protobuf](https://github.com/dropbox/mypy-protobuf)).
 
-# Conclusion
+## Conclusion
 
 This is really just scratching the surface of type hinting. There's a ton of tricks,
 and lots of different ways you can type hint stuff for more complex functions
@@ -602,7 +602,7 @@ I truly hope this helps improve your Python code and make you a better programme
 It certainly has helped me reduce the errors in my code without needing to 
 actually run it.
 
-# Footnotes
+## Footnotes
 
 [^1]: Yes, in some extremely rare cases, this is not the case. One would have to override
    the `__str__` or `__repr__` functions of the type's class to raise an exception.
