@@ -4,13 +4,13 @@
 }
 
 /* Allow links to be word broken */
-.post-content li > a {
-  word-break: break-all;
+.post-content a {
+  word-break: break-word;
 }
 
 /* Allow inline code to be word broken */
-.post-content p code {
-  word-break: break-all;
+.post-content code {
+  word-break: break-word;
 }
 
 /* Apply max width to video */
