@@ -34,13 +34,13 @@ enableGitInfo   = true
 [languages]
 [languages.en]
   title       = "Nathan Vaughn"
+  keywords = ["programming", "tech", "Nathan", "Vaughn", "blog"]
   description = "Adventures in programming and tech"
   subtitle    = "Adventures in programming and tech"
   # lastModDisplay = "Last Modified:"
 
   # default open graph image
-  images   = ["img/favicon.png"]
-  keywords = ["programming", "tech", "Nathan", "Vaughn", "blog"]
+  images   = ["img/opg.png"]
 
 # logo parameters
 [languages.en.params.logo]
