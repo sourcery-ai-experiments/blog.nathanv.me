@@ -4,10 +4,10 @@ cover: img/cover.jpg
 date: "2021-02-21"
 description: Now that I live somewhere permanently, my home network has gotten more complex.
 images:
-- /posts/no-so-budget-home-network/img/cover.jpg
+  - /posts/no-so-budget-home-network/img/cover.jpg
 tags:
-- home-networking
-- Docker
+  - home-networking
+  - Docker
 title: Building a Home Network on a Not-So-Budget
 userelativecover: true
 ---
@@ -169,7 +169,6 @@ that lets you see statuses, run tests, and setup alerts.
 I created a Dockerfile for this software as I couldn't find a pre-made one that
 was updated. See [powerpanel-business-docker](https://github.com/NathanVaughn/powerpanel-business-docker).
 
-
 ### 6U Rack - $50
 
 {{< figure src="img/6u-rack.jpg" alt="6U rack from Craigslist" >}}
@@ -237,7 +236,7 @@ It also looks pretty cool in the dark.
 
 {{< figure src="img/rack-dark.jpg" alt="Server rack with status lights shining in the dark" >}}
 
-*Full Disclosure:* **After** I originally posted this article, Traefik Labs 
-reached out to me  and sent me a swag bag free of charge.
+_Full Disclosure:_ **After** I originally posted this article, Traefik Labs
+reached out to me and sent me a swag bag free of charge.
 
 {{< figure src="img/traefik-swag.jpg" alt="Traefik t-shirt and stickers" caption="Traefik Swag Bag" >}}

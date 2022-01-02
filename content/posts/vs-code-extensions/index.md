@@ -3,9 +3,9 @@ author: Nathan Vaughn
 date: "2021-06-03"
 description: Some of my favorite VS Code extensions that have changed how I write code.
 tags:
-- VS Code
-- Python
-- Microsoft
+  - VS Code
+  - Python
+  - Microsoft
 title: My Must-Have VS Code Extensions and Settings
 userelativecover: true
 ---
@@ -59,31 +59,31 @@ Postman files.
 
 Git Graph is probably my absolute favorite extension. Git Graph is basically
 a GUI Git client right in VS Code. Coupled with VS Code's existing Git integration,
-it turns VS Code into a formidable Git GUI. 
+it turns VS Code into a formidable Git GUI.
 
 {{< figure src="img/git-graph.png" alt="Git Graph VS Code extension" >}}
 
-I mostly use it for branching and merging. And frankly, I almost never even 
-use a Git GUI client like [GitKraken](https://www.gitkraken.com/) 
+I mostly use it for branching and merging. And frankly, I almost never even
+use a Git GUI client like [GitKraken](https://www.gitkraken.com/)
 anymore (except for a few rare edge cases) as this has everything I need.
 
 ### GitLens
 
 [https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
 
-GitLens adds a ton in-line Git blame information 
+GitLens adds a ton in-line Git blame information
 (among other functionality).
 
 {{< figure src="img/gitlens-inline.png" alt="GitLens VS Code extension inline popup" >}}
 
-This is fantastic when working with other developers to easily identify who 
+This is fantastic when working with other developers to easily identify who
 last edited a line and can subsequently be yelled at for breaking the tests 😛.
 
 {{< figure src="img/gitlens-blame.png" alt="GitLens VS Code extension file line blame" >}}
 
 ## Python
 
-Besides Microsoft's 
+Besides Microsoft's
 [Python VS Code extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python),
 here are my favorite Python extensions.
 
@@ -96,7 +96,7 @@ all of your tests, and quickly run, debug, and view tests.
 
 {{< figure src="img/python-test-explorer.png" alt="Python Test Explorer VS Code Extension" >}}
 
-Make sure to go into your settings and enable detection for your testing framework. 
+Make sure to go into your settings and enable detection for your testing framework.
 For example:
 
 ```json
@@ -123,8 +123,8 @@ I am not joking when I say this one setting completely changed the way I write P
 code. Having warnings of possible type issues in my code before I ever run it
 has completely revolutionzied my development workflow. It has saved so much of
 my time showing issues I would not have found until much later. I now
-get irrationally angry when things like 
-[Protobufs](https://github.com/protocolbuffers/protobuf/issues/2638#issue-203602478) 
+get irrationally angry when things like
+[Protobufs](https://github.com/protocolbuffers/protobuf/issues/2638#issue-203602478)
 don't have proper type hints.
 
 {{< figure src="img/python-type-error.png" caption="In this example, VS Code is complaining that `config.REDIS_PORT` can possibly be `None`, which can't convert to an `int`"alt="Python Type Error" >}}
@@ -171,7 +171,7 @@ draw boxes on it, then save it, without needing to open another program.
 
 [https://marketplace.visualstudio.com/items?itemName=kisstkondoros.vscode-gutter-preview](https://marketplace.visualstudio.com/items?itemName=kisstkondoros.vscode-gutter-preview)
 
-Have you ever wanted to be able to hover over a file path of an image, 
+Have you ever wanted to be able to hover over a file path of an image,
 and have it displayed in VS Code? Well, that's exactly what this extension does.
 
 {{< figure src="img/image-preview.png" alt="Image Preview VS Code Extension" >}}
@@ -191,8 +191,8 @@ and showing syntax errors.
 {{< figure src="img/azure-pipelines.png" alt="Azure Pipelines VS Code Extension" >}}
 
 I'd also recommend setting up your file associations with a bit more generic matching
-patterns. For example, I often have multiple Pipeline files like 
-`azure-pipelines-test.yml` and `azure-pipelines-package.yml` or 
+patterns. For example, I often have multiple Pipeline files like
+`azure-pipelines-test.yml` and `azure-pipelines-package.yml` or
 [template files](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/templates?view=azure-devops#insert-a-template)
 such as `python-pytest-steps.yml`.
 
@@ -210,7 +210,7 @@ such as `python-pytest-steps.yml`.
 This extension is very similar to the Azure Pipelines extension as it helps
 you complete the schema for Github Actions. The really cool thing about this
 one however is that it also allows you to manage your Actions right in VS Code.
-You can see logs of past runs, fire off new runs 
+You can see logs of past runs, fire off new runs
 (if you have `workflow_dispatch:` setup), and configure secrets.
 
 {{< figure src="img/github-actions.png" alt="Github Actions VS Code Extension" >}}

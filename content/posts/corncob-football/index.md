@@ -4,11 +4,11 @@ cover: img/corncob_cfd.png
 date: "2020-06-24"
 description: A humorous analysis of the practicality of using a corncob as a football
 images:
-- /posts/corncob-football/img/corncob_cfd.png
+  - /posts/corncob-football/img/corncob_cfd.png
 tags:
-- humor
-- CFD
-- SOLIDWORKS
+  - humor
+  - CFD
+  - SOLIDWORKS
 title: Feasibility of Using a Corncob as a Football
 userelativecover: true
 ---
@@ -39,8 +39,8 @@ the frontal area is 38.52 in<sup>2</sup> or 0.0248 m<sup>2</sup>.
 
 ### Throwing Velocity
 
-So, how fast can a quarterback *actually* throw a football? More importantly, how much
-*force* can a quarterback impart on a football? (you'll see why later)
+So, how fast can a quarterback _actually_ throw a football? More importantly, how much
+_force_ can a quarterback impart on a football? (you'll see why later)
 Based on some research, a fast throw is around 60 mph (26.82 m/s)
 with a rotation of about 600 rpm (62.83 rad/s).
 [Source.](https://www.sportsrec.com/6938474/maximum-speed-of-a-football)
@@ -72,7 +72,7 @@ find the average altitude of every college football stadium, and use a
 standard atmosphere lookup table to find the air properties.
 
 Unfortunately, I was unable to find a list of altitudes of college football stadiums.
-Instead, I had to get creative. I *did* manage to find a list of
+Instead, I had to get creative. I _did_ manage to find a list of
 every college football stadium.
 [Source.](http://www.collegegridirons.com/comparisons.htm)
 From there, I wrote a script that ran each
@@ -119,8 +119,8 @@ drag force imparted on the football.
 Parameters:
 
 - External Analysis
-    - Exclude cavities without flow conditions
-    - Exclude internal space
+  - Exclude cavities without flow conditions
+  - Exclude internal space
 - Gravity on
 - Global rotation @ 62.83 rad/s
 - Air preset
@@ -275,7 +275,7 @@ to be a bit conservative, so the actual results may even be better!
 ### Catching Feasibility
 
 An important question you may be wondering is "How feasible is it to actually
-*catch* a corncob flying at you?" Well, as an engineering student, I can't
+_catch_ a corncob flying at you?" Well, as an engineering student, I can't
 catch a regular football to save my life. I was also unable to convince
 any of my friends to stand in a field and let me throw corncobs at them, and
 I doubt I could catch any 80 mph corncobs thrown at me. Therefore, I'll
@@ -327,6 +327,7 @@ Overall, analysis has shown that corncobs replacing footballs is an incredible
 idea and should be considered by the NCAA.
 
 ## References
+
 - [https://www.sportsrec.com/6560043/what-is-the-official-size-of-the-nfl-football](https://www.sportsrec.com/6560043/what-is-the-official-size-of-the-nfl-football)
 - [https://www.sportsrec.com/6938474/maximum-speed-of-a-football](https://www.sportsrec.com/6938474/maximum-speed-of-a-football)
 - [https://youtu.be/tVoqA-LKGb4?t=206](https://youtu.be/tVoqA-LKGb4?t=206)
@@ -351,5 +352,5 @@ idea and should be considered by the NCAA.
 
 [CAD Files](https://github.com/NathanVaughn/blog.nathanv.me/tree/master/content/posts/corncob-football/cad/)
 
-*This is not meant to be a serious engineering analysis. This is purely
-for entertainment purposes.*
+_This is not meant to be a serious engineering analysis. This is purely
+for entertainment purposes._

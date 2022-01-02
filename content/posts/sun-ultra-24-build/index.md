@@ -4,10 +4,10 @@ cover: img/new_home.jpg
 date: "2020-01-05"
 description: Building a server inside an old Sun Ultra 24 case
 images:
-- /posts/sun-ultra-24-build/new_home.jpg
+  - /posts/sun-ultra-24-build/new_home.jpg
 tags:
-- pc building
-- self-hosting
+  - pc building
+  - self-hosting
 title: Sun Ultra 24 Server Build
 userelativecover: true
 ---
@@ -16,22 +16,22 @@ userelativecover: true
 
 Early last year, I went to my university's surplus store. I was looking to
 purchase an
-[old Mac Pro tower](https://en.wikipedia.org/wiki/Mac_Pro#1st_generation_(Tower))
+[old Mac Pro tower](<https://en.wikipedia.org/wiki/Mac_Pro#1st_generation_(Tower)>)
 with the intent to do a case mod with it, since I knew the surplus store had a
-few available for cheap and I thought it would be a fun project. 
+few available for cheap and I thought it would be a fun project.
 However, while looking around, I spotted a beautiful
 [Sun Ultra 24](https://en.wikipedia.org/wiki/Ultra_24) on the shelf. I quickly
 decided to purchase that instead for two reasons.
 
 1. The novelty value, as Sun Microsystems is long-gone.
 2. It has standard ATX parts, while a Mac Pro was going to require liberal application
-of a Dremel.
+   of a Dremel.
 
 {{< figure src="img/from_surplus.jpg" alt="Sun Ultra 24 from surplus" position="center" style="border-radius: 8px;" caption="My Sun Ultra 24 after taking it home from surplus." captionPosition="center" >}}
 
 ## Build
 
-Before I started my build, I did notice 
+Before I started my build, I did notice
 [ServeTheHome's build](https://www.servethehome.com/introducing-the-ultra-epyc-amd-powered-sun-ultra-24-workstation/)
 in the exact same case. While I like their build a lot, I also wanted to
 shoot for an as original appearance as possible with mine.
@@ -96,8 +96,8 @@ I wasn't able to use the old power supply.
 ### Power Supply Orientation
 
 This wasn't really a problem, but I was surprised that unlike most modern cases,
-the power supply only fits one direction. Thankfully, I didn't have 
-[the problem](https://www.servethehome.com/introducing-the-ultra-epyc-amd-powered-sun-ultra-24-workstation/5/#attachment_32156) 
+the power supply only fits one direction. Thankfully, I didn't have
+[the problem](https://www.servethehome.com/introducing-the-ultra-epyc-amd-powered-sun-ultra-24-workstation/5/#attachment_32156)
 that ServeTheHome did with their power supply.
 
 {{< figure src="img/new_power_supply.jpg" alt="New power supply installed" position="center" style="border-radius: 8px;" caption="New power supply installed" captionPosition="center" >}}
@@ -121,7 +121,7 @@ a previous ESD incident, I decided to just remove this cable too.
 ### Missing PCIe Slot Covers
 
 I already knew about this when I bought the system, but it was missing some PCIe
-slot covers. Since I don't like missing pieces, I bought 
+slot covers. Since I don't like missing pieces, I bought
 [some spares](https://www.amazon.com/gp/product/B07TXBGGDM) on Amazon,
 but unfortunately they don't quite match.
 
@@ -131,24 +131,24 @@ but unfortunately they don't quite match.
 
 I was also disappointed when I bought the system that either the computer never came
 with all the drive sleds, or they were removed at some point. Either way, if I ever
-want to add more hard drives, I'll need to source 
-[some from eBay](https://www.ebay.com/itm/Lot-of-5-Sun-Microsystems-HDD-Hot-Swap-3-5-Hard-Drive-Disk-Tray-Caddy-20-screw/153755065494) 
+want to add more hard drives, I'll need to source
+[some from eBay](https://www.ebay.com/itm/Lot-of-5-Sun-Microsystems-HDD-Hot-Swap-3-5-Hard-Drive-Disk-Tray-Caddy-20-screw/153755065494)
 or something. I haven't purchased any yet, since the cost of them would nearly equal
 what I paid for the original computer.
 
 ### Missing Ultra 24 Badge
 
-As you can see in the [old exterior photo](img/from_surplus.jpg), 
+As you can see in the [old exterior photo](img/from_surplus.jpg),
 at the bottom, the
-[Ultra 24 badge](https://www.servethehome.com/wp-content/uploads/2019/01/The-Ultra-EPYC-Cover.jpg) 
+[Ultra 24 badge](https://www.servethehome.com/wp-content/uploads/2019/01/The-Ultra-EPYC-Cover.jpg)
 is missing. I'm going to try and 3D print a replacement at some point.
 
 ### Fan Noise
 
 The whole point of this build was to have a quieter computer. I quickly discovered that
 the rear case fan is _bloody_ loud, which defeated the entire purpose of this project.
-This fan has a very weird mount which doesn't make it easy to just replace with a 
-new fan. 
+This fan has a very weird mount which doesn't make it easy to just replace with a
+new fan.
 
 {{< figure src="img/old_fan.jpg" alt="Sun Ultra 24 rear case fan mount" position="center" style="border-radius: 8px;" caption="Sun Ultra 24 rear case fan mount" captionPosition="center" >}}
 
@@ -173,13 +173,13 @@ This is the front panel header for my Asus Z97-AR.
 As you can see, the Asus motherboard header is **wider** than the Ultra 24.
 In order to rectify this, I bought some
 [jumper wire extensions](https://www.amazon.com/gp/product/B07BVS3FX7) from Amazon
-and used some trial-and-error and help from 
-[this forum post](https://forums.tomshardware.com/threads/front-panel-connector-pin-outs.3236564/) 
+and used some trial-and-error and help from
+[this forum post](https://forums.tomshardware.com/threads/front-panel-connector-pin-outs.3236564/)
 to connect everything.
 
 {{< figure src="img/new_header.jpg" alt="New front panel header connection" position="center" style="border-radius: 8px;" caption="New front panel header connection" captionPosition="center" >}}
 
-It's ugly but it works. 
+It's ugly but it works.
 
 Here is the pinout I figured out for reference:
 
@@ -197,7 +197,7 @@ The power switch is just shorting two pins, so positive versus negative doesn't 
 ## Conclusion
 
 Overall, I'm happy with the build. Despite all the problems, it has ended up working
-well, and it's nearly dead-silent. My only complaint is the power LED is 
+well, and it's nearly dead-silent. My only complaint is the power LED is
 incredibly bright, especially at night. I had some problems transferring my data
 from my old server to it, but that's beyond the scope of this post.
 

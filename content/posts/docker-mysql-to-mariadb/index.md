@@ -5,12 +5,12 @@ userelativecover: true
 date: "2019-07-20"
 description: Replacing existing MySQL 8 containers in Docker Compose stacks with MariaDB
 images:
-- /posts/docker-mysql-to-mariadb/img/mysql_to_mariadb.jpg
+  - /posts/docker-mysql-to-mariadb/img/mysql_to_mariadb.jpg
 tags:
-- Docker
-- MySQL
-- MariaDB
-- bash
+  - Docker
+  - MySQL
+  - MariaDB
+  - bash
 title: Converting MySQL 8 Docker Containers to MariaDB
 ---
 

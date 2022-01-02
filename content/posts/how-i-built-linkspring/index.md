@@ -3,11 +3,11 @@ author: Nathan Vaughn
 date: "2022-02-14"
 description: A deep dive in how I started my own SaaS business
 tags:
-- Linkspring
-- serverless
-- AWS
-- flask
-- python
+  - Linkspring
+  - serverless
+  - AWS
+  - flask
+  - python
 title: "How I Built Linkspring"
 draft: true
 ---
@@ -44,27 +44,27 @@ With that out of the way, I had some requirements/goals for myself,
 primarily made up of pet peeves.
 
 - Allow users to delete account. Way too many websites don't let
-you delete an old account, and I've got tons cluttering up my password manager.
+  you delete an old account, and I've got tons cluttering up my password manager.
 - Allow users to change username at any time.
-[Relevant StackOverflow Discussion](https://security.stackexchange.com/questions/175802/is-it-good-or-bad-practice-to-allow-a-user-to-change-their-username)
-- Support two-factor authentication. You *have* to get security right the first time,
-so I opted to only allow social sign-in.
-Then I never have to touch a password, deal with reset emails, TOTP tokens, etc.
+  [Relevant StackOverflow Discussion](https://security.stackexchange.com/questions/175802/is-it-good-or-bad-practice-to-allow-a-user-to-change-their-username)
+- Support two-factor authentication. You _have_ to get security right the first time,
+  so I opted to only allow social sign-in.
+  Then I never have to touch a password, deal with reset emails, TOTP tokens, etc.
 - No CSS framework. I wanted to build this from the ground up.
 - As much server-side rendering as possible. I hate client-side rendering. It's
-almost always slower, and puts the burden on the client.
+  almost always slower, and puts the burden on the client.
 - Infrastructure as code. I wanted to be able to clone a repo, run a few commands,
-and have everything be deployed.
+  and have everything be deployed.
 - Testing. I had never done automated testing in any of my own projects despite
-working on writing automated tests for avionics software for close to 6 months.
+  working on writing automated tests for avionics software for close to 6 months.
 - Not support Internet Explorer. Internet Explorer is a disease to the world of web dev,
-and I from the start decided that it was never getting any support.
+  and I from the start decided that it was never getting any support.
 
 ## Frameworks
 
 Selecting the tooling and frameworks and things for a project I think
 is more important than some people think. It's almost a form of vendor lock-in.
-I ended up using a *ton* dependencies, but here is the high-level overview.
+I ended up using a _ton_ dependencies, but here is the high-level overview.
 
 ### Back-end
 
@@ -120,7 +120,7 @@ everything I read about Cloud Functions was that it was still sort of buggy and 
 good as Lambda.
 
 For a database, with AWS selected, [DynamoDB](https://aws.amazon.com/dynamodb/) was the
-clear choice. I mean, I *wanted* so badly to use a SQL database backend,
+clear choice. I mean, I _wanted_ so badly to use a SQL database backend,
 (and I nearly threw in the towel at one point)
 but it was going to triple my operating costs. I needed to learn about NoSQL databases,
 and it's pricing is cheap.
@@ -143,7 +143,7 @@ In order to get all of this work with a serverless environment, I used
 the confusingly-namd [Serverless](https://www.serverless.com/) framework.
 This has been a double-edged sword. While it has made a lot of stuff very easy
 (like packaging and deployments), and has a rich plugin ecosystem, updates to
-it and it's plugin *constantly* breaks things. I've lost track how many times
+it and it's plugin _constantly_ breaks things. I've lost track how many times
 now that bugs are introduced or behavior is changed or features are removed
 that break my CI/CD pipeline. I have automated tests for dependency updates
 so it's not breaking my production environment, but it's frustrating
@@ -165,18 +165,18 @@ Examples:
 
 ```css
 .bg-white {
-    background-color: white;
+  background-color: white;
 }
 
 .mb-2 {
-    margin-botton: 2rem;
+  margin-botton: 2rem;
 }
 ```
 
 This has two major disadvantages.
 
-1) Your CSS file is huge
-2) Your HTML is very markup heavy.
+1. Your CSS file is huge
+2. Your HTML is very markup heavy.
 
 Number 1 is manageable with [PurgeCSS](https://purgecss.com/),
 which Tailwind actually ships with in recent versions. This a program that scans

@@ -4,9 +4,9 @@ cover: img/fun-in-the-sun-v2.jpg
 date: "2020-03-26"
 description: Short update on my repaired 1973 Schwinn bike
 images:
-- /posts/schwinn-bicycle-update/img/fun-in-the-sun-v2.jpg
+  - /posts/schwinn-bicycle-update/img/fun-in-the-sun-v2.jpg
 tags:
-- cycling
+  - cycling
 title: 1973 Schwinn Bicycle Update
 userelativecover: true
 ---

@@ -3,7 +3,7 @@ author: Nathan Vaughn
 date: "2020-04-20"
 description: Doing bad things with Python to fake module imports
 tags:
-- Python
+  - Python
 title: "Faking Python Imports"
 ---
 
@@ -31,7 +31,7 @@ so that I could combine the features of both.
 
 I really wanted to avoid editing code of the dependencies if at all possible,
 so I tried to see if I could get Flask-Static-Digest to import Flask-CDN while making it
-*think* it was importing Flask.
+_think_ it was importing Flask.
 
 ## Solution
 
@@ -110,4 +110,5 @@ While this trick can be very useful, it can also very dangerous and easy to brea
 Remember, with great power comes great responsibility.
 
 ## References
+
 - [https://stackoverflow.com/questions/8658043/how-to-mock-an-import](https://stackoverflow.com/questions/8658043/how-to-mock-an-import)

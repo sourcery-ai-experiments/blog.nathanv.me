@@ -3,8 +3,8 @@ author: Nathan Vaughn
 date: "2020-02-09"
 description: Replacing Mailgun with SendGrid and ForwardEmail
 tags:
-- email
-- DNS
+  - email
+  - DNS
 title: Replacing Mailgun
 ---
 
@@ -42,7 +42,7 @@ Here are some potential options I considered.
 
 ### Other Transactional Email Services
 
-I looked into a *bunch* of different transactional email providers (SendGrid, AWS SES,
+I looked into a _bunch_ of different transactional email providers (SendGrid, AWS SES,
 PostSpark, etc.) and they all fell into a combination of three categories:
 
 1. No support for inbound email
@@ -97,15 +97,15 @@ you need to setup.
 {{< figure src="img/fordwardemail_dns.jpg" alt="ForwardEmail DNS" position="center" style="border-radius: 8px;" caption="ForwardEmail DNS" captionPosition="center" >}}
 
 The actual DNS records makes sense. I understand why they need
-a `MX` record for the incoming mail servers and a 
-`TXT` record for what email address to forward to. 
+a `MX` record for the incoming mail servers and a
+`TXT` record for what email address to forward to.
 I'm very confused why they want you to add a `TXT` record for SPF, as I thought
-it was only needed for *sending* emails which this service doesn't do.
+it was only needed for _sending_ emails which this service doesn't do.
 ImprovMX [explains this](https://improvmx.com/guides/improvmx-spf-support/) for
-their similar service. ForwardEmail has 
+their similar service. ForwardEmail has
 [a guide](https://forwardemail.net/en/faq#how-to-send-mail-as-using-gmail)
 on how to "Send Mail As" with Gmail, but my understanding of that is it is still
-being sent by Google's email servers, so I still don't understand why this is needed. 
+being sent by Google's email servers, so I still don't understand why this is needed.
 If someone can explain this better, please leave a comment below.
 
 ## Conclusion
@@ -123,6 +123,7 @@ As always, it was DNS.
 {{< figure src="img/its_always_dns.png" alt="DNS Haiku" position="center" style="border-radius: 8px;" caption="It was DNS" captionPosition="center" >}}
 
 ## References
+
 - [https://www.mailgun.com](https://www.mailgun.com)
 - [https://forwardemail.net/en](https://forwardemail.net/en)
 - [https://improvmx.com/](https://improvmx.com/)
