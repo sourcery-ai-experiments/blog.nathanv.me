@@ -398,13 +398,13 @@ jobs:
         run: poetry install
 
       - name: Run Black
-        run: python -m black pyleft/ --check
+        run: python -m black . --check
 
       - name: Run Isort
-        run: python -m isort pyleft/ --profile black --check
+        run: python -m isort . --profile black --check
 
       - name: Run Autoflake
-        run: python -m autoflake pyleft/ --recursive --remove-all-unused-imports --check
+        run: python -m autoflake . --recursive --remove-all-unused-imports --check
 
   type-checking:
     runs-on: ubuntu-latest
@@ -431,10 +431,10 @@ jobs:
         run: npm install pyright
 
       - name: Run Pyright
-        run: npx pyright pyleft/
+        run: npx pyright .
 
       - name: Run Pyleft
-        run: python -m pyleft pyleft/
+        run: python -m pyleft .
 
   linting:
     runs-on: ubuntu-latest
@@ -458,7 +458,7 @@ jobs:
         run: poetry install
 
       - name: Run Pflake8
-        run: python -m pflake8 pyleft/
+        run: python -m pflake8 .
 ```
 
 This is just a starting point, and can be modified to fit your project.
