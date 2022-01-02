@@ -4,9 +4,9 @@ date: "2020-09-08"
 cover: img/cover.png
 description: How to install the Spin model checker on Windows
 images:
-- /posts/spin-windows/img/cover.png
+  - /posts/spin-windows/img/cover.png
 tags:
-- Windows
+  - Windows
 title: Spin Model Checker on Windows
 userelativecover: true
 ---
@@ -14,10 +14,10 @@ userelativecover: true
 ## Introduction
 
 For a class, I was trying to install the [Spin](https://spinroot.com/)
-formal verification tool *somehow* on my Windows computer. I couldn't find
+formal verification tool _somehow_ on my Windows computer. I couldn't find
 a good guide, so this is what I figured out.
 
-While you *can* do this with WSL, Spin has prebuilt Windows
+While you _can_ do this with WSL, Spin has prebuilt Windows
 binaries available, so I think this is easier than trying to get
 X11 working ([as of Sept 2020](https://devblogs.microsoft.com/commandline/whats-new-in-the-windows-subsystem-for-linux-september-2020/#gui-apps)).
 
@@ -114,7 +114,7 @@ which is needed to run this file.
 
 ### Git for Windows
 
-If you have installed Git for Windows, it likely already has already installed Tcl/Tk 
+If you have installed Git for Windows, it likely already has already installed Tcl/Tk
 (or another program may have installed it).
 An easy way to check is to open up [Everything](https://www.voidtools.com/),
 and look for `wish.exe`.
@@ -169,7 +169,7 @@ line 22, and adjust the path to `dot` as needed. For example:
 	set DOT		"C:/Program\ Files\ \(x86\)/graphviz-2.44.1-win32/Graphviz/bin/dot";
 ```
 
-*(Even if `dot.exe` is added to your PATH, I've found it will still not work without doing this)*
+_(Even if `dot.exe` is added to your PATH, I've found it will still not work without doing this)_
 
 You should be all set now.
 

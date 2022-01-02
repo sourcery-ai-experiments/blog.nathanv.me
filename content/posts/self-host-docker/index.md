@@ -3,10 +3,10 @@ author: Nathan Vaughn
 date: "2019-07-07"
 description: Moving my personal web apps from the cloud to self-hosted infrastructure
 images:
-- /posts/self-host-docker/img/hp_dl_360_g5.jpg
+  - /posts/self-host-docker/img/hp_dl_360_g5.jpg
 tags:
-- Docker
-- self-hosting
+  - Docker
+  - self-hosting
 title: Self-Hosting with Docker and Argo Tunnel
 ---
 

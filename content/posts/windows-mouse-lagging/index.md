@@ -3,7 +3,7 @@ author: Nathan Vaughn
 date: "2020-03-19"
 description: Discovering that Synergy was causing my mouse cursor to lag on Windows
 tags:
-- Windows
+  - Windows
 title: "Windows Mouse Lagging"
 ---
 

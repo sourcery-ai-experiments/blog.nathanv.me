@@ -3,9 +3,9 @@ author: Nathan Vaughn
 date: "2019-07-21"
 description: Installing HPE Linux Management Component Pack on Ubuntu on a Gen 5 server
 tags:
-- Ubuntu
-- HP
-- ProLiant
+  - Ubuntu
+  - HP
+  - ProLiant
 title: Installing HP ProLiant Utilities on Ubuntu Server
 ---
 

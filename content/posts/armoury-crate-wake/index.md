@@ -3,7 +3,7 @@ author: Nathan Vaughn
 date: "2020-02-03"
 description: Fixing Asus Armoury Crate from waking my Windows computer from sleep
 tags:
-- Windows
+  - Windows
 title: Armoury Crate Waking Windows from Sleep
 ---
 
@@ -31,9 +31,9 @@ powercfg -lastwake
 ```
 
 This shows what woke up the current Windows session. If the current Windows session
-was started from a cold boot or restart, it simply returns blank info. 
+was started from a cold boot or restart, it simply returns blank info.
 
-The other way (and only way to view wake history) 
+The other way (and only way to view wake history)
 is to open Event Viewer, go to "Windows Logs" -> "System", and filter by
 "Power-Troubleshooter". From there, you can just click through the events to see
 which scheduled tasks or executables last woke your computer.
@@ -46,8 +46,8 @@ As you can see in the screenshot, the culprit was `ArmouryCrate.UserSessionHelpe
 
 To fix this, you need to disable wake timers in your power settings. This is buried
 deep in the legacy power plan settings in Control Panel.
-Within the Settings app, go to "Power & sleep" -> "Changing power mode" -> 
-"Change plan settings" -> "Change advanced power settings" -> "Sleep" -> 
+Within the Settings app, go to "Power & sleep" -> "Changing power mode" ->
+"Change plan settings" -> "Change advanced power settings" -> "Sleep" ->
 "Allow wake timers" and set it to "Disable".
 
 {{< figure src="img/power-settings.jpg" alt="Power plan settings" position="center" style="border-radius: 8px;" caption="Holy settings menu nesting Batman!" captionPosition="center" >}}

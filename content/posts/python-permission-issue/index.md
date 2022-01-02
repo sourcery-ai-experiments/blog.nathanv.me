@@ -3,8 +3,8 @@ author: Nathan Vaughn
 date: "2020-10-26"
 description: How to deal with an extremely strange Python file permission issue
 tags:
-- Python
-- Windows
+  - Python
+  - Windows
 title: Fixing a Weird Python Permission Issue
 ---
 
@@ -17,7 +17,7 @@ While testing my mod manager, I ran into a scenario where Python
 couldn't delete a mod's folder with the error:
 `Permission Error: [WinError 5] Access is denied`.
 I thought this was strange as the files were owned by my account, and Python
-*should* have had permission to delete them (and I hadn't had this issue with
+_should_ have had permission to delete them (and I hadn't had this issue with
 any other mods). I even tried relaunching the Python process
 as an administrator, and Python still couldn't delete it.
 

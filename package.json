@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "prettier": "^2.5.1"
+  },
+  "scripts": {
+    "format": "prettier --write content/",
+    "format:check": "prettier --check content/"
+  }
+}

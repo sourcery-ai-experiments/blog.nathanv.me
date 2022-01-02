@@ -3,8 +3,8 @@ author: Nathan Vaughn
 date: "2021-10-10"
 description: Explaining the structure of Docker image names and the hidden defaults
 tags:
-- Docker
-- Docker Hub
+  - Docker
+  - Docker Hub
 title: Docker Image Names for Dummies
 ---
 
@@ -18,13 +18,13 @@ I'm going to try and break it down.
 # Image Names
 
 The name of a Docker image is made of a number of pieces. The confusing part is
-that nearly every piece is optional and can mixed and matched, along 
+that nearly every piece is optional and can mixed and matched, along
 with non-obvious defaults. I'm going to work left to right in the image name, with
 the example of the [base `python` image](https://hub.docker.com/_/python).
 
 ## Registry
 
-The first piece of any Docker image name is the registry. The registry is just the 
+The first piece of any Docker image name is the registry. The registry is just the
 server the image comes from (or at least tagged to). A whole discussion on Docker
 registries is [here]({{< relref "quay-registry#what-is-a-registry" >}}).
 
@@ -48,9 +48,9 @@ your own, IP addresses and port numbers can also be used:
 
 ## User
 
-After the registry, followed by a `/`, comes the user. 
+After the registry, followed by a `/`, comes the user.
 The user is the person or organization that
-owns the image. Like the registry, this is optional, and defaults to `library`, 
+owns the image. Like the registry, this is optional, and defaults to `library`,
 so the following two images are the same:
 
 1. `docker.io/library/python`
@@ -62,18 +62,18 @@ non-library images:
 - `https://hub.docker.com/_/python`
 - `https://hub.docker.com/r/bitnami/python`
 
-***HOWEVER***, this is not always the case, and actually varies by 
+**_HOWEVER_**, this is not always the case, and actually varies by
 server implementation. The default Docker Hub registry does this, but not
-all registries do. For example, the 
+all registries do. For example, the
 [Quay registry software](https://www.projectquay.io/) allows you to enable this
-feature, but on the other hand as far as I'm aware, 
-[Azure Container registry](https://azure.microsoft.com/en-us/services/container-registry/) 
-does not do this and will let you name images with or without user names 
+feature, but on the other hand as far as I'm aware,
+[Azure Container registry](https://azure.microsoft.com/en-us/services/container-registry/)
+does not do this and will let you name images with or without user names
 and does not do any `/library/` shenanigans.
 
 ## Repository
 
-After the user, followed again by a `/`, is now the image repository. 
+After the user, followed again by a `/`, is now the image repository.
 This is more or less the name of the image itself.
 In our example, the repository is `python`. This is
 the only piece of the image name that is actually required.
@@ -81,8 +81,8 @@ the only piece of the image name that is actually required.
 ## Tag
 
 Finally, is the tag of the image, which follows the repository name with a `:`.
-This is basically the version specifier of the image. 
-The tag is optional, and defaults to `latest`. The `latest` tag has no 
+This is basically the version specifier of the image.
+The tag is optional, and defaults to `latest`. The `latest` tag has no
 special properties, nor does it even have to be defined,
 it's just by convention the most recent version of the image.
 Once again in our example, the following two images are the same:
@@ -96,7 +96,7 @@ Tags are user-defined and can be almost anything. In our
 A confusing part about tags is that unlike most package registries (npm, PyPi, etc.),
 tags can be overwritten or deleted at any time. This how `latest` tags are usually used,
 by always assigning it to the last image pushed. Additionally, an image can have
-multiple tags. Once again in our example, the following two images are the same 
+multiple tags. Once again in our example, the following two images are the same
 (at time of writing):
 
 1. `docker.io/library/python:latest`
@@ -113,10 +113,10 @@ in multiple ways, depending on how specific you want to be. For example:
 ## Digests
 
 Okay, there is actually one last piece of the image name, which is the digest.
-These are mutually exclusive to tags are not commonly used. 
-Instead of separating the repository and tag with a `:`, you separate a repository and 
-digest with a `@`. These reference a specific version of the image 
-based on a hash of the content of the image. Unlike user-defined tags, 
+These are mutually exclusive to tags are not commonly used.
+Instead of separating the repository and tag with a `:`, you separate a repository and
+digest with a `@`. These reference a specific version of the image
+based on a hash of the content of the image. Unlike user-defined tags,
 these can not be changed. These take the form of (nearly always) `sha256:<hash>`.
 Once again, these two images are the same (at time of writing):
 
@@ -149,7 +149,7 @@ Today we've learned about Docker image names are constructed, and how all of the
 - `docker.io/library/python@sha256:dc7c3f207ec689940a1458d09c862f599c1cf5ca525ee28e18514df3735feea1`
 - `index.docker.io/library/python@sha256:dc7c3f207ec689940a1458d09c862f599c1cf5ca525ee28e18514df3735feea1`
 
-Personally, I like to be explicit and specific as reasonably possible. In my Dockerfiles, 
+Personally, I like to be explicit and specific as reasonably possible. In my Dockerfiles,
 I would usually do something like:
 
 ```dockerfile

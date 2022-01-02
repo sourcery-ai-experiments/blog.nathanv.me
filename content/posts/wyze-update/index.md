@@ -3,8 +3,8 @@ author: Nathan Vaughn
 date: "2020-08-22"
 description: An update on my various Wyze health products
 tags:
-- Wyze
-- health
+  - Wyze
+  - health
 title: Wyze Products Update
 ---
 
@@ -31,7 +31,7 @@ that it's beginning to break so soon into owning it.
 ## Syncing
 
 This is, by far, the most infuriating thing. I can absolutely confirm that the Scale
-and Band *do not* whatsoever, unless you manually open up the page for each in the
+and Band _do not_ whatsoever, unless you manually open up the page for each in the
 Wyze app. Why this is, I have not a clue. The app is already always running in the
 background (there's a persistent notification that tells you as much). Why can't it
 try to automatically sync every 24 hours on its own? I haven't experimented
@@ -45,7 +45,7 @@ to not lose any data.
 
 ## Google Fit
 
-On the bright side, Google Fit integration *finally* got added to the Band, which is
+On the bright side, Google Fit integration _finally_ got added to the Band, which is
 fantastic. I complained about this in my review
 [here]({{< relref "wyze-band-review#fitness-apps" >}}).
 

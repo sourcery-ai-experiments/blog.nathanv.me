@@ -4,9 +4,9 @@ cover: img/fun-in-the-sun.jpg
 date: "2020-02-26"
 description: Repairing an old 27" 1973 Schwinn Varsity 10-speed bicycle to rideable condition
 images:
-- /posts/fixing-schwinn-bicycle/img/fun-in-the-sun.jpg
+  - /posts/fixing-schwinn-bicycle/img/fun-in-the-sun.jpg
 tags:
-- cycling
+  - cycling
 title: Fixing a 1973 Schwinn Bicycle
 userelativecover: true
 ---
@@ -67,7 +67,7 @@ I decided not to. To me at least, that rubber just looks more
 {{< figure src="img/continental-tire.png" alt="Continental Ride Tour Tire" position="center" style="border-radius: 8px;" caption="Continental Ride Tour tire" captionPosition="center" >}}
 
 Amazon surprised me by not folding or rolling up the tires at all. No, instead, they
-shipped the tires in their normal resting shape. I was really surprised by the *massive*
+shipped the tires in their normal resting shape. I was really surprised by the _massive_
 box they left at my door.
 
 {{< figure src="img/big-tire-box.jpg" alt="Large tire box" position="center" style="border-radius: 8px;" caption="This is the box they arrived in." captionPosition="center" >}}
@@ -86,7 +86,7 @@ my local bike shop was closed, so I substituted some basic electrical tape from 
 
 While not very important, I didn't like that the handlebar endcaps on my bike didn't
 match. One of them was also broken and had sharp metal. I went on Amazon and got
-a [4-pack](https://www.amazon.com/gp/product/B07XG51Z4M) 
+a [4-pack](https://www.amazon.com/gp/product/B07XG51Z4M)
 of various colors that were easily removable. Buying a single pack on Amazon was
 close to the same price, so I decided to get multiple colors so I could pick the one
 I liked the most.
@@ -121,12 +121,12 @@ because I didn't trust my own abilities to wrap it well.
 
 ### Water Bottle Cage
 
-Lastly, I want to take this bike on some longer rides, so I got a basic 
+Lastly, I want to take this bike on some longer rides, so I got a basic
 water bottle cage.
 
 {{< figure src="img/water-bottle-cage.png" alt="Water bottle cage" position="center" style="border-radius: 8px;" caption="A water bottle cage pretty similar to what I purchased." captionPosition="center" >}}
 
-While the water bottle cage I got is a very bright red and the bike is more of an 
+While the water bottle cage I got is a very bright red and the bike is more of an
 orange-red, it looks close enough.
 
 ## Tools
@@ -143,8 +143,8 @@ I just went to Walmart and grabbed whatever they had.
 
 ### Tire Levers
 
-I had never heard of these things before. In case you're like me and 
-don't know what they are, they're basically little pry bars that help you 
+I had never heard of these things before. In case you're like me and
+don't know what they are, they're basically little pry bars that help you
 put a bike tire on a rim.
 
 {{< figure src="img/tire-lever-usage.jpg" alt="Tire lever usage" position="center" style="border-radius: 8px;" caption="This is how you're supposed to use a tire lever." captionPosition="center" >}}
@@ -181,7 +181,7 @@ to work on the bike.
 
 With a bit of percussive maintenance, we got both the wheels off. Once the wheels were
 off, it was more obvious how bad of shape the tires were in. While taking the tires
-off the rims, you could hear the rubber cracking. 
+off the rims, you could hear the rubber cracking.
 
 Also during this process,
 we discovered that the rim tape on the front rim was completely falling off.
@@ -195,7 +195,7 @@ endcaps. The endcaps ended up being a bit a tricky as one of the
 existing ones did not have a screw and was just press-fit.
 It took quite a bit of patience and prying to get it out.
 
-Lastly, we tried to clean the bike as much as reasonably possible and 
+Lastly, we tried to clean the bike as much as reasonably possible and
 lube everything up.
 
 {{< figure src="img/dirty-bike.jpg" alt="Dirty bicycle" position="center" style="border-radius: 8px;" caption="This was <i>after</i> trying to clean it." captionPosition="center" >}}
@@ -214,7 +214,7 @@ and just tightening it down really hard in order to get it roll straight.
 
 ### More Work
 
-After reassembling the bike and taking it home, I quickly realized that the rear shifter 
+After reassembling the bike and taking it home, I quickly realized that the rear shifter
 wouldn't shift worth a damn (I also taught myself to use the shifter.
 There's no dials to spin like I'm used to on mountain bikes,
 but levers you pull to manually move the chain between gears. You just listen and feel
@@ -255,7 +255,7 @@ you normally screw it into. My road bike had no such holes so I had to get creat
 
 {{< figure src="img/water-bottle-cage-mounted.jpg" alt="Water bottle cage mounted" position="center" style="border-radius: 8px;" caption="Two hose clamps slipped under the shifting lines hold it nice and snug." captionPosition="center" >}}
 
-Now, I know what you're thinking: "Won't that damage the paint?". Yes, yes it will, 
+Now, I know what you're thinking: "Won't that damage the paint?". Yes, yes it will,
 unless I put some electrical tape underneath of it. However, the paint is already so
 beat and rusted that I truly don't care.
 
@@ -298,12 +298,12 @@ looking particularly great, it lowers the chance of it getting stolen while on c
 This summer I'll have more time and tools to work on the bike, so I'd like to
 disassemble some more of the bearings and brake assembly to clean them and
 give them a good lube.
-I will have a power washer available, so I'd really like to use that clean a lot 
+I will have a power washer available, so I'd really like to use that clean a lot
 of the gunk off.
 
 ### Painting Over Phone Number
 
-A previous owner was so kind as to scratch their phone number into the frame of the 
+A previous owner was so kind as to scratch their phone number into the frame of the
 bike. To make it even better, they started on the side, then decided against it
 and started over on the top.
 

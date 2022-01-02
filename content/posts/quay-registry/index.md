@@ -4,35 +4,35 @@ cover: img/cover.jpg
 date: "2021-05-30"
 description: Run your own Docker registry with a web UI and vulnerability scanning for free by using Quay and Clair from Red Hat
 images:
-- /posts/quay-registry/img/cover.jpg
+  - /posts/quay-registry/img/cover.jpg
 tags:
-- Docker
-- registry
-- self-hosting
+  - Docker
+  - registry
+  - self-hosting
 title: Hosting your own fully featured Docker registry
 userelativecover: true
 ---
 
 ## Background
 
-Recently, I've become more interested in Docker containers and registries. 
-This is from a combination of dealing with these daily at work and publishing my 
+Recently, I've become more interested in Docker containers and registries.
+This is from a combination of dealing with these daily at work and publishing my
 [own containers](https://hub.docker.com/u/nathanvaughn) publicly. I thought it
-would be neat to publish my containers on my own private registry, 
-on my own domain name. For example, 
-instead of `docker pull ghcr.io/nathanvaughn/webtrees` 
+would be neat to publish my containers on my own private registry,
+on my own domain name. For example,
+instead of `docker pull ghcr.io/nathanvaughn/webtrees`
 it would be `docker pull cr.nthnv.me/webtrees`.
 
-Part of this is my constant desire to host non-critical services myself 
+Part of this is my constant desire to host non-critical services myself
 (by critical, I mean like email, calendar, git, etc.), part is a desire to remove
 my dependence on Docker Hub (I don't fully trust their ability to stay around forever,
-given them locking more features  behind paid tiers, 
+given them locking more features behind paid tiers,
 adding more aggressive rate limits, etc.). Additionally, outages are extremely disruptive,
-due to how the Docker client works\* and it using `index.docker.io` 
+due to how the Docker client works\* and it using `index.docker.io`
 as the default registry.
 
 \* Whenever you try to build a Docker image that bases off another image with `FROM`,
-Docker will *always* try to fetch the hash of the tag you have used to see if there's
+Docker will _always_ try to fetch the hash of the tag you have used to see if there's
 a newer version available. If Docker can't connect to the registry to check this,
 it fails and will refuse to build your image, even if you already have the
 base image locally. In my opinion, this is a colossally stupid design decision.
@@ -43,9 +43,9 @@ We quickly made copies of all our base images to our own registry.
 ## What is a Registry
 
 First off, we need to understand what a Docker registry is. At its core, a registry
-is just a web server with some API endpoints that returns and accepts JSON and files. 
-That's really about it. The full specification for a registry is defined 
-[here](https://docs.docker.com/registry/spec/api/). In terms of a web UI 
+is just a web server with some API endpoints that returns and accepts JSON and files.
+That's really about it. The full specification for a registry is defined
+[here](https://docs.docker.com/registry/spec/api/). In terms of a web UI
 or authentication, that is not handled by the core registry software and is left
 to the administrator to provide, if desired. While the "official" registry software is
 [here](https://github.com/distribution/distribution), as the specification
@@ -55,11 +55,11 @@ registry is just a bit of software that has no user interface, and anyone can
 
 ## Search
 
-With this in mind, I wanted to run my own registry that had a nice web UI for 
-public browsing and I could sign in with via 
-[SAML](https://en.wikipedia.org/wiki/Security_Assertion_Markup_Language) or 
-[OIDC](https://en.wikipedia.org/wiki/OpenID#OpenID_Connect) 
-(Open ID Connect, *basically* OAuth)
+With this in mind, I wanted to run my own registry that had a nice web UI for
+public browsing and I could sign in with via
+[SAML](https://en.wikipedia.org/wiki/Security_Assertion_Markup_Language) or
+[OIDC](https://en.wikipedia.org/wiki/OpenID#OpenID_Connect)
+(Open ID Connect, _basically_ OAuth)
 (the two protocols that [Keycloak](https://www.keycloak.org/) provide). In my mind,
 this shouldn't be too difficult, as I thought lots of tech companies run their own
 internal registries with similar requirements. Oh how wrong I was.
@@ -76,11 +76,11 @@ much like how I use GitHub Pages for my homepage and this blog.
 However, there are two problems with this software that prevented me from using it.
 
 1. This acts as a reverse-proxy, thus all traffic between the user and the registry
-go through it. When setup as an AWS Lambda Function or other serverless function,
-the bandwidth fees can get quite expensive.
+   go through it. When setup as an AWS Lambda Function or other serverless function,
+   the bandwidth fees can get quite expensive.
 2. The Docker client does not follow redirects. I tried to rewrite this in Python
-to instead serve 301 redirects rather than proxying traffic to save on bandwidth costs,
-but it did not work.
+   to instead serve 301 redirects rather than proxying traffic to save on bandwidth costs,
+   but it did not work.
 
 ### Amazon ECR Public
 
@@ -88,12 +88,12 @@ but it did not work.
 
 [Link](https://gallery.ecr.aws/)
 
-Next, I started to look into other hosted registries. The first thing I tried was 
+Next, I started to look into other hosted registries. The first thing I tried was
 Amazon Web Service's Amazon Elastic Container Registry Public (what a mouthful).
 While free and with generous limits,
-the URL scheme is like `public.ecr.aws/<random string>/<container>` 
+the URL scheme is like `public.ecr.aws/<random string>/<container>`
 and there's no way to add a custom domain name.
-While it seems neat if you are fully-invested in the AWS ecosystem, 
+While it seems neat if you are fully-invested in the AWS ecosystem,
 this doesn't really provide any advantages over Docker Hub or GitHub Container Registry.
 
 {{< figure src="img/ecr-gallery.png" alt="Amazon ECR Public Gallery" >}}
@@ -106,13 +106,13 @@ this doesn't really provide any advantages over Docker Hub or GitHub Container R
 
 I'm most familiar with this and looked into using it for myself.
 Unlike most hosted container registries, you get a custom subdomain. So instead of
-`azurecr.io/<name>/<container>` you get `<name>.azurecr.io/<container>`. 
-However, it lacks a public web UI browser, it costs 
+`azurecr.io/<name>/<container>` you get `<name>.azurecr.io/<container>`.
+However, it lacks a public web UI browser, it costs
 [$0.16/day](https://azure.microsoft.com/en-us/pricing/details/container-registry/)
-for the most basic plan (at time of writing), and only 
+for the most basic plan (at time of writing), and only
 [supports custom domain names](https://github.com/Azure/acr/blob/main/docs/custom-domain/README.md)
-with a *Premium* subscription. This was far too expensive and restrictive 
-for what I wanted. Cloudflare Argo Tunnel was still a paid product so my 
+with a _Premium_ subscription. This was far too expensive and restrictive
+for what I wanted. Cloudflare Argo Tunnel was still a paid product so my
 search ended here, for now.
 
 ### Harbor
@@ -121,20 +121,20 @@ search ended here, for now.
 
 [Link](https://goharbor.io/)
 
-After Cloudflare Tunnel 
+After Cloudflare Tunnel
 [was made free](https://blog.cloudflare.com/tunnel-for-everyone/), I began
 looking into hosting my own registry on my own hardware.
 One of the first self-hosted registry softwares I came across was Harbor by VMWare.
 It seemed to have a lot of the features I was looking for. OIDC sign-in and all-in-one
 registry and web UI for management. The real problem for this for me was that
-they're very adamant that you use their 
+they're very adamant that you use their
 [installer](https://goharbor.io/docs/latest/install-config/download-installer/).
 There's no mention of how to setup a Docker-compose stack (which is how I currently
 manage all of my applications). I really want a little bit more DIY setup process
 as I want to be able to connect software to my existing databases and reverse proxy.
 I do this via a shared Docker network that containers can be connected to. Additionally,
 I like to use Docker named volumes as it makes centralized backups easier. There's
-no ability to configure any of this in Harbor, nor is it easy to reverse-engineer 
+no ability to configure any of this in Harbor, nor is it easy to reverse-engineer
 as the installer creates a Docker-compose stack and a whole mess of folders and data.
 I quickly abandoned this idea as I thought the effort of reverse-engineering this
 would not be worthwhile and create an extremely fragile setup.
@@ -145,19 +145,19 @@ would not be worthwhile and create an extremely fragile setup.
 
 [Link](https://port.us.org/)
 
-The first piece of software I really tried and spent to time to setup was 
-Portus by the SUSE team. It seemed really promising. It acts as an authorization server 
+The first piece of software I really tried and spent to time to setup was
+Portus by the SUSE team. It seemed really promising. It acts as an authorization server
 that can connect to an OIDC provider, and gives a registry management web interface.
-It doesn't *really* have a nice public registry browser, but I was already striking
-out so this looked promising. However, this ended up being a massive timesink. 
-First off, the official website has an invalid SSL certificate (not a good sign) 
+It doesn't _really_ have a nice public registry browser, but I was already striking
+out so this looked promising. However, this ended up being a massive timesink.
+First off, the official website has an invalid SSL certificate (not a good sign)
 and the GitHub repository hasn't had a meaningful code contribution in nearly 2 years.
 To make it worse, a number of the official Docker images just flat out wouldn't
 run for me, with errors indicative that the image was built incorrectly (like `exec.go`
-errors that usually arise when you screw up your entrypoint). 
+errors that usually arise when you screw up your entrypoint).
 Portus requires 2 separate containers to run (a web UI and a background worker)
-together but I couldn't even get the same version of both to work 
-(they're the same container image, just a different entry command). 
+together but I couldn't even get the same version of both to work
+(they're the same container image, just a different entry command).
 Even with my cobbled together stack "running" it was extremely buggy and unstable.
 As much as I wanted it to work out, it just didn't.
 
@@ -201,7 +201,7 @@ Handling 'pull' event:
 	from /srv/Portus/bin/background.rb:56:in `each_with_index'
   },
 	from /srv/Portus/bin/background.rb:56:in `block in <top (required)>'
-     
+
   "actor": {
 	from /srv/Portus/bin/background.rb:55:in `loop'
     "name": "portus"
@@ -233,14 +233,14 @@ This caused it to crash.
 
 [Link](https://help.sonatype.com/repomanager3)
 
-After the failure of Portus, the next software 
-I tried was Sonatype's Nexus Repository Manager 3 (another mouthful). 
-This is pretty cool software. It's a universal package repository, 
+After the failure of Portus, the next software
+I tried was Sonatype's Nexus Repository Manager 3 (another mouthful).
+This is pretty cool software. It's a universal package repository,
 like [JFrog Artifactory](https://jfrog.com/artifactory/),
 [ProGet](https://inedo.com/proget),
 or [Azure Artifacts](https://azure.microsoft.com/en-us/services/devops/artifacts/).
-I played with this some, but it had a few downsides. First and foremost, 
-while self-hosted, only LDAP is supported as a form of single sign-on in 
+I played with this some, but it had a few downsides. First and foremost,
+while self-hosted, only LDAP is supported as a form of single sign-on in
 the free version. SAML authentication requires a license. While it does have a web UI
 for browsing the registry, it's very basic and pretty bland. This isn't really a
 negative against it, but the permissions system is very complex and way
@@ -259,11 +259,11 @@ I was looking for and super overkill for what I was trying to do.
 
 Starting to get desperate, I investigated GitLab's container registry. This is part
 of the GitLab application as a whole. I didn't install it, but from reading their
-documentation, this seems to be heavily based around the "projects" you have in 
+documentation, this seems to be heavily based around the "projects" you have in
 GitLab, thus I would need to make mirrors of all of my containers as GitLab projects.
 I'm not interested in moving my code to my own GitLab instance, so I decided to shelve
 this for now. However, being able to sign-in to my registry with GitLab
-(which supports a *ton* of different connections like LDAP, OIDC, etc.)
+(which supports a _ton_ of different connections like LDAP, OIDC, etc.)
 was going to be a huge plus.
 
 ### Quay
@@ -272,8 +272,8 @@ was going to be a huge plus.
 
 [Link](https://www.projectquay.io/)
 
-Last, but certainly not least is Quay. Spoiler alert, Quay is what I ended up 
-going with. I didn't find Quay earlier because when I searched for self-hosted 
+Last, but certainly not least is Quay. Spoiler alert, Quay is what I ended up
+going with. I didn't find Quay earlier because when I searched for self-hosted
 registry software, Quay would come up, but I thought it meant [Quay.io](https://quay.io)
 which is Red Hat's public instance of the Quay software.
 
@@ -292,10 +292,10 @@ Now, I'll discuss getting Quay setup (the meat of this article).
 ### Disclaimer
 
 This is not a fully secure production-ready setup. Quay recommends setup certificates
-in the application itself rather than using a reverse-proxy. 
-Communication between containers should also be secured, 
+in the application itself rather than using a reverse-proxy.
+Communication between containers should also be secured,
 though they are not in this example.
-Additionally, using  some sort of blob storage is highly recommended 
+Additionally, using some sort of blob storage is highly recommended
 rather than local filesystem storage. Finally, you should pin the versions of
 the containers you're using, I'm just showing `latest` as an example.
 
@@ -325,7 +325,7 @@ Enter the user `quayconfig` and the password you selected.
 
 Fill out the configuration. Item to note, while Quay supports MySQL, I had issues
 setting this up, and found using PostgreSQL to be easier
-(and Clair needs PostgreSQL anyways, more on that later). Just make sure to add the 
+(and Clair needs PostgreSQL anyways, more on that later). Just make sure to add the
 `pg_trgm` extension to the PostgreSQL database you create. Example:
 
 ```bash
@@ -334,12 +334,12 @@ psql # login
 CREATE EXTENSION pg_trgm; # install extension
 ```
 
-The options inside the configuration are extensive, 
-so I'm not going to go over all of them. The full documentation is available 
+The options inside the configuration are extensive,
+so I'm not going to go over all of them. The full documentation is available
 [here](https://access.redhat.com/documentation/en-us/red_hat_quay/3/html/manage_red_hat_quay/quay-schema).
 
-An important option is enabling non-superuser creation. 
-If you have it setup as I do to only allow sign-ins through an external 
+An important option is enabling non-superuser creation.
+If you have it setup as I do to only allow sign-ins through an external
 authentication provider, Quay needs to create an account the first time a user signs in.
 You should allow account creation, and restrict sign-ins at your identity provider.
 That way as long as someone can sign in with your authentication service, they can
@@ -355,13 +355,13 @@ options not available in the UI, that you can change manually.
 
 ```yaml
 # adds gravatar avatars
-AVATAR_KIND: gravatar 
-# this defaults to true, but allows you to omit the 
+AVATAR_KIND: gravatar
+# this defaults to true, but allows you to omit the
 # user/org part of a container namespace, and have it interpreted as "library".
 # For example: `quay.io/library/python` will be equivalent to `quay.io/python`.
-FEATURE_LIBRARY_SUPPORT: true 
+FEATURE_LIBRARY_SUPPORT: true
 # allows users to rename account
-FEATURE_USER_RENAME: true 
+FEATURE_USER_RENAME: true
 ```
 
 Now place this inside the `/conf/stack/` folder of your container.
@@ -406,8 +406,8 @@ volumes:
 
 If you decided to leave the library support enabled earlier, you'll need to create
 and organization or user with this name in order for it to work. Personally,
-I recommend 
-[creating an organization](https://access.redhat.com/documentation/en-us/red_hat_quay/3/html/use_red_hat_quay/proc-use-quay-create-user-org#proc-use-quay-create-orgs), 
+I recommend
+[creating an organization](https://access.redhat.com/documentation/en-us/red_hat_quay/3/html/use_red_hat_quay/proc-use-quay-create-user-org#proc-use-quay-create-orgs),
 and adding your account to it.
 
 ### Mirror
@@ -442,7 +442,7 @@ services:
 
   mirror:
     command: repomirror
-    depends_on: 
+    depends_on:
       - app
     image: quay.io/projectquay/quay:latest
     restart: unless-stopped
@@ -463,13 +463,13 @@ volumes:
     driver: local
 ```
 
-Now you can 
+Now you can
 [create a mirrored repository](https://access.redhat.com/documentation/en-us/red_hat_quay/3/html/manage_red_hat_quay/repo-mirroring-in-red-hat-quay#create-mirrored-repo).
 
 ⚠ Warning ⚠: I would be extremely careful of starting both the main Quay container and
 the mirror worker at the same time. When starting a new setup from scratch, or upgrading
-the versions, the first thing Quay does is create/migrate the database schema. 
-Having two containers do this at the same time will end poorly, 
+the versions, the first thing Quay does is create/migrate the database schema.
+Having two containers do this at the same time will end poorly,
 and usually results in a corrupted state.
 Start one container, let it migrate the database, then starts the other.
 
@@ -486,15 +486,15 @@ extra for vulnerability scanning, and this is integrated directly into Quay for 
 
 Before you get started, Clair has a habit of writing a LOT of data to the log.
 I highly recommend modifying your Docker `daemon.json` to limit the size
-of the log files. Documentation for that is 
+of the log files. Documentation for that is
 [here](https://docs.docker.com/config/containers/logging/json-file/). Example:
 
-``` json
+```json
 {
   "log-driver": "json-file",
   "log-opts": {
     "max-size": "100m",
-    "max-file": "3" 
+    "max-file": "3"
   }
 }
 ```
@@ -505,21 +505,20 @@ hard way that this will allow a single log file to grow infinitely.
 {{< figure src="img/clair-log.png" alt="A 270GB log file" caption="It took me forever to figure out why my server was constantly hammering the disk" >}}
 
 To setup Clair, you first need to configure Quay.
-Relaunch the Quay configurator and enable 
-vulnerability scanning. You also want to generate a pre-shared key (PSK). 
+Relaunch the Quay configurator and enable
+vulnerability scanning. You also want to generate a pre-shared key (PSK).
 Copy this value. Save the configuration and copy it back into the container.
 
 For Clair, setup a PostgreSQL database for it, just like Quay. You will need
 to manually create a settings file for Clair (much like Quay) and copy it
-into `/config` of the Clair container. See [Clair Config](#clair-config) for 
-my configuration or 
+into `/config` of the Clair container. See [Clair Config](#clair-config) for
+my configuration or
 [Quay's documentation](https://docs.projectquay.io/manage_quay.html#clair-v4)
-for another example. The full reference can be found 
+for another example. The full reference can be found
 [here](https://quay.github.io/clair/reference/config.html). Clair has 3 pieces, the
 indexer, matcher, and notifier. The easiest and simplest configuration is to
-run all 3 at once in the Clair container. Enable this by setting the `CLAIR_MODE` 
+run all 3 at once in the Clair container. Enable this by setting the `CLAIR_MODE`
 environment variable to `combo`. Now, launch the Clair container.
-
 
 ```yaml
 services:
@@ -536,7 +535,7 @@ services:
       - app_tmp:/tmp
 
   mirror:
-    depends_on: 
+    depends_on:
       - app
     image: quay.io/projectquay/quay:latest
     command: repomirror
@@ -548,9 +547,9 @@ services:
       - app_tmp:/tmp
 
   clair:
-    depends_on: 
+    depends_on:
       - app
-    environment: 
+    environment:
       - CLAIR_MODE=combo
       - CLAIR_CONF=/config/config.yaml
     image: quay.io/projectquay/clair:latest
@@ -577,7 +576,7 @@ start scanning images already pushed to Quay and any new images.
 {{< figure src="img/quay-vulns.png" alt="Vulnerabilities for a container image shown in the web UI" >}}
 
 If you get any "unable to analyze image" messages in Quay, this likely means
-there is a version mismatch between Quay and Clair. I would *highly* recommend
+there is a version mismatch between Quay and Clair. I would _highly_ recommend
 to use the latest stable version of each, as that should always play nice.
 I would verify this works before pushing lots of content to your registry, as the
 only way to downgrade Quay is to wipe the database and start over.
@@ -607,23 +606,23 @@ AUTHENTICATION_TYPE: Database
 AVATAR_KIND: gravatar
 BITTORRENT_FILENAME_PEPPER: <autogenerated uuid>
 BUILDLOGS_REDIS:
-    host: redis
-    port: 6379
+  host: redis
+  port: 6379
 CONTACT_INFO:
-    - https://nthnv.me/contact
+  - https://nthnv.me/contact
 DATABASE_SECRET_KEY: <autogenerated uuid>
 DB_CONNECTION_ARGS:
-    autorollback: true
-    threadlocals: true
+  autorollback: true
+  threadlocals: true
 DB_URI: postgresql://quay:<pass>@postgres/quay
 DEFAULT_TAG_EXPIRATION: 2w
 DISTRIBUTED_STORAGE_CONFIG:
-    default:
-        - LocalStorage
-        - storage_path: /datastorage/registry
+  default:
+    - LocalStorage
+    - storage_path: /datastorage/registry
 DISTRIBUTED_STORAGE_DEFAULT_LOCATIONS: []
 DISTRIBUTED_STORAGE_PREFERENCE:
-    - default
+  - default
 EXTERNAL_TLS_TERMINATION: true
 FEATURE_ACI_CONVERSION: false
 FEATURE_ACTION_LOG_ROTATION: true
@@ -667,10 +666,10 @@ GITLAB_TRIGGER_KIND: {}
 GPG2_PRIVATE_KEY_FILENAME: signing-private.gpg
 GPG2_PUBLIC_KEY_FILENAME: signing-public.gpg
 KEYCLOAK_LOGIN_CONFIG:
-    CLIENT_ID: quay
-    CLIENT_SECRET: <keycloak client secret>
-    OIDC_SERVER: https://keycloak.nathanv.app/auth/realms/nathanv/
-    SERVICE_NAME: Keycloak
+  CLIENT_ID: quay
+  CLIENT_SECRET: <keycloak client secret>
+  OIDC_SERVER: https://keycloak.nathanv.app/auth/realms/nathanv/
+  SERVICE_NAME: Keycloak
 LDAP_ALLOW_INSECURE_FALLBACK: false
 LDAP_EMAIL_ATTR: mail
 LDAP_UID_ATTR: uid
@@ -699,19 +698,19 @@ SECURITY_SCANNER_V4_PSK: <generated key>
 SERVER_HOSTNAME: cr.nthnv.me
 SETUP_COMPLETE: true
 SUPER_USERS:
-    - nathan
+  - nathan
 TAG_EXPIRATION_OPTIONS:
-    - 0s
-    - 1d
-    - 1w
-    - 2w
-    - 4w
+  - 0s
+  - 1d
+  - 1w
+  - 2w
+  - 4w
 TEAM_RESYNC_STALE_TIME: 30m
 TESTING: false
 USE_CDN: false
 USER_EVENTS_REDIS:
-    host: redis
-    port: 6379
+  host: redis
+  port: 6379
 USER_RECOVERY_TOKEN_LIFETIME: 30m
 USERFILES_LOCATION: default
 ```
@@ -753,7 +752,7 @@ trace:
 ### Docker-compose.yml
 
 ```yaml
-version: '3'
+version: "3"
 
 services:
   app:
@@ -792,7 +791,7 @@ services:
   #     - app_config:/conf/stack
 
   mirror:
-    depends_on: 
+    depends_on:
       - app
     image: quay.io/projectquay/quay:v3.6.0-alpha.9
     command: repomirror
@@ -809,9 +808,9 @@ services:
       - app_tmp:/tmp
 
   clair:
-    depends_on: 
+    depends_on:
       - app
-    environment: 
+    environment:
       - CLAIR_MODE=combo
       - CLAIR_CONF=/config/config.yaml
     image: quay.io/projectquay/clair:4.1.0-alpha.3
@@ -848,13 +847,14 @@ networks:
 I'm extremely pleased with how this came out. I basically have my own little Docker Hub
 on my domain and my own server. If you want to look at it for yourself, go to
 [cr.nthnv.me](https://cr.nthnv.me/search) (yes, I could have bought a short domain
-such as `nvcr.me` for this, but I rather use a subdomain of my already-existing short 
-domain. See my rant on that here: 
+such as `nvcr.me` for this, but I rather use a subdomain of my already-existing short
+domain. See my rant on that here:
 [Stop Using So Many Domain Names]({{< relref "domain-abuse" >}})).
 It's got OIDC authentication, a public web UI, vulnerability scanning, support for the
 `library` namespace, all-in-one.
 
 ## References
+
 - [https://access.redhat.com/documentation/en-us/red_hat_quay/3/](https://access.redhat.com/documentation/en-us/red_hat_quay/3/)
 - [https://docs.projectquay.io/manage_quay.html#clair-v4](https://docs.projectquay.io/manage_quay.html#clair-v4)
 - [https://quay.github.io/clair/whatis.html](https://quay.github.io/clair/whatis.html)

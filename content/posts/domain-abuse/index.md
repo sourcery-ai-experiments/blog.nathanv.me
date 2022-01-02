@@ -3,10 +3,10 @@ author: Nathan Vaughn
 date: "2020-10-06"
 description: A short rant on companies' obsession with domain names
 tags:
-- rant
-- domains
-- Microsoft
-- Google
+  - rant
+  - domains
+  - Microsoft
+  - Google
 title: "Stop Using So Many Domain Names"
 ---
 
@@ -42,7 +42,7 @@ aka.ms
 yammer.com
 ```
 
-Some of these even *look* like phishing domains. `microsoftstream.com`?
+Some of these even _look_ like phishing domains. `microsoftstream.com`?
 Just for fun, I looked at similar domains for sale to see how easy it would
 be to just buy a similar looking domain.
 

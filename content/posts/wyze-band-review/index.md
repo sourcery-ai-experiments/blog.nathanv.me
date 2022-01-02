@@ -4,12 +4,12 @@ cover: img/stock-band.png
 date: "2020-06-20"
 description: My review of the new(ish) Wyze Band
 images:
-- /posts/wyze-band-review/img/stock-band.png
+  - /posts/wyze-band-review/img/stock-band.png
 tags:
-- Wyze
-- wearables
-- health
-- review
+  - Wyze
+  - wearables
+  - health
+  - review
 title: Wyze Band Review
 userelativecover: true
 ---
@@ -27,6 +27,7 @@ Here's the summary:
 I give it 4/5 stars, primarily for being such a good value.
 
 ### The Good
+
 ---
 
 - Cheap
@@ -40,6 +41,7 @@ I give it 4/5 stars, primarily for being such a good value.
 - Find my phone (or vice versa) feature
 
 ### The Bad
+
 ---
 
 - Wyze app needs to be constantly running
@@ -47,6 +49,7 @@ I give it 4/5 stars, primarily for being such a good value.
 - No external fitness app integration (coming soon, supposedly)
 
 ### The Ugly
+
 ---
 
 - Alexa integration is relatively useless
@@ -95,7 +98,7 @@ The left side does not have any openings.
 
 For starters, you absolutely need
 a phone with the Wyze app installed. The Band is completely dependent on it.
-While it doesn't *need* to be running at all times, if you actually want
+While it doesn't _need_ to be running at all times, if you actually want
 notifications to work, Alexa, or weather to update, you have to set it up to
 constantly run in the background.
 
@@ -106,7 +109,7 @@ screens you can swipe through.
 
 {{< video src="vid/swipe.mp4" alt="Swiping through screen demonstration" position="center" style="border-radius: 8px;" caption="Swipe up, swipe down, swipe it all around." >}}
 
-The screens can be reordered or removed<sup>*</sup> as desired. Each screen
+The screens can be reordered or removed<sup>\*</sup> as desired. Each screen
 also has accompanying information in the Wyze app.
 
 In the following screenshots, the image on the left is how the screen appears on the
@@ -153,7 +156,7 @@ In the app, this page shows the same graphs, but for more periods of time.
 
 {{< figure src="img/activity-app.jpg" alt="The activity screen on the Band and in the Wyze app" position="center" style="border-radius: 8px;" caption="The activity screen on the Band and in the Wyze app" captionPosition="center" >}}
 
-My only complaint here is that this is the Wyze app is the *only*
+My only complaint here is that this is the Wyze app is the _only_
 place you can view this data outside of the Band.
 
 #### Weather
@@ -182,7 +185,7 @@ In the app, you can change a few settings for this functionality.
 #### Alarm
 
 On the Band itself, tapping on this screen begins shows the list of
-active alarms. You *cannot* set alarms from the Band directly.
+active alarms. You _cannot_ set alarms from the Band directly.
 I use my phone for alarms, so I have this disabled.
 
 In the app, you can set alarms (strangely, only up to 6).
@@ -193,7 +196,7 @@ In the app, you can set alarms (strangely, only up to 6).
 
 The "shortcuts" name is a bit deceptive. It's for custom shortcuts and actions
 you can setup for
-[*only supported Wyze devices*](https://support.wyzecam.com/hc/en-us/articles/360041403591-Shortcuts).
+[_only supported Wyze devices_](https://support.wyzecam.com/hc/en-us/articles/360041403591-Shortcuts).
 I assume to turn on/off lights and things.
 
 On the Band itself, I have no idea what this does, as I don't own any other Wyze
@@ -219,7 +222,7 @@ everything seemed to be setup fine. Updates seem to have fixed this.
 Another big issue is that the Band tries to show the content of notifications,
 and there is no way to turn this off. With the tiny screen, it can only fit 10
 characters across, so things like text messages, and even email subjects
-get line-wrapped to hell. I really would love a way to just get the *indication*
+get line-wrapped to hell. I really would love a way to just get the _indication_
 that I have an unread message, so I can look at it on my phone. Additionally,
 there is no power setting for the vibration of the notification. The vibration
 motor in the Band is very strong, and notifications have legitimately startled
@@ -250,7 +253,7 @@ but with a 3-second delay? Neither have I.
 This one isn't a "screen", but instead you press and hold the one button on the thing
 for two seconds. Wait for the Band to get ready for two **more** seconds,
 then talk at it, and wait for your
-response. Oh, and have this thing buzz on your wrist ***five*** separate times.
+response. Oh, and have this thing buzz on your wrist **_five_** separate times.
 To be as fair as possible for this test, I rebooted the Band right before recording.
 
 {{< video src="vid/alexa.mp4" alt="Alexa on the Band demonstration" position="center" style="border-radius: 8px;" caption="Make sure your audio is on" autoplay="false" >}}
@@ -283,7 +286,7 @@ In the app, you can change some Band settings.
 {{< figure src="img/settings-app.jpg" alt="The settings screen on the Band and in the Wyze app" position="center" style="border-radius: 8px;" caption="The settings screen on the Band and in the Wyze app" captionPosition="center" >}}
 
 Now, you may naively assume this is where you would find all of your Band settings
-in the app. How wrong you are. No, if you want to modify *other* settings
+in the app. How wrong you are. No, if you want to modify _other_ settings
 such as Alexa, device name, or your health info, you have to click the three dots in
 the top right which is super not-obvious.
 
@@ -291,7 +294,7 @@ the top right which is super not-obvious.
 
 I cannot figure why this is just not with the other Band settings in the Wyze app.
 You have to swipe through all these screens to access all these settings, with one of
-them called "Settings", but you have to go somewhere else to find the *special*
+them called "Settings", but you have to go somewhere else to find the _special_
 settings. It really is terrible UX.
 
 ### Other Thoughts
@@ -307,9 +310,9 @@ G-Shock watch that goes 5+ years between battery changes.
 
 #### Screen
 
-The screen is also *really* good (for the price point). It's no Apple Watch retina
+The screen is also _really_ good (for the price point). It's no Apple Watch retina
 display, but for $25, a full-color AMOLED display is darn good value. I personally
-think it's better than  my mom's FitBit Charge 3 which I believe is also AMOLED,
+think it's better than my mom's FitBit Charge 3 which I believe is also AMOLED,
 but only two colors.
 
 Additionally, the brightness is fantastic. I've never had any issues
@@ -324,7 +327,7 @@ While support "is coming", this is a serious bummer. It feels like this was
 omitted to meet the release date.
 
 The more baffling thing is that the [Wyze Scale](https://wyze.com/wyze-scale) currently
-[*does* in fact do this](https://support.wyzecam.com/hc/en-us/articles/360039174572-How-do-I-sync-the-Wyze-app-with-Google-Fit-).
+[_does_ in fact do this](https://support.wyzecam.com/hc/en-us/articles/360039174572-How-do-I-sync-the-Wyze-app-with-Google-Fit-).
 It makes absolutely sense to me that one product in Wyze's fitness tracker
 lineup supports data sharing while the other doesn't! WHY?! Both were released
 at the same time, both should support it.
@@ -368,7 +371,7 @@ for this review, my band shows the location as Seattle, despite being in Florida
 
 When I tap on the screen, it correctly shows me the weather for my location in Florida.
 Funnily enough, the weather its displaying on the main screen is also the weather
-where I am actually, and *not* Seattle. So I have no idea why that shows Seattle.
+where I am actually, and _not_ Seattle. So I have no idea why that shows Seattle.
 
 ### Final Thoughts
 

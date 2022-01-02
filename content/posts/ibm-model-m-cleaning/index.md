@@ -4,11 +4,11 @@ cover: img/model-m-angle.jpg
 date: "2020-12-18"
 description: Cleaning an original IBM Model M from 1986
 images:
-- /posts/ibm-model-m-cleaning/img/model-m-angle.jpg
+  - /posts/ibm-model-m-cleaning/img/model-m-angle.jpg
 tags:
-- IBM
-- Model M
-- mechanical keyboards
+  - IBM
+  - Model M
+  - mechanical keyboards
 title: "IBM Model M Cleaning"
 userelativecover: true
 ---
@@ -137,8 +137,8 @@ produced for each localization.
 ## Cleaning
 
 Let's get [down to business](https://youtu.be/TVcLIfSC4OE). This keyboard had
-almost 35 years of grime on it. It wasn't *bad* considering its age,
-but it wasn't *good* either.
+almost 35 years of grime on it. It wasn't _bad_ considering its age,
+but it wasn't _good_ either.
 
 {{< figure src="img/grime.jpg" alt="Keyboard grime" caption="30+ years in an academic environment has left its residue"  >}}
 
@@ -279,7 +279,7 @@ the switches themselves are put on a curve.
 
 {{< figure src="img/keycap-profiles.jpg" alt="Standard keycap profiles versus Model M keycap profiles" caption="Top: [SA profile keycaps](https://drop.com/buy/ascii-sa-pbt-dye-subbed-custom-keycap-set) on a straight keyboard. Bottom: Model M keycaps on its curved backplate." >}}
 
-In terms of cleaning the backplate, I used a *lot* of paper towels soaked with alcohol.
+In terms of cleaning the backplate, I used a _lot_ of paper towels soaked with alcohol.
 To get in some of the tighter spaces, I again used a screwdriver tip wrapped in paper
 towels to run through the spaces.
 
@@ -330,7 +330,7 @@ Each sample was done with no risers on the back deployed, and not modified in an
 ### Issues
 
 There's a few things you have to deal with, with a keyboard this old.
-First is the size. This thing is a ***monster***.
+First is the size. This thing is a **_monster_**.
 It's 19.25 inches long by 8.25 inches wide. It takes up a ton of desk space.
 
 {{< figure src="img/desk-space.jpg" alt="Model M on my desk" caption="This thing consumes the majority of my [desk mat](https://bitwit.tech/shop/ensemble1-blupnk)" >}}

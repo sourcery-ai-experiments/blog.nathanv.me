@@ -1,13 +1,14 @@
 ---
 author: Nathan Vaughn
 date: "2019-10-15"
-description: How I used GitHub Actions to completely automate the building and deployment
+description:
+  How I used GitHub Actions to completely automate the building and deployment
   of my personal site (and this blog)
 tags:
-- GitHub
-- GitHub Actions
-- continuous delivery
-- Hugo
+  - GitHub
+  - GitHub Actions
+  - continuous delivery
+  - Hugo
 title: Deploying a Static Site with GitHub Actions
 ---
 
@@ -63,7 +64,7 @@ with some basic, yet widely used functionality.
 My website is built with the
 [Hugo](https://gohugo.io) static site generator, using a theme I made for myself.
 I admit, my website doesn't exactly have the cleanest structure. While Hugo is meant
-to be used with Markdown files (like this blog), I wanted *extremely* structured
+to be used with Markdown files (like this blog), I wanted _extremely_ structured
 content for my website. In order to do this, I used Hugo's
 [data templates](https://gohugo.io/templates/data-templates/)
 ([example](https://github.com/NathanVaughn/nathanv.me/blob/master/data/workexperience.yml)).
@@ -83,7 +84,7 @@ Anyways, this was my build process for my site previously:
 5. Run `npm run build:js` to minify the JS (if needed)
 6. Run `hugo` to actually build the site's contents
 7. Run `npm run beautify` to beautify the output HTML because whitespace with HTML
-templates is surprisingly difficult
+   templates is surprisingly difficult
 8. Run `npm run deploy` to actually commit and push the changes
 
 While I did basically have steps 4-7 clumped together into a single `build` script,
@@ -102,41 +103,40 @@ name: Build
 on:
   push:
     branches:
-    - master
+      - master
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@master
-      with:
-        submodules: true
-    - name: Install Node
-      uses: actions/setup-node@master
-    - name: Install dependencies
-      run: npm install
-    - name: Build Critical CSS
-      run: npm run critical
-    - name: Build Site
-      run: npm run build
-    - name: Deploy Site
-      uses: peaceiris/actions-gh-pages@master
-      if: success()
-      env:
-        ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-        PUBLISH_BRANCH: gh-pages
-        PUBLISH_DIR: ./public
-    - name: Purge Cache
-      uses: nathanvaughn/actions-cloudflare-purge@master
-      if: success()
-      env:
-        CLOUDFLARE_ZONE: ${{ secrets.CLOUDFLARE_ZONE }}
-        CLOUDFLARE_AUTH_KEY: ${{ secrets.CLOUDFLARE_AUTH_KEY }}
-    - name: Load Site
-      run: curl $(echo $GITHUB_REPOSITORY | cut -d "/" -f 2-) --location --output /dev/null
+      - name: Checkout code
+        uses: actions/checkout@master
+        with:
+          submodules: true
+      - name: Install Node
+        uses: actions/setup-node@master
+      - name: Install dependencies
+        run: npm install
+      - name: Build Critical CSS
+        run: npm run critical
+      - name: Build Site
+        run: npm run build
+      - name: Deploy Site
+        uses: peaceiris/actions-gh-pages@master
+        if: success()
+        env:
+          ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          PUBLISH_BRANCH: gh-pages
+          PUBLISH_DIR: ./public
+      - name: Purge Cache
+        uses: nathanvaughn/actions-cloudflare-purge@master
+        if: success()
+        env:
+          CLOUDFLARE_ZONE: ${{ secrets.CLOUDFLARE_ZONE }}
+          CLOUDFLARE_AUTH_KEY: ${{ secrets.CLOUDFLARE_AUTH_KEY }}
+      - name: Load Site
+        run: curl $(echo $GITHUB_REPOSITORY | cut -d "/" -f 2-) --location --output /dev/null
 ```
 
 ### Breakdown
@@ -145,17 +145,16 @@ jobs:
 on:
   push:
     branches:
-    - master
+      - master
 ```
 
 I want this workflow to run on every single push to the master branch. I don't have
-this set to *every* branch, because I publish the output HTML to the `gh-pages` branch
+this set to _every_ branch, because I publish the output HTML to the `gh-pages` branch
 for [GitHub Pages](https://pages.github.com/) (how I host the site). Plus, if I want to work on a separate branch and not have the changes deployed, I can do so.
 
 ```yml
 jobs:
   build:
-
     runs-on: ubuntu-latest
 ```
 
@@ -163,11 +162,11 @@ You can define multiple "jobs" per workflow, but mine just has one called "build
 I want it to run on the latest build of Ubuntu.
 
 ```yml
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@master
-      with:
-        submodules: true
+steps:
+  - name: Checkout code
+    uses: actions/checkout@master
+    with:
+      submodules: true
 ```
 
 This is where the steps of the job start. To begin, I use the latest copy of the premade
@@ -176,45 +175,45 @@ and initialize all submodules (though I don't use any submodules currently for m
 site).
 
 ```yml
-    - name: Install Node
-      uses: actions/setup-node@master
+- name: Install Node
+  uses: actions/setup-node@master
 ```
 
 Next I use the premade [setup-node](https://github.com/actions/setup-node) action
 to setup NodeJS and npm.
 
 ```yml
-    - name: Install dependencies
-      run: npm install
+- name: Install dependencies
+  run: npm install
 ```
 
 After that, I simply run the `npm install` command to install all the dependencies.
 Since I'm using the [hugo-bin](https://www.npmjs.com/package/hugo-bin) package,
-this also sets up Hugo for me. While I *could* run a different script
+this also sets up Hugo for me. While I _could_ run a different script
 to download and install Hugo, doing it in one shot with npm just makes things easier.
 
 ```yml
-    - name: Build Critical CSS
-      run: npm run critical
+- name: Build Critical CSS
+  run: npm run critical
 ```
 
 Next, I run my npm script to start the Hugo server, and generate the critical CSS.
 
 ```yml
-    - name: Build Site
-      run: npm run build
+- name: Build Site
+  run: npm run build
 ```
 
 Then, I run my npm script to build the site (CSS, JS, Hugo) as described above.
 
 ```yml
-    - name: Deploy Site
-      uses: peaceiris/actions-gh-pages@master
-      if: success()
-      env:
-        ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-        PUBLISH_BRANCH: gh-pages
-        PUBLISH_DIR: ./public
+- name: Deploy Site
+  uses: peaceiris/actions-gh-pages@master
+  if: success()
+  env:
+    ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+    PUBLISH_BRANCH: gh-pages
+    PUBLISH_DIR: ./public
 ```
 
 Afterwards, I use [an action](https://github.com/peaceiris/actions-gh-pages)
@@ -224,12 +223,12 @@ if the previous step ran successfully. This is important, as I don't want to com
 broken site build.
 
 ```yml
-    - name: Purge Cache
-      uses: nathanvaughn/actions-cloudflare-purge@master
-      if: success()
-      env:
-        CLOUDFLARE_ZONE: ${{ secrets.CLOUDFLARE_ZONE }}
-        CLOUDFLARE_AUTH_KEY: ${{ secrets.CLOUDFLARE_AUTH_KEY }}
+- name: Purge Cache
+  uses: nathanvaughn/actions-cloudflare-purge@master
+  if: success()
+  env:
+    CLOUDFLARE_ZONE: ${{ secrets.CLOUDFLARE_ZONE }}
+    CLOUDFLARE_AUTH_KEY: ${{ secrets.CLOUDFLARE_AUTH_KEY }}
 ```
 
 This uses a custom action
@@ -240,8 +239,8 @@ long leading to things breaking. This uses
 passed in as environment variables to securely store important tokens.
 
 ```yml
-    - name: Load Site
-      run: curl $(echo $GITHUB_REPOSITORY | cut -d "/" -f 2-) --location --output /dev/null
+- name: Load Site
+  run: curl $(echo $GITHUB_REPOSITORY | cut -d "/" -f 2-) --location --output /dev/null
 ```
 
 To finish it off, I do a `curl` pull of my site to ensure it's working properly.
@@ -291,6 +290,7 @@ doing deployments, or anything else. I'm excited to see where GitHub and the com
 take the product.
 
 ## References
+
 - [https://help.github.com/en/categories/automating-your-workflow-with-github-actions](https://help.github.com/en/categories/automating-your-workflow-with-github-actions)
 - [https://help.github.com/en/articles/events-that-trigger-workflows](https://help.github.com/en/articles/events-that-trigger-workflows)
 - [https://help.github.com/en/articles/contexts-and-expression-syntax-for-github-actions](https://help.github.com/en/articles/contexts-and-expression-syntax-for-github-actions)

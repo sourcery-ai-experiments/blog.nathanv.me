@@ -4,11 +4,11 @@ cover: img/stock-scale.png
 date: "2020-06-24"
 description: My review of the new(ish) Wyze Scale
 images:
-- /posts/wyze-scale-review/img/stock-scale.png
+  - /posts/wyze-scale-review/img/stock-scale.png
 tags:
-- Wyze
-- health
-- review
+  - Wyze
+  - health
+  - review
 title: Wyze Scale Review
 userelativecover: true
 ---
@@ -17,7 +17,7 @@ userelativecover: true
 
 A few months ago I decided to preorder a [Wyze Scale](https://wyze.com/wyze-scale).
 It was only $20 and I was curious to have a "smart" scale so I could track
-my weight. This is review is going to be *way* shorter than my
+my weight. This is review is going to be _way_ shorter than my
 [Wyze Band Review]({{< relref "wyze-band-review" >}}), as it's a far simpler product
 
 Here's the summary:
@@ -27,6 +27,7 @@ Here's the summary:
 I give it 5/5 stars, because it does what it says on the tin.
 
 ### The Good
+
 ---
 
 - Cheap
@@ -36,12 +37,14 @@ I give it 5/5 stars, because it does what it says on the tin.
 - Does what it says
 
 ### The Bad
+
 ---
 
 - My unit makes a very faint, but noticeable high-pitched whine while measuring your weight
 - Measuring weight does take a few seconds
 
 ### The Ugly
+
 ---
 
 None
