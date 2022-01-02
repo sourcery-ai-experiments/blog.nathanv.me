@@ -1,2 +1,7 @@
-node_modules
+# site build
 public
+.hugo_build.lock
+
+# testing
+node_modules
+.venv

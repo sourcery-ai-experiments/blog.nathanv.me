@@ -42,7 +42,7 @@ portal to disable it's WiFi, since I just want to use it as a modem, and not a r
 
 ### TP-Link Archer C1900 - $34.99
 
-{{< image src="img/tplink-archer.jpg" alt="TP-Link Archer C1900" position="center" style="border-radius: 8px;" >}}
+{{< figure src="img/tplink-archer.jpg" alt="TP-Link Archer C1900" position="center" style="border-radius: 8px;" >}}
 
 I managed to snag a refurbished unit in a Newegg flash deal for $34.99.
 
@@ -57,7 +57,7 @@ up a printer, but it does provide enough amperage to power a Raspberry Pi (see b
 
 ### Raspberry Pi 3 Model B - Free
 
-{{< image src="img/rpi3.jpg" alt="Raspberry Pi 3 Model B" position="center" style="border-radius: 8px;" >}}
+{{< figure src="img/rpi3.jpg" alt="Raspberry Pi 3 Model B" position="center" style="border-radius: 8px;" >}}
 
 I got a free Raspberry Pi 3 a few years back when Arrow was running a promotion for
 Pi day (March 14), where they were selling Raspberry Pi's for $3.14. Well, their
@@ -72,14 +72,14 @@ plugged in.
 
 ### Netgear GS305 - $19.99
 
-{{< image src="img/netgear-gs305.jpg" alt="Netgear GS305" position="center" style="border-radius: 8px;" >}}
+{{< figure src="img/netgear-gs305.jpg" alt="Netgear GS305" position="center" style="border-radius: 8px;" >}}
 
 Not much to say about this. It's a basic 5-port gigabit unmanaged switch.
 I've had it for a few years.
 
 ### Netgear Powerline 1200 - $79.99
 
-{{< image src="img/PL1200_NA_Hero_Transparent.png" alt="Netgear Powerline 1200" position="center" style="border-radius: 8px;" >}}
+{{< figure src="img/PL1200_NA_Hero_Transparent.png" alt="Netgear Powerline 1200" position="center" style="border-radius: 8px;" >}}
 
 This one hurt the most to purchase. For best WiFi coverage, I have my router
 sitting on the main floor of my townhouse. My desktop computer and

@@ -1,57 +1,62 @@
-baseurl = "https://blog.nathanv.me/"
-languageCode = "en-us"
-theme = "hello-friend"
-paginate = 5
+# general settings
+baseurl         = "https://blog.nathanv.me/"
+languageCode    = "en-us"
+theme           = "hello-friend"
+paginate        = 5
 googleAnalytics = "UA-91853319-4"
-enableGitInfo = true
+enableGitInfo   = true
 
+# markdown settings
 [markup]
   defaultMarkdownHandler = "goldmark"
 
-  [markup.goldmark]
-    [markup.goldmark.extensions]
-      footnote = true
+[markup.goldmark]
+[markup.goldmark.extensions]
+  footnote = true
 
-    [markup.goldmark.renderer]
-      # needed for superscript
-      unsafe = true
+[markup.goldmark.renderer]
+  # needed for superscript
+  unsafe = true
 
-  [markup.highlight]
-    # lineNos = true
-    style = "dracula"
+[markup.highlight]
+  # lineNos = true
+  style = "dracula"
 
+# theme parameters
 [params]
   contentTypeName = "posts"
-  defaultTheme = "dark"
-  showMenuItems = 2
+  defaultTheme    = "dark"
+  showMenuItems   = 2
   showReadingTime = true
-  toc = true
-  rssFullText = true
+  toc             = true
+  rssFullText     = true
 
 [languages]
-  [languages.en]
-    title = "Nathan Vaughn"
-    description = "Adventures in programming and tech"
-    subtitle = "Adventures in programming and tech"
-    # lastModDisplay = "Last Modified:"
+[languages.en]
+  title       = "Nathan Vaughn"
+  description = "Adventures in programming and tech"
+  subtitle    = "Adventures in programming and tech"
+  # lastModDisplay = "Last Modified:"
 
-    # default open graph image
-    images = ["img/favicon.png"]
-    keywords = ["programming", "tech", "Nathan", "Vaughn", "blog"]
+  # default open graph image
+  images   = ["img/favicon.png"]
+  keywords = ["programming", "tech", "Nathan", "Vaughn", "blog"]
 
-    [languages.en.params.logo]
-      logoText = "nathanv@blog"
-      logoHomeLink = "/"
+# logo parameters
+[languages.en.params.logo]
+  logoText     = "nathanv@blog"
+  logoHomeLink = "/"
 
-    [languages.en.menu]
-      [[languages.en.menu.main]]
-        identifier = "Homepage"
-        name = "Homepage"
-        weight = 10
-        url = "https://nathanv.me"
+# extra links
+[languages.en.menu]
+[[languages.en.menu.main]]
+  identifier = "Homepage"
+  name       = "Homepage"
+  weight     = 10
+  url        = "https://nathanv.me"
 
-      [[languages.en.menu.main]]
-        identifier = "github"
-        name = "GitHub"
-        weight = 20
-        url = "https://nthnv.me/github"
+[[languages.en.menu.main]]
+  identifier = "github"
+  name       = "GitHub"
+  weight     = 20
+  url        = "https://nthnv.me/github"
