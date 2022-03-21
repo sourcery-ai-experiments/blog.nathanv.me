@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "prettier": "^2.5.1"
+    "prettier": "^2.6.0"
   },
   "scripts": {
     "format": "prettier --write content/",
