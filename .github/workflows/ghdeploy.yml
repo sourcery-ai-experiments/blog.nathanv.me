@@ -16,11 +16,11 @@ jobs:
         with:
           submodules: true
 
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
+      - name: Install Dependencies
+        run: npm install
 
       - name: Build Site
-        run: hugo
+        run: npx hugo
 
       - name: Deploy Site
         uses: peaceiris/actions-gh-pages@v3
