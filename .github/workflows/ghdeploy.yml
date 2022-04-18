@@ -16,6 +16,12 @@ jobs:
         with:
           submodules: true
 
+      - name: Setup NPM
+        uses: actions/setup-node@v3
+        with:
+          node-version: "16"
+          cache: npm
+
       - name: Install Dependencies
         run: npm install
 
