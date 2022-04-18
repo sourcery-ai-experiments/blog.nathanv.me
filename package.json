@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "hugo-bin": "^0.85.0",
+    "hugo-bin": "^0.85.3",
     "prettier": "^2.6.2"
   },
   "scripts": {
