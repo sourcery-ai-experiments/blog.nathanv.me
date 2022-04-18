@@ -25,12 +25,11 @@ def check(thing):
 ```
 
 This is a completely made up example, but I see stuff like this far too often.
-While it's not *technically* wrong, it can make things very difficult to read.
+While it's not _technically_ wrong, it can make things very difficult to read.
 Especially as the statements get longer, they can very easily begin to word-wrap
 when using a formatter that limits line-length. Because there is no `else` condition
 for these `if` statements, it's much cleaner to add an early `return` and not need
 to nest as much. A better way to write this would be:
-
 
 ```python
 def check(thing):
@@ -84,7 +83,7 @@ a is b # False
 ```
 
 In this example, `a` and `b` are two different instances of `Person`, but they
-are *equal* to each other, but they are not the same instance.
+are _equal_ to each other, but they are not the same instance.
 
 The reason that `is` is better than `==` for comparing to `True`, `False`, and `None`
 is that in Python, `True`, `False`, and `None` are constants that are always
