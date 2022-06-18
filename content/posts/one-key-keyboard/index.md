@@ -92,7 +92,8 @@ instead. This is super simple to do in AutoHotkey:
 
 ```autohotkey
 F20::
-Send (╯°□°）╯︵ ┻━┻
+; renders to (╯°□°）╯︵ ┻━┻
+Send {U+0FF08}{U+0256F}{U+0B0}{U+025A1}{U+0B0}{U+0FF09}{U+0256F}{U+0FE35}{U+020}{U+0253B}{U+02501}{U+0253B}
 return
 ```
 
