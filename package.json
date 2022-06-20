@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "hugo-extended": "^0.101.0",
-    "prettier": "^2.6.2"
+    "prettier": "^2.7.1"
   },
   "scripts": {
     "format": "prettier --write content/",
