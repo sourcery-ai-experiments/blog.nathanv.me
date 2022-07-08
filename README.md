@@ -14,3 +14,10 @@ git clone --recurse-submodules https://github.com/NathanVaughn/blog.nathanv.me.g
 git pull
 git submodule update --init --recursive
 ```
+
+## Building
+
+```bash
+npm install
+npm run build
+```
