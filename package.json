@@ -6,6 +6,7 @@
   "scripts": {
     "format": "prettier --write content/",
     "format:check": "prettier --check content/",
-    "server": "hugo server"
+    "server": "hugo server",
+    "build": "hugo"
   }
 }

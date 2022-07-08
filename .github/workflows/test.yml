@@ -8,7 +8,6 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-    if: "!contains(github.event.head_commit.message, 'ci skip')"
 
     steps:
       - name: Checkout Code
@@ -29,4 +28,4 @@ jobs:
         run: npm run format:check
 
       - name: Build Site
-        run: npx hugo
+        run: npm run build
