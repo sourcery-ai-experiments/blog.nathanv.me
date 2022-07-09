@@ -7,6 +7,6 @@
     "format": "prettier --write content/",
     "format:check": "prettier --check content/",
     "server": "hugo server",
-    "build": "hugo"
+    "build": "hugo --cleanDestinationDir"
   }
 }
