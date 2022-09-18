@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "hugo-extended": "^0.102.2",
+    "hugo-extended": "^0.103.1",
     "prettier": "^2.7.1"
   },
   "scripts": {
