@@ -1,6 +1,7 @@
 # site build
 public
 .hugo_build.lock
+resources/_gen
 
 # testing
 node_modules

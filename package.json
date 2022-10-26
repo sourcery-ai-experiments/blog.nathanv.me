@@ -1,6 +1,7 @@
 {
   "dependencies": {
-    "hugo-extended": "^0.104.2",
+    "hello-friend": "github:panr/hugo-theme-hello-friend#3.0.0",
+    "hugo-extended": "^0.104.3",
     "prettier": "^2.7.1"
   },
   "scripts": {

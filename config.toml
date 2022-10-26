@@ -1,6 +1,7 @@
 # general settings
 baseurl         = "/"
 languageCode    = "en-us"
+themesDir       = "node_modules"
 theme           = "hello-friend"
 paginate        = 5
 googleAnalytics = "UA-91853319-4"
