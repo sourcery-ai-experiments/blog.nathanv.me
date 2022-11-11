@@ -4,8 +4,13 @@ languageCode    = "en-us"
 themesDir       = "node_modules"
 theme           = "hello-friend"
 paginate        = 5
-googleAnalytics = "UA-91853319-4"
+googleAnalytics = "G-40Y1N6611R"
 enableGitInfo   = true
+
+[privacy]
+  [privacy.googleAnalytics]
+    anonymizeIP = true
+    respectDoNotTrack = true
 
 # markdown settings
 [markup]
