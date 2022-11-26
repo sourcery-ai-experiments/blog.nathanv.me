@@ -121,6 +121,7 @@ To enable and start the new service, run:
 
 ```bash
 sudo systemctl daemon-reload
+sudo systemctl enable octoprint
 sudo service octoprint start
 ```
 
