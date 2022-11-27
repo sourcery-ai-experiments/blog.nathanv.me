@@ -36,8 +36,8 @@ HP Chromebox.
 
 The Chromebox line is like a desktop version of a Chromebook, that is
 designed to only run ChromeOS. However, ChromeOS is built on Linux,
-so you hack these things to run a normal Linux distribution.
-These in particualr have a dual core Celeron, 4GB of RAM, 16GB of internal storage,
+so you can hack these things to run a normal Linux distribution.
+These in particular have a dual core Celeron, 4GB of RAM, 16GB of internal storage,
 and WiFi built-in. If you don't need a power supply, they can be had for under $30,
 though finding only that comes with a power supply ended up
 [costing me around $45](https://web.archive.org/web/20221031015546/https://www.ebay.com/itm/185452336874).
@@ -53,8 +53,8 @@ Remove the 4 screws on the bottom of the Chromebox and take off the lid
 mounting screws and gingerly peel up one side
 of the tape and take out the metal assembly.
 
-You can now remove the write protection screw. It should stand out as teh onyl screw
-that has contacts that make eletrical contact with the motherboard.
+You can now remove the write protection screw. It should stand out as the only screw
+that has contacts that make electrical contact with the motherboard.
 
 {{< figure src="img/1590137438225223-0.jpg" caption="From https://reflectiveriot.blogspot.com/2020/05/hp-chromebox-g1-write-protection-screw.html" >}}
 
@@ -100,11 +100,12 @@ pip install octoprint                     # install octoprint
 Now, with OctoPrint installed, I recommend setting up a `systemd` service so that
 it starts automatically on boot and will restart if it crashes.
 
-Create the file `/etc/systemd/system/octoprint.service` with the following content:
+Create the file `/etc/systemd/system/octoprint.service` with the following content
+(substitute your username for `<user>`, OctoPrint will not run as `root`):
 
 ```ini
 [Unit]
-Description=Octoprint
+Description=OctoPrint
 Wants=network-online.target
 After=network-online.target
 
@@ -134,7 +135,7 @@ sudo chmod a+rw /dev/ttyUSB0
 
 OctoPrint will now be available on port 5000, or as `octoprint.local`.
 
-For even more convience, you can now setup restart and shutdown commands in the
+For even more convenience, you can now setup restart and shutdown commands in the
 OctoPrint UI with `sudo service octoprint restart` and `sudo service octoprint stop`.
 
 ### Webcam Setup
@@ -144,7 +145,7 @@ I wanted a webcam for OctoPrint so I could check on my prints remotely, and boug
 very cheap webcam.
 
 OctoPrint does not include a webcam HTTP server, so if you are using a webcam,
-you'll need to use a seperate piece of software. The OctoPi image uses
+you'll need to use a separate piece of software. The OctoPi image uses
 [mjpg-streamer](https://github.com/jacksonliam/mjpg-streamer) and this seems to
 work well. To install, run:
 
