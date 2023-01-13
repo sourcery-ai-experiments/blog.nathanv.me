@@ -33,7 +33,7 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           projectName: blog-nathanv-me
-          directory: dist/
+          directory: public/
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Comment PR with URL
