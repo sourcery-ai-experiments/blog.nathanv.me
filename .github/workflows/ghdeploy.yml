@@ -1,0 +1,45 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup NPM
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: ".node-version"
+          cache: npm
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Build Site
+        run: npm run build
+
+      - name: Publish to Cloudflare Pages
+        uses: cloudflare/pages-action@v1
+        id: cf-deployment
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: blog-nathanv-me
+          directory: dist/
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Comment PR with URL
+        if: github.event_name == 'pull_request'
+        uses: thollander/actions-comment-pull-request@v2
+        with:
+          message: |
+            Site deployed at [${{ steps.cf-deployment.outputs.url }}](${{ steps.cf-deployment.outputs.url }})
+          comment_tag: cf-deployment-comment
