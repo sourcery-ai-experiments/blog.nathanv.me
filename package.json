@@ -9,8 +9,9 @@
   "scripts": {
     "format": "prettier --write content/",
     "format:check": "prettier --check content/",
-    "server": "hugo server",
     "build": "hugo --cleanDestinationDir && rimraf public/style.css",
+    "server": "hugo server",
+    "make-patch": "patch-package hello-friend",
     "postinstall": "patch-package"
   }
 }
