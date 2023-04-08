@@ -10,25 +10,25 @@ index 7b7f8c6..2c5b431 100644
 -<script type="text/javascript" src="{{ $bundle.RelPermalink }}"></script>
 +{{ $bundle := slice $menu $prism $theme | resources.Concat "js/bundle.js" | resources.Minify | resources.Fingerprint }}
 +<script type="text/javascript" src="{{ $bundle.RelPermalink }}" integrity="{{ $bundle.Data.Integrity }}"></script>
- 
+
  {{- partial "extended_footer.html" . }}
 diff --git a/node_modules/hello-friend/layouts/partials/head.html b/node_modules/hello-friend/layouts/partials/head.html
 index 07938e1..57925dc 100644
 --- a/node_modules/hello-friend/layouts/partials/head.html
 +++ b/node_modules/hello-friend/layouts/partials/head.html
 @@ -16,10 +16,12 @@
- 
+
  <!-- Theme CSS -->
  {{ $res := resources.Get "css/style.scss" }}
 -{{ $style := $res | resources.ToCSS }}
 -<link rel="stylesheet" href="{{ $style.RelPermalink }}" />
 +{{ $style := $res | resources.ToCSS (dict "targetPath" "css/styles.css" "outputStyle" "compressed" "enableSourceMap" true "precision" 6) | resources.Fingerprint }}
-+<link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}"/>
++<link rel="stylesheet" href="{{ $style.RelPermalink }}" />
  <!-- Custom CSS to override theme properties (/static/style.css) -->
 -<link rel="stylesheet" href="{{ "style.css" | absURL }}" />
 +{{ $custom_res := resources.Get "style.scss" }}
 +{{ $custom_style := $custom_res | resources.ToCSS (dict "targetPath" "css/custom_styles.css" "outputStyle" "compressed" "enableSourceMap" true "precision" 6) | resources.Fingerprint }}
-+<link rel="stylesheet" href="{{ $custom_style.RelPermalink }}" integrity="{{ $custom_style.Data.Integrity }}"/>
- 
++<link rel="stylesheet" href="{{ $custom_style.RelPermalink }}"/>
+
  <!-- Icons -->
  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ "img/apple-touch-icon-144-precomposed.png" | absURL }}" />
