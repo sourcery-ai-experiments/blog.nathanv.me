@@ -12,6 +12,11 @@ enableGitInfo   = true
     anonymizeIP = true
     respectDoNotTrack = true
 
+# better resampling algorithm
+[imaging]
+  quality = 95
+  resampleFilter = "lanczos"
+
 # markdown settings
 [markup]
   defaultMarkdownHandler = "goldmark"
