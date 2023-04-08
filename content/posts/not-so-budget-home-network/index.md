@@ -116,7 +116,7 @@ package on pfSense provides.
 
 ### TP-Link Archer C1900 - $34.99
 
-{{< figure src="../budget-home-network/img/tplink-archer.jpg" alt="TP-Link Archer C1900" >}}
+{{< figure src="img/tplink-archer.jpg" alt="TP-Link Archer C1900" >}}
 
 This is the same WiFi router from before. Instead now, I'm using it as an access point
 rather than a router. This was pretty easily done by disabling the DHCP server

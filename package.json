@@ -2,12 +2,15 @@
   "dependencies": {
     "hello-friend": "github:panr/hugo-theme-hello-friend#3.0.0",
     "hugo-extended": "^0.111.3",
-    "prettier": "^2.8.7"
+    "patch-package": "^6.5.1",
+    "prettier": "^2.8.7",
+    "rimraf": "^4.4.1"
   },
   "scripts": {
     "format": "prettier --write content/",
     "format:check": "prettier --check content/",
     "server": "hugo server",
-    "build": "hugo --cleanDestinationDir --minify"
+    "build": "hugo --cleanDestinationDir && rimraf public/style.css",
+    "postinstall": "patch-package"
   }
 }

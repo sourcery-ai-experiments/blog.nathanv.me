@@ -13,7 +13,7 @@ For a while lately, I've been dealing with a very frustrating issue on my Window
 desktop and laptop. Whenever I would turn on my computer, the mouse cursor
 would lag horribly for around 20 seconds.
 
-{{< video src="vid/mouse-lag.mp4" alt="Mouse lag" position="center" style="border-radius: 8px;" caption="Apologies for the poor recording, it's difficult to get with screen capture software." >}}
+{{< video src="vid/mouse-lag.mp4" alt="Mouse lag" caption="Apologies for the poor recording, it's difficult to get with screen capture software." >}}
 
 Weirdly, the mouse would almost
 always return to normal after pressing `Ctrl+Alt+Del` or `Ctrl+Shift+Esc` (which opens
@@ -33,6 +33,6 @@ killing all the running executables isn't enough, as Synergy registers a service
 will automatically restart them. Find "Synergy" in the list, right-click and go to
 Properties -> Startup type -> Manual.
 
-{{< figure src="img/synergy-service-manual.jpg" alt="Synergy Windows service" position="center" style="border-radius: 8px;" caption="Set the Synergy service to start manually" captionPosition="center" >}}
+{{< figure src="img/synergy-service-manual.jpg" alt="Synergy Windows service" caption="Set the Synergy service to start manually" captionPosition="center" >}}
 
 You'll just need to manually start and stop the Synergy service now whenever you want to use it.

@@ -29,7 +29,7 @@ To begin with, let me explain my goals for Linkspring. I knew that I wanted to c
 a web app to allow users to create a single page to list social media links.
 I had the idea for this seeing lots of YouTube descriptions looking like this:
 
-{{< figure src="img/tested-links.jpg" alt="A long list of links on a Tested video" position="center" style="border-radius: 8px;" caption="A long list of links on a Tested video" captionPosition="center" >}}
+{{< figure src="img/tested-links.jpg" alt="A long list of links on a Tested video" caption="A long list of links on a Tested video" captionPosition="center" >}}
 
 I now realize this idea is
 [far from original](https://alternativeto.net/software/linktree/), but oh well.
@@ -202,7 +202,7 @@ CSS and JS features are available and if not, prompt the user to upgrade their b
 
 ## Project Structure
 
-{{< figure src="img/folder-structure.png" alt="Linkspring folder structure" position="center" style="border-radius: 8px;" caption="Linkspring folder structure" captionPosition="center" >}}
+{{< figure src="img/folder-structure.png" alt="Linkspring folder structure" caption="Linkspring folder structure" captionPosition="center" >}}
 
 ## Tooling
 

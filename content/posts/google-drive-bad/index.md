@@ -42,7 +42,7 @@ folder to be inside the Google Drive sync folder.)
 This was a huge pain point for myself. Games like to use the user's Documents folder
 as a location to save settings and gamesaves.
 
-{{< figure src="img/documents-games.png" alt="Game save folders generated in my Documents" position="center" style="border-radius: 8px;" caption="I didn't create any of these folders manually." captionPosition="center" >}}
+{{< figure src="img/documents-games.png" alt="Game save folders generated in my Documents" caption="I didn't create any of these folders manually." captionPosition="center" >}}
 
 Some games I play either aren't on Steam, or don't support
 [Steam's cloud saves](https://support.steampowered.com/kb_article.php?ref=6736-QEIG-8941),
@@ -96,7 +96,7 @@ while using the backup to Google Photos option.
 Sometimes this is due to the client thinking certain
 file formats are pictures when they are actually not.
 
-{{< figure src="img/high-quality.png" alt="Can't convert photos to high quality" position="center" style="border-radius: 8px;" caption="WHY NOT??" captionPosition="center" >}}
+{{< figure src="img/high-quality.png" alt="Can't convert photos to high quality" caption="WHY NOT??" captionPosition="center" >}}
 
 My parents use Google Photos for their 20+ year old photo collection
 so I've set them up with the Backup and Sync client.
@@ -121,12 +121,12 @@ why not try that?". I did and wow was I impressed.
 
 Most importantly for me, it natively syncs the Documents, Pictures, and Desktop folders.
 
-{{< figure src="img/onedrive-folders.png" alt="OneDrive sync folders" position="center" style="border-radius: 8px;" caption="I created a 'My Files' folder to distinguish my actual documents from the Documents folder which is filled with stuff from programs." captionPosition="center" >}}
+{{< figure src="img/onedrive-folders.png" alt="OneDrive sync folders" caption="I created a 'My Files' folder to distinguish my actual documents from the Documents folder which is filled with stuff from programs." captionPosition="center" >}}
 
 It supports a virtual file system (called "Files On Demand")
 so files that aren't used within a certain number of days are removed locally.
 
-{{< figure src="img/onedrive-files-on-demand.png" alt="OneDrive files on demand" position="center" style="border-radius: 8px;" caption="Recently used files are stored locally, while others are only available with an internet connection." captionPosition="center" >}}
+{{< figure src="img/onedrive-files-on-demand.png" alt="OneDrive files on demand" caption="Recently used files are stored locally, while others are only available with an internet connection." captionPosition="center" >}}
 
 I absolutely love this feature. I was able to sync my 10GB Documents folder from
 my desktop with my laptop in seconds since files are only downloaded as needed.
@@ -146,14 +146,14 @@ from the web and download files from it](https://support.office.com/en-us/articl
 This is super handy if you're on the go,
 and need to download some file that you forgot to put in the OneDrive folder.
 
-{{< figure src="img/onedrive-remote-pcs.png" alt="OneDrive remote PCs" position="center" style="border-radius: 8px;" caption="Browsing a folder on my computer that isn't in OneDrive and synced." captionPosition="center" >}}
+{{< figure src="img/onedrive-remote-pcs.png" alt="OneDrive remote PCs" caption="Browsing a folder on my computer that isn't in OneDrive and synced." captionPosition="center" >}}
 
 **_Update:_** Microsoft has [decided to remove this feature](https://www.ghacks.net/2020/07/14/microsoft-retires-onedrives-fetch-files-feature/)
 as of July 31, 2020.
 
 Additionally, if you use OneDrive with Office, your documents get auto-saving.
 
-{{< figure src="img/office-autosave.png" alt="Office Autosave" position="center" style="border-radius: 8px;" caption="No more losing work in Office from forgetting to save and crashes." captionPosition="center" >}}
+{{< figure src="img/office-autosave.png" alt="Office Autosave" caption="No more losing work in Office from forgetting to save and crashes." captionPosition="center" >}}
 
 Lastly, I just think the document browser and built-in PDF viewer are faster, cleaner,
 and easier to use than Google Drive, but that is more personal preference.
@@ -192,7 +192,7 @@ as much as say Gmail and Calendar and Contacts. The only thing I
 still use Google Drive for is my Pixel phone backup
 since that's built-in to the phone (and it has really saved my ass recently).
 
-{{< figure src="img/pixel-backup.png" alt="Google Pixel Backup" position="center" style="border-radius: 8px;" caption="Google Pixel Backup" captionPosition="center" >}}
+{{< figure src="img/pixel-backup.png" alt="Google Pixel Backup" caption="Google Pixel Backup" captionPosition="center" >}}
 
 ### References
 

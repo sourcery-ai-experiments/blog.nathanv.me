@@ -1,10 +1,30 @@
-{{ if .Get "src" }}
-  <figure class="center" >
-    <a href="{{ .Get "src" | safeURL }}" target="_blank">
-      <img src="{{ .Get "src" | safeURL }}" {{ with .Get "alt" }} alt="{{ . | plainify }}" {{ end }} style="border-radius: 8px;" />
-    </a>
-    {{ if .Get "caption" }}
-      <figcaption class="center" {{ with .Get "captionStyle" }} style="{{ . | safeCSS }}" {{ end }}>{{ .Get "caption" | markdownify }}</figcaption>
-    {{ end }}
-  </figure>
+{{/* Reimplement figure shortcode with resources and defaults */}}
+
+{{ $image := .Page.Resources.Get (.Get "src") }}
+
+{{/* Make sure variable lives outside scope of if statement */}}
+{{ $image_webp := false }}
+
+{{/* Can only resize raster images */}}
+{{ if ne $image.MediaType.SubType "svg" }}
+  {{ $image = $image.Fit "1000x1000" }}
 {{ end }}
+
+{{ $image = $image | resources.Fingerprint }}
+
+{{/* Can only convert raster images */}}
+{{ if ne $image.MediaType.SubType "svg" }}
+  {{ $image_webp = $image.Fit "1000x1000 webp" }}
+{{ end }}
+
+<figure class="center" >
+  <picture>
+    {{ if ne $image_webp false }}
+    <source srcset="{{ $image_webp.Permalink }}" type="image/webp" {{ with .Get "alt" }} alt="{{ . | plainify }}" {{ end }} style="border-radius: 8px;">
+    {{ end }}
+    <img src="{{ $image.Permalink }}" {{ with .Get "alt" }} alt="{{ . | plainify }}" {{ end }} style="border-radius: 8px;">
+  </picture>
+  {{ with .Get "caption" }}
+    <figcaption class="center">{{ . | markdownify }}</figcaption>
+  {{ end }}
+</figure>

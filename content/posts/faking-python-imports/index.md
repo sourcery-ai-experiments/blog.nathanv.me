@@ -22,12 +22,12 @@ it applies its processing and then calls Flask's underlying `url_for` function.
 Flask-Static-Digest works similarly, but instead defines a new
 function `static_url_for`. This function still ends up calling `url_for`.
 
-{{< figure src="img/original-diagram.svg" alt="How everything originally works." position="center" style="border-radius: 8px;" caption="How everything originally works." captionPosition="center" >}}
+{{< figure src="img/original-diagram.svg" alt="How everything originally works." caption="How everything originally works." captionPosition="center" >}}
 
 What I wanted was to have Flask-Static-Digest call the `url_for` function of Flask-CDN
 so that I could combine the features of both.
 
-{{< figure src="img/desired-diagram.svg" alt="How I want it to work." position="center" style="border-radius: 8px;" caption="How I want it to work." captionPosition="center" >}}
+{{< figure src="img/desired-diagram.svg" alt="How I want it to work." caption="How I want it to work." captionPosition="center" >}}
 
 I really wanted to avoid editing code of the dependencies if at all possible,
 so I tried to see if I could get Flask-Static-Digest to import Flask-CDN while making it

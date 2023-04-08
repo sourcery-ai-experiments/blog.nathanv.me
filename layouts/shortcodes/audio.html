@@ -1,10 +1,8 @@
-{{ if .Get "src" }}
-  <figure class="center" >
-    <audio controls>
-        <source src="{{ .Get "src" | safeURL }}" type="{{ .Get "type" }}">
-    </audio>
-    {{ if .Get "caption" }}
-      <figcaption class="center" {{ with .Get "captionStyle" }} style="{{ . | safeCSS }}" {{ end }}>{{ .Get "caption" | markdownify }}</figcaption>
-    {{ end }}
-  </figure>
-{{ end }}
+<figure class="center" >
+  <audio controls>
+      <source src="{{ .Get "src" | safeURL }}" type="{{ .Get "type" }}">
+  </audio>
+  {{ if .Get "caption" }}
+    <figcaption class="center">{{ .Get "caption" | markdownify }}</figcaption>
+  {{ end }}
+</figure>

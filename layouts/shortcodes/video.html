@@ -1,10 +1,7 @@
-{{ if .Get "src" }}
-  <figure class="{{ with .Get "position"}}{{ . }}{{ else -}} left {{- end }}" >
-    <video src="{{ .Get "src" | safeURL }}" {{ with .Get "alt" }} alt="{{ . | plainify }}" {{ end }} {{ with .Get "style" }} style="{{ . | safeCSS }}" {{ end }} {{ if ne (.Get "autoplay") "false" }} autoplay loop {{ else }} controls {{ end }} />
-    </video>
-    {{ if .Get "caption" }}
-      <figcaption class="{{ with .Get "captionPosition"}}{{ . }}{{ else -}} center {{- end }}" {{ with .Get "captionStyle" }} style="{{ . | safeCSS }}" {{ end }}>{{ .Get "caption" | markdownify }}</figcaption>
-    {{ end }}
-  </figure>
-{{ end }}
-
+<figure class="center" >
+  <video src="{{ .Get "src" | safeURL }}" {{ with .Get "alt" }} alt="{{ . | plainify }}" {{ end }} {{ if ne (.Get "autoplay") "false" }} autoplay loop {{ else }} controls {{ end }} style="border-radius: 8px;"/>
+  </video>
+  {{ if .Get "caption" }}
+    <figcaption class="center">{{ .Get "caption" | markdownify }}</figcaption>
+  {{ end }}
+</figure>

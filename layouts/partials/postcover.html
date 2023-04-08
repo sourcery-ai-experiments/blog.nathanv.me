@@ -1,0 +1,17 @@
+{{/* Reimplement figure shortcode with resources */}}
+
+{{ $image := .Page.Resources.Get .Params.Cover }}
+{{ $image := $image.Fit "1000x1000" }}
+{{ $image := $image | resources.Fingerprint }}
+{{ $image_webp := $image.Fit "1000x1000 webp" }}
+
+<figure class="post-cover">
+    <picture>
+      <source srcset="{{ $image_webp.Permalink }}" type="image/webp" alt="{{ .Params.CoverAlt | plainify | default .Title }}">
+      <img src="{{ $image.Permalink }}" alt="{{ .Params.CoverAlt | plainify | default .Title }}" >
+    </picture>
+
+    {{ if .Params.CoverCaption }}
+      <figcaption class="center">{{ .Params.CoverCaption | markdownify }}</figcaption>
+    {{ end }}
+  </figure>

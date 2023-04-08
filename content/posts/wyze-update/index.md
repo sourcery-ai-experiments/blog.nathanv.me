@@ -22,7 +22,7 @@ Since then, there's been a few things I've noticed that I'd like to share.
 The build quality of the Band has not been great. The two tabs on each side of the Band
 that hold on the wristband are beginning to crack.
 
-{{< figure src="img/band-cracking.jpg" alt="The tabs are starting to crack" position="center" style="border-radius: 8px;" caption="The tabs are starting to crack" captionPosition="center" >}}
+{{< figure src="img/band-cracking.jpg" alt="The tabs are starting to crack" caption="The tabs are starting to crack" captionPosition="center" >}}
 
 I wear the Band at a comfortable setting for me, if anything, a little loose,
 so I don't feel that there is too much pressure being exerted. It's disappointing
@@ -38,7 +38,7 @@ try to automatically sync every 24 hours on its own? I haven't experimented
 enough to confirm this, but if you forget to sync often enough, you may lose
 data.
 
-{{< figure src="img/missing-sleep.jpg" alt="Monday's sleep data is mysteriously missing in Google Fit" position="center" style="border-radius: 8px;" caption="Monday's sleep data is mysteriously missing in Google Fit" captionPosition="center" >}}
+{{< figure src="img/missing-sleep.jpg" alt="Monday's sleep data is mysteriously missing in Google Fit" caption="Monday's sleep data is mysteriously missing in Google Fit" captionPosition="center" >}}
 
 I found that I need to remember to manually sync both devices at least once every 24 hours
 to not lose any data.

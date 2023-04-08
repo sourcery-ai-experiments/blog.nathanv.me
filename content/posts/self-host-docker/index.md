@@ -22,7 +22,7 @@ However, with Cloudflare's new service,
 and ~~poor financial decisions~~ a server I bought on Craigslist,
 I decided to move my apps to be hosted on-premise.
 
-{{< figure src="img/hp_dl_360_g5.jpg" alt="HP DL360 G5 with dual Xeon E5410s and 64GB of RAM" position="center" style="border-radius: 8px;" caption="HP DL360 G5 with dual Xeon E5410s and 64GB of RAM" captionPosition="center" >}}
+{{< figure src="img/hp_dl_360_g5.jpg" alt="HP DL360 G5 with dual Xeon E5410s and 64GB of RAM" caption="HP DL360 G5 with dual Xeon E5410s and 64GB of RAM" captionPosition="center" >}}
 
 ## Decision to Use Docker
 
@@ -73,7 +73,7 @@ nathan@zeus:[~]$ sudo /usr/bin/landscape-sysinfo
   IP address for br-3780ddef1e2f: 192.168.64.1
 ```
 
-{{< figure src="img/docker_vs_vm.png" alt="Docker vs VM diagram" position="center" style="border-radius: 8px;" caption="Docker vs VM diagram (from [https://blog.docker.com/2018/08/containers-replacing-virtual-machines/](https://blog.docker.com/2018/08/containers-replacing-virtual-machines/))" captionPosition="center" >}}
+{{< figure src="img/docker_vs_vm.png" alt="Docker vs VM diagram" caption="Docker vs VM diagram (from [https://blog.docker.com/2018/08/containers-replacing-virtual-machines/](https://blog.docker.com/2018/08/containers-replacing-virtual-machines/))" captionPosition="center" >}}
 
 ## Docker Setup
 
@@ -303,7 +303,7 @@ launch a console connected to a container, start and stop containers,
 manage volumes and networks, and more all from a web interface. It makes interacting
 with Docker so much easier.
 
-{{< figure src="img/portainer.jpg" alt="Screenshot of Portainer interface" position="center" style="border-radius: 8px;" caption="Screenshot of Portainer interface" captionPosition="center" >}}
+{{< figure src="img/portainer.jpg" alt="Screenshot of Portainer interface" caption="Screenshot of Portainer interface" captionPosition="center" >}}
 
 ### Netdata
 
@@ -316,7 +316,7 @@ particularly customizable, the amount of information is immense, and it integrat
 well with Docker so you can see which container specifically is hogging all your
 CPU.
 
-{{< figure src="img/netdata.jpg" alt="Screenshot of Netdata statistics" position="center" style="border-radius: 8px;" caption="Screenshot of Netdata statstics" captionPosition="center" >}}
+{{< figure src="img/netdata.jpg" alt="Screenshot of Netdata statistics" caption="Screenshot of Netdata statstics" captionPosition="center" >}}
 
 ## Backups
 
@@ -369,7 +369,7 @@ a report.
 
 ## Conclusion
 
-{{< figure src="img/server_diagram.jpg" alt="Rough diagram of final setup" position="center" style="border-radius: 8px;" caption="Rough diagram of final setup" captionPosition="center" >}}
+{{< figure src="img/server_diagram.jpg" alt="Rough diagram of final setup" caption="Rough diagram of final setup" captionPosition="center" >}}
 
 ### Things I'm Happy With
 

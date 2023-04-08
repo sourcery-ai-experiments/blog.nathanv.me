@@ -21,13 +21,13 @@ _should_ have had permission to delete them (and I hadn't had this issue with
 any other mods). I even tried relaunching the Python process
 as an administrator, and Python still couldn't delete it.
 
-{{< figure src="img/original_error.jpg" alt="Recreation of the error." position="center" style="border-radius: 8px;" caption="Recreation of the error. As you can see boxed in red, the Python process is running with Administrator privileges." captionPosition="center" >}}
+{{< figure src="img/original_error.jpg" alt="Recreation of the error." caption="Recreation of the error. As you can see boxed in red, the Python process is running with Administrator privileges." captionPosition="center" >}}
 
 Even weirder, the folder was completely empty
 (as Python was able to delete all of the contents), yet it couldn't delete
 the 0-byte folder itself.
 
-{{< figure src="img/folder_size.jpg" alt="Windows dialog showing folder size." position="center" style="border-radius: 8px;" caption="The folder is completely empty. Deselecting the read-only checkbox does not affect anything." captionPosition="center" >}}
+{{< figure src="img/folder_size.jpg" alt="Windows dialog showing folder size." caption="The folder is completely empty. Deselecting the read-only checkbox does not affect anything." captionPosition="center" >}}
 
 And to make it still stranger, I could delete this folder fine
 in File Explorer under my regular user account, just not programmatically.
@@ -40,7 +40,7 @@ the [`stat.S_IWUSR`](https://docs.python.org/3/library/stat.html#stat.S_IWUSR)
 (write by owner) mode to the folder with
 [`os.chmod`](https://docs.python.org/3/library/os.html#os.chmod).
 
-{{< figure src="img/fixed_error.jpg" alt="Example of fixing the error." position="center" style="border-radius: 8px;" caption="Example of fixing the error. As you can see boxed in red, the Python process is *NOT* running with Administrator privileges, yet can now delete the folder." captionPosition="center" >}}
+{{< figure src="img/fixed_error.jpg" alt="Example of fixing the error." caption="Example of fixing the error. As you can see boxed in red, the Python process is *NOT* running with Administrator privileges, yet can now delete the folder." captionPosition="center" >}}
 
 Here is a very simple implementation for recursively fixing permissions:
 

@@ -46,7 +46,7 @@ Some of these even _look_ like phishing domains. `microsoftstream.com`?
 Just for fun, I looked at similar domains for sale to see how easy it would
 be to just buy a similar looking domain.
 
-{{< figure src="img/microsoft_phishing_domains.jpg" alt="A list of Microsoft video-related domains for sale" position="center" style="border-radius: 8px;" caption="Just a quick search on Google Domains." captionPosition="center" >}}
+{{< figure src="img/microsoft_phishing_domains.jpg" alt="A list of Microsoft video-related domains for sale" caption="Just a quick search on Google Domains." captionPosition="center" >}}
 
 While `microsoftvideo.com` is taken
 (and fun fact, does not take you to a Microsoft site)

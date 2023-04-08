@@ -38,7 +38,7 @@ is to open Event Viewer, go to "Windows Logs" -> "System", and filter by
 "Power-Troubleshooter". From there, you can just click through the events to see
 which scheduled tasks or executables last woke your computer.
 
-{{< figure src="img/event-viewer-culprit.jpg" alt="Windows Event Viewer" position="center" style="border-radius: 8px;" caption="Windows Event Viewer showing the Power-Troubleshooter filter and the culprit" captionPosition="center" >}}
+{{< figure src="img/event-viewer-culprit.jpg" alt="Windows Event Viewer" caption="Windows Event Viewer showing the Power-Troubleshooter filter and the culprit" captionPosition="center" >}}
 
 As you can see in the screenshot, the culprit was `ArmouryCrate.UserSessionHelper.exe`.
 
@@ -50,7 +50,7 @@ Within the Settings app, go to "Power & sleep" -> "Changing power mode" ->
 "Change plan settings" -> "Change advanced power settings" -> "Sleep" ->
 "Allow wake timers" and set it to "Disable".
 
-{{< figure src="img/power-settings.jpg" alt="Power plan settings" position="center" style="border-radius: 8px;" caption="Holy settings menu nesting Batman!" captionPosition="center" >}}
+{{< figure src="img/power-settings.jpg" alt="Power plan settings" caption="Holy settings menu nesting Batman!" captionPosition="center" >}}
 
 ## References
 

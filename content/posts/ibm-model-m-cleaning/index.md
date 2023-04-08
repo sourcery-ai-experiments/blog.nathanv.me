@@ -355,7 +355,7 @@ For this, I've found the program
 [TrayStatus](https://www.traystatus.com/) works wonderfully,
 by adding customizable icons in the Windows system tray.
 
-{{< figure src="img/tray-lock-lights.jpg" alt="TrayStatus virtual lock lights on the far left"  caption="TrayStatus virtual lock lights on the far left" >}}
+{{< figure src="img/tray-lock-lights.jpg" alt="TrayStatus virtual lock lights on the far left" caption="TrayStatus virtual lock lights on the far left" >}}
 
 ## Conclusion
 

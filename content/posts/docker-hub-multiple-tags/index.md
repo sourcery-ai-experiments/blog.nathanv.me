@@ -40,7 +40,7 @@ docker build --build-arg VCS_REF=`git rev-parse — short HEAD` \
 
 This is where everything fell apart. My image builds started failing!
 
-{{< figure src="img/build_fail.jpg" alt="Docker Hub build failure" position="center" style="border-radius: 8px;" caption="Oh no" captionPosition="center" >}}
+{{< figure src="img/build_fail.jpg" alt="Docker Hub build failure" caption="Oh no" captionPosition="center" >}}
 
 ## Issue
 
@@ -95,7 +95,7 @@ the `-t` tagging argument for the `build` command. There is no harm in
 using this for an image with only a single tag, as this will still work perfectly
 fine.
 
-{{< figure src="img/build_success.jpg" alt="Docker Hub build success" position="center" style="border-radius: 8px;" caption="Success!" captionPosition="center" >}}
+{{< figure src="img/build_success.jpg" alt="Docker Hub build success" caption="Success!" captionPosition="center" >}}
 
 ## Conclusion
 
@@ -103,7 +103,7 @@ With a bit of abuse of some undocumented features, I was able to get my Docker i
 to build automatically on Docker Hub with all of the
 [labels and tags](https://microbadger.com/images/nathanvaughn/webtrees) I wanted.
 
-{{< figure src="img/microbadger_labels.jpg" alt="Microbadger labels" position="center" style="border-radius: 8px;" caption="Microbadger labels" captionPosition="center" >}}
+{{< figure src="img/microbadger_labels.jpg" alt="Microbadger labels" caption="Microbadger labels" captionPosition="center" >}}
 
 This adventure though has really made me question my usage of Docker Hub's
 image building. It seems like I could have avoided a lot of this hassle if I
