@@ -6,6 +6,7 @@ theme           = "hello-friend"
 paginate        = 5
 googleAnalytics = "G-40Y1N6611R"
 enableGitInfo   = true
+enableRobotsTXT = true
 
 [privacy]
   [privacy.googleAnalytics]
