@@ -20,9 +20,9 @@
 <figure class="center" >
   <picture>
     {{ if ne $image_webp false }}
-    <source srcset="{{ $image_webp.Permalink }}" type="image/webp" {{ with .Get "alt" }} alt="{{ . | plainify }}" {{ end }} style="border-radius: 8px;">
+    <source srcset="{{ $image_webp.Permalink }}" type="image/webp" {{ with .Get "alt" }} alt="{{ . | plainify }}" {{ end }} style="border-radius: 8px;" loading="lazy">
     {{ end }}
-    <img src="{{ $image.Permalink }}" {{ with .Get "alt" }} alt="{{ . | plainify }}" {{ end }} style="border-radius: 8px;">
+    <img src="{{ $image.Permalink }}" {{ with .Get "alt" }} alt="{{ . | plainify }}" {{ end }} style="border-radius: 8px;" loading="lazy">
   </picture>
   {{ with .Get "caption" }}
     <figcaption class="center">{{ . | markdownify }}</figcaption>
