@@ -13,10 +13,10 @@ index 7b7f8c6..2c5b431 100644
  
  {{- partial "extended_footer.html" . }}
 diff --git a/node_modules/hello-friend/layouts/partials/head.html b/node_modules/hello-friend/layouts/partials/head.html
-index 07938e1..ef8e062 100644
+index 07938e1..1fe44b6 100644
 --- a/node_modules/hello-friend/layouts/partials/head.html
 +++ b/node_modules/hello-friend/layouts/partials/head.html
-@@ -16,10 +16,12 @@
+@@ -16,14 +16,16 @@
  
  <!-- Theme CSS -->
  {{ $res := resources.Get "css/style.scss" }}
@@ -30,4 +30,10 @@ index 07938e1..ef8e062 100644
 +<link rel="stylesheet" href="{{ $custom_style.RelPermalink }}"/>
  
  <!-- Icons -->
- <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ "img/apple-touch-icon-144-precomposed.png" | absURL }}" />
+-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ "img/apple-touch-icon-144-precomposed.png" | absURL }}" />
+-<link rel="shortcut icon" href="{{ "img/favicon.png" | absURL }}" />
++<link rel="shortcut icon" href=https://nathanv.me/img/theme-colors/green.png>
++<link rel=apple-touch-icon href=https://nathanv.me/img/theme-colors/green.png>
+ 
+ <!-- Fonts -->
+ <link href="{{ (resources.Get "fonts/Inter-Italic.woff2").RelPermalink }}" rel="preload" type="font/woff2" as="font" crossorigin="">
