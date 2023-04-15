@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: {{ site.Home.Sitemap.Filename | absURL}}
+Sitemap: {{ site.Home.Sitemap.Filename | absURL }}

@@ -4,8 +4,7 @@
     "hello-friend": "github:panr/hugo-theme-hello-friend#3.0.0",
     "hugo-extended": "^0.111.3",
     "patch-package": "^6.5.1",
-    "prettier": "^2.8.7",
-    "rimraf": "^4.4.1"
+    "prettier": "^2.8.7"
   },
   "scripts": {
     "format": "prettier --write content/",

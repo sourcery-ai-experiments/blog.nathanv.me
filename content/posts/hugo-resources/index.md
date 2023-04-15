@@ -136,7 +136,7 @@ Babel to be installed.
 Images are where Hugo's asset processing capabilities really shine. Images are often
 the largest files on a static site, so resizing and compressing them appropriately
 can significantly decrease the loading time of a page. In the past, this has been ...
-*challenging*. I always found manually resizing images hard because I had to manually
+_challenging_. I always found manually resizing images hard because I had to manually
 try to keep the dimensions consistent and then I would often forget to keep a copy
 of the original uncompressed image. Additionally, .webp is frequently recommended now,
 but some browsers still do not support it, and many desktop image editors don't either.
@@ -144,7 +144,7 @@ This usually lead me to giving up trying to do this, and just serve the original
 instead.
 
 Hugo lets you resize images automatically, and convert them to different formats
-automatically at build time. This is *amazing*. You can keep the original source image
+automatically at build time. This is _amazing_. You can keep the original source image
 in the site repository and only serve smaller resized versions to users. By being
 able to also convert the images to different formats, you can easily serve
 optimized versions to browsers that support it.
@@ -220,7 +220,7 @@ package.json
   "dependencies": {
     "hello-friend": "github:panr/hugo-theme-hello-friend#3.0.0",
     "hugo-extended": "^0.111.3",
-    "patch-package": "^6.5.1",
+    "patch-package": "^6.5.1"
   },
   "scripts": {
     "postinstall": "patch-package"
