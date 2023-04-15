@@ -31,8 +31,11 @@ enableRobotsTXT = true
   unsafe = true
 
 [markup.highlight]
-  # lineNos = true
-  style = "dracula"
+  lineNos = true
+  lineNumbersInTable = false
+  anchorLineNos = true
+  # https://xyproto.github.io/splash/docs/all.html
+  style = "vulcan"
 
 # theme parameters
 [params]

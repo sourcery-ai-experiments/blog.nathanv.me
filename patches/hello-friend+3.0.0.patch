@@ -1,19 +1,25 @@
 diff --git a/node_modules/hello-friend/layouts/partials/footer.html b/node_modules/hello-friend/layouts/partials/footer.html
-index 7b7f8c6..2c5b431 100644
+index 7b7f8c6..e7ffed2 100644
 --- a/node_modules/hello-friend/layouts/partials/footer.html
 +++ b/node_modules/hello-friend/layouts/partials/footer.html
-@@ -21,7 +21,7 @@
- {{ $menu := resources.Get "js/menu.js" | js.Build }}
- {{ $prism := resources.Get "js/prism.js" | js.Build }}
- {{ $theme := resources.Get "js/theme.js" | js.Build }}
+@@ -18,10 +18,10 @@
+   </div>
+ </footer>
+ 
+-{{ $menu := resources.Get "js/menu.js" | js.Build }}
+-{{ $prism := resources.Get "js/prism.js" | js.Build }}
+-{{ $theme := resources.Get "js/theme.js" | js.Build }}
 -{{ $bundle := slice $menu $prism $theme | resources.Concat "bundle.js" | resources.Minify }}
 -<script type="text/javascript" src="{{ $bundle.RelPermalink }}"></script>
-+{{ $bundle := slice $menu $prism $theme | resources.Concat "js/bundle.js" | resources.Minify | resources.Fingerprint }}
++{{ $menu := resources.Get "js/menu.js" }}
++{{ $prism := resources.Get "js/prism.js" }}
++{{ $theme := resources.Get "js/theme.js" }}
++{{ $bundle := slice $menu $prism $theme | resources.Concat "js/bundle.js" | js.Build (dict "sourceMap" "external" ) | resources.Minify | resources.Fingerprint }}
 +<script type="text/javascript" src="{{ $bundle.RelPermalink }}" integrity="{{ $bundle.Data.Integrity }}"></script>
  
  {{- partial "extended_footer.html" . }}
 diff --git a/node_modules/hello-friend/layouts/partials/head.html b/node_modules/hello-friend/layouts/partials/head.html
-index 07938e1..1fe44b6 100644
+index 07938e1..6013e64 100644
 --- a/node_modules/hello-friend/layouts/partials/head.html
 +++ b/node_modules/hello-friend/layouts/partials/head.html
 @@ -16,14 +16,16 @@
@@ -21,12 +27,12 @@ index 07938e1..1fe44b6 100644
  <!-- Theme CSS -->
  {{ $res := resources.Get "css/style.scss" }}
 -{{ $style := $res | resources.ToCSS }}
-+{{ $style := $res | resources.ToCSS (dict "targetPath" "css/styles.css" "outputStyle" "compressed" "enableSourceMap" true "precision" 6) | resources.Fingerprint }}
++{{ $style := $res | resources.ToCSS (dict "targetPath" "css/styles.css" "enableSourceMap" true) | resources.Minify | resources.Fingerprint }}
  <link rel="stylesheet" href="{{ $style.RelPermalink }}" />
  <!-- Custom CSS to override theme properties (/static/style.css) -->
 -<link rel="stylesheet" href="{{ "style.css" | absURL }}" />
 +{{ $custom_res := resources.Get "style.scss" }}
-+{{ $custom_style := $custom_res | resources.ToCSS (dict "targetPath" "css/custom_styles.css" "outputStyle" "compressed" "enableSourceMap" true "precision" 6) | resources.Fingerprint }}
++{{ $custom_style := $custom_res | resources.ToCSS (dict "targetPath" "css/custom_styles.css" "enableSourceMap" true) | resources.Minify | resources.Fingerprint }}
 +<link rel="stylesheet" href="{{ $custom_style.RelPermalink }}"/>
  
  <!-- Icons -->
