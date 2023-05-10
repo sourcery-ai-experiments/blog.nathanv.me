@@ -119,7 +119,7 @@ license = "MIT"
 readme = "README.md"
 homepage = "https://github.com/NathanVaughn/pyleft"
 repository = "https://github.com/NathanVaughn/pyleft.git"
-authors = ["Nathan Vaughn <nthnv.me/email>"]
+authors = ["Nathan Vaughn <REDACTED>"]
 classifiers = [
     "Intended Audience :: Developers",
     "Topic :: Software Development :: Libraries :: Python Modules",
