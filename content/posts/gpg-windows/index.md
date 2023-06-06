@@ -32,12 +32,12 @@ Configure GPG to use the pin entry program installed in Windows and reload
 the agent.
 
 ```bash
+git config --global gpg.program /mnt/c/Program\ Files/Git/usr/bin/gpg.exe
 echo pinentry-program /mnt/c/Program\ Files/Git/usr/bin/pinentry.exe > ~/.gnupg/gpg-agent.conf
 gpg-connect-agent reloadagent /bye
 ```
 
 When you commit in WSL, this will use the pin entry program installed in Windows.
-Not positive why this is required for everything to work, but it is.
 
 ## Combined
 
