@@ -5,7 +5,7 @@ description: Shave 50MB off your AWS Lambda functions with just a ~~little bit~~
 tags:
   - AWS
   - Python
-  - severless
+  - serverless
 title: Stripping Down Botocore With Python Serverless Requirements
 ---
 
