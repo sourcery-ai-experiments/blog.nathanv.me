@@ -71,7 +71,7 @@ enableRobotsTXT = true
   url        = "https://nathanv.me"
 
 [[languages.en.menu.main]]
-  identifier = "github"
-  name       = "GitHub"
+  identifier = "links"
+  name       = "Links"
   weight     = 20
-  url        = "https://links.nathanv.me/github"
+  url        = "https://links.nathanv.me/"
