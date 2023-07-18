@@ -15,7 +15,7 @@ title: Closing the dev-to-prod gap
 
 At [my last job](https://nathanv.me/work-experience/bell-flight/), buzzwords were used
 constantly. One of the many that was used a lot was "closing the sim-to-real gap".
-This referred (I think) to how make simulators as close to real-life as possible.
+This referred (I think) to how to make simulators as close to real-life as possible.
 While in the context of flight simulators, I tend to think it's silly,
 one thing I feel passionately about is making a software development
 environment as close to the real thing as possible.
