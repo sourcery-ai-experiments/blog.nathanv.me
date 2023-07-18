@@ -1,5 +1,5 @@
 <figure class="center" >
-  <video src="{{ .Get "src" | safeURL }}" {{ with .Get "alt" }} alt="{{ . | plainify }}" {{ end }} {{ if ne (.Get "autoplay") "false" }} autoplay loop {{ else }} controls {{ end }} style="border-radius: 8px;"/>
+  <video src="{{ .Get "src" | safeURL }}" {{ with .Get "alt" }} alt="{{ . | plainify }}" {{ end }} {{ if ne (.Get "autoplay") "false" }} autoplay loop muted {{ else }} controls {{ end }} style="border-radius: 8px;"/>
   </video>
   {{ if .Get "caption" }}
     <figcaption class="center">{{ .Get "caption" | markdownify }}</figcaption>
