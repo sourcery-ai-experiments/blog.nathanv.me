@@ -2,9 +2,9 @@
   "dependencies": {
     "cross-spawn": "^7.0.3",
     "hello-friend": "github:panr/hugo-theme-hello-friend#3.0.0",
-    "hugo-extended": "^0.113.0",
-    "patch-package": "^7.0.0",
-    "prettier": "^2.8.8"
+    "hugo-extended": "^0.115.4",
+    "patch-package": "^8.0.0",
+    "prettier": "^3.0.0"
   },
   "scripts": {
     "format": "prettier --write content/",
