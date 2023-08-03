@@ -10,7 +10,13 @@
 
 /* Allow inline code to be word broken */
 .post-content code {
+  white-space: initial;
   word-break: break-word;
+}
+
+/* Prevent code blocks from be word broken */
+.post-content pre code {
+  white-space: pre;
 }
 
 /* Apply max width to video */
