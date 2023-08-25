@@ -47,31 +47,32 @@ enableRobotsTXT = true
   rssFullText     = true
 
 [languages]
-[languages.en]
-  title       = "Nathan Vaughn"
-  keywords    = ["programming", "tech", "Nathan", "Vaughn", "blog"]
-  description = "Adventures in programming and tech"
-  subtitle    = "Adventures in programming and tech"
-  lastModDisplay = "Last Modified:"
+  [languages.en]
+    [languages.en.params]
+      title       = "Nathan Vaughn"
+      keywords    = ["programming", "tech", "Nathan", "Vaughn", "blog"]
+      description = "Adventures in programming and tech"
+      subtitle    = "Adventures in programming and tech"
+      lastModDisplay = "Last Modified:"
 
-  # default open graph image
-  images = ["img/opg.png"]
+      # default open graph image
+      images = ["img/opg.png"]
 
-# logo parameters
-[languages.en.params.logo]
-  logoText     = "nathanv@blog"
-  logoHomeLink = "/"
+    # logo parameters
+    [languages.en.params.logo]
+      logoText     = "nathanv@blog"
+      logoHomeLink = "/"
 
-# extra links
-[languages.en.menu]
-[[languages.en.menu.main]]
-  identifier = "Homepage"
-  name       = "Homepage"
-  weight     = 10
-  url        = "https://nathanv.me"
+  # extra links
+  [languages.en.menu]
+    [[languages.en.menu.main]]
+      identifier = "Homepage"
+      name       = "Homepage"
+      weight     = 10
+      url        = "https://nathanv.me"
 
-[[languages.en.menu.main]]
-  identifier = "links"
-  name       = "Links"
-  weight     = 20
-  url        = "https://links.nathanv.me/"
+    [[languages.en.menu.main]]
+      identifier = "links"
+      name       = "Links"
+      weight     = 20
+      url        = "https://links.nathanv.me/"
