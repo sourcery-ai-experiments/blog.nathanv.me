@@ -52,6 +52,7 @@ enableRobotsTXT = true
 [languages]
   [languages.en]
       title       = "Nathan Vaughn"
+      copyright = "Written by a human, for humans"
 
     [languages.en.params]
       keywords    = ["programming", "tech", "Nathan", "Vaughn", "blog"]
