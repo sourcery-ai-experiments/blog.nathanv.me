@@ -6,6 +6,7 @@ description: Using an HP Chromebox to run Octoprint for my Ender 3
 images:
   - /posts/octoprint-setup/img/cover.jpg
 tags:
+  - Octoprint
   - Linux
   - 3D Printing
 title: Setting up Octoprint without a Raspberry Pi
