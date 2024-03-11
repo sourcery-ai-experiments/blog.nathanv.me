@@ -4,19 +4,13 @@ languageCode    = "en-us"
 themesDir       = "node_modules"
 theme           = "hello-friend"
 paginate        = 5
-googleAnalytics = "G-40Y1N6611R"
-# enableGitInfo   = true
+enableGitInfo   = true
 enableRobotsTXT = true
-
-[privacy]
-  [privacy.googleAnalytics]
-    anonymizeIP = true
-    respectDoNotTrack = true
 
 # better resampling algorithm
 [imaging]
   quality = 95
-  resampleFilter = "lanczos"
+  resampleFilter = "Lanczos"
 
 # markdown settings
 [markup]
