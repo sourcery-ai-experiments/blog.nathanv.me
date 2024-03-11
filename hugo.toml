@@ -4,7 +4,7 @@ languageCode    = "en-us"
 themesDir       = "node_modules"
 theme           = "hello-friend"
 paginate        = 5
-enableGitInfo   = true
+# enableGitInfo   = true
 enableRobotsTXT = true
 
 # better resampling algorithm
