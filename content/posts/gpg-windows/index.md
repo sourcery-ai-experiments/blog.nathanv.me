@@ -109,24 +109,24 @@ in the container, and override your git config to point at that installation.
 For `apt`-based images:
 
 ```bash
-apt update && apt install gnupg2 -y && git config gpg.program gpg2
+apt update && apt install gnupg2 -y && git config gpg.program gpg2 --global
 ```
 
 For `apk`-based images:
 
 ```bash
-apk add gnupg && git config gpg.program gpg
+apk add gnupg && git config gpg.program gpg --global
 ```
 
 As your keyring and git config from WSL get copied in to the container,
 this should work automatically.
 
-Do be warned that this changes the git config for the current repo. If this is
+<!-- Do be warned that this changes the git config for the current repo. If this is
 a repo that you open both in a Dev Container and Windows/WSL, this will cause havoc.
 I highly recommend using the "Clone in Volume" option when creating the Dev Container
 to avoid this.
 
-{{< figure src="img/2023-06-06-18-12-50.png" captionPosition="center" >}}
+{{< figure src="img/2023-06-06-18-12-50.png" captionPosition="center" >}} -->
 
 ## Conclusion
 
