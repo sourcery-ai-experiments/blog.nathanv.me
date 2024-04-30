@@ -121,12 +121,31 @@ apk add gnupg && git config gpg.program gpg --global
 As your keyring and git config from WSL get copied in to the container,
 this should work automatically.
 
+A good way to test is to run
+
+```bash
+gpg --list-secret-keys
+```
+
+inside the container to make sure the keyring was imported. If this fails,
+a possible cause is not having a default WSL distribution set. Fix this with
+
+```bash
+wsl --list
+wsl --set-default {name}
+# wsl --set-default Ubuntu
+# for example
+```
+
 <!-- Do be warned that this changes the git config for the current repo. If this is
 a repo that you open both in a Dev Container and Windows/WSL, this will cause havoc.
 I highly recommend using the "Clone in Volume" option when creating the Dev Container
-to avoid this.
+to avoid this. -->
 
-{{< figure src="img/2023-06-06-18-12-50.png" captionPosition="center" >}} -->
+For best I/O performance, I highly recommend using the "Clone in Volume"
+option when creating the Dev Container.
+
+{{< figure src="img/2023-06-06-18-12-50.png" captionPosition="center" >}}
 
 ## Conclusion
 
