@@ -43,10 +43,14 @@ enableRobotsTXT = true
   # default open graph image
   images = ["img/opg.png"]
 
+[privacy]
+  [privacy.youtube]
+    privacyEnhanced = true
+
 [languages]
   [languages.en]
-      title       = "Nathan Vaughn"
-      copyright = "Written by a human, for humans"
+      title       = "nathanv@blog"
+      copyright   = "Written by a human, for humans"
 
     [languages.en.params]
       keywords    = ["programming", "tech", "Nathan", "Vaughn", "blog"]
