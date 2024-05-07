@@ -43,6 +43,10 @@ enableRobotsTXT = true
   # default open graph image
   images = ["img/opg.png"]
 
+[privacy]
+  [privacy.youtube]
+    privacyEnhanced = true
+
 [languages]
   [languages.en]
       title       = "nathanv@blog"
