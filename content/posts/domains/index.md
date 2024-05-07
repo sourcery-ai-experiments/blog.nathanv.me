@@ -1,3 +1,13 @@
+---
+author: Nathan Vaughn
+date: "2024-05-06"
+description: Let's talk about domain names
+tags:
+  - DNS
+  - domains
+title: "Domains"
+---
+
 Let's talk about domain names. Despite being a strictly digital creation,
 they are intertwined with the social and political complexities of the real world.
 
@@ -5,12 +15,12 @@ they are intertwined with the social and political complexities of the real worl
 
 In the beginning, there were six top-level domains (TLDs):
 
-- .com
-- .net
-- .org
-- .edu
-- .mil
-- .gov
+- `.com`
+- `.net`
+- `.org`
+- `.edu`
+- `.mil`
+- `.gov`
 
 Wait, what is a top-level domain? Let's back up and talk about the parts of a domain
 name. As an example, let's use the domain for this site: `blog.nathanv.me`.
@@ -95,21 +105,223 @@ In 1998, the Internet Corporation for Assigned Names and Numbers (ICANN) was cre
 to manage the global DNS system. In 2000, ICANN decided there were not enough
 generic top-level domains (gTLDs) and announced seven new ones:
 
-- .aero
-- .biz
-- .coop
-- .info
-- .museum
-- .name
-- .pro
+- `.aero`
+- `.biz`
+- `.coop`
+- `.info`
+- `.museum`
+- `.name`
+- `.pro`
 
 Since 2000, there were several more rounds of new gTLDs, however in in 2012, ICANN
 began accepting applications for new gTLDs from companies. With a compelling enough
 pitch, and a nice pile of cash, you too could have your own top-level domain.
 This has created an explosion in top-level domains, with examples including
 `.bridgestone` (yes, the tire company), `.irish`, `.zip`, `.mint` and more.
+At the time of writing, there are over 1,500 top-level domains.
 
 ## Software
 
 You likely know that your computer takes a domain name and turns it into an IP address.
-But how exactly does it do that?
+But how exactly does it do that? Well, your computer asks a DNS server, such
+as [`1.1.1.1`](https://one.one.one.one/), [`8.8.8.8`](https://dns.google/)
+or one that your ISP provides. But (ignoring caching) these servers don't know
+the IP address of every domain in the world. Instead, they have to ask the
+**Root Name Servers**.
+
+The Root Name Servers bootstrap the DNS system. There are 13 of them, named A through M,
+run by different organizations, such as NASA, University of Maryland, and ICANN.
+They also have their own second-level domain, `root-servers.net`.
+The IP addresses of these servers are well-known and hardcoded into just about every
+piece of DNS software (so that you don't have a cyclical problem of trying to
+resolve `a.root-servers.net`).
+
+So, the DNS server talks to a randomly selected Root Name Server. But the Root Name
+Server *also* doesn't know the IP address of every domain in the world. Instead,
+they know what server to talk to for each top-level domain. Again, let's use this site,
+`blog.nathanv.me`, as an example:
+
+```bash
+$ dig @a.root-servers.net blog.nathanv.me
+
+; <<>> DiG 9.18.18-0ubuntu0.22.04.2-Ubuntu <<>> @a.root-servers.net blog.nathanv.me
+; (2 servers found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 61755
+;; flags: qr rd; QUERY: 1, ANSWER: 0, AUTHORITY: 5, ADDITIONAL: 11
+;; WARNING: recursion requested but not available
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 4096
+;; QUESTION SECTION:
+;blog.nathanv.me.               IN      A
+
+;; AUTHORITY SECTION:
+me.                     172800  IN      NS      b0.nic.me.
+me.                     172800  IN      NS      a0.nic.me.
+me.                     172800  IN      NS      c0.nic.me.
+me.                     172800  IN      NS      a2.nic.me.
+me.                     172800  IN      NS      b2.nic.me.
+
+;; ADDITIONAL SECTION:
+b0.nic.me.              172800  IN      A       199.253.60.1
+b0.nic.me.              172800  IN      AAAA    2001:500:54::1
+a0.nic.me.              172800  IN      A       199.253.59.1
+a0.nic.me.              172800  IN      AAAA    2001:500:53::1
+c0.nic.me.              172800  IN      A       199.253.61.1
+c0.nic.me.              172800  IN      AAAA    2001:500:55::1
+a2.nic.me.              172800  IN      A       199.249.119.1
+a2.nic.me.              172800  IN      AAAA    2001:500:47::1
+b2.nic.me.              172800  IN      A       199.249.127.1
+b2.nic.me.              172800  IN      AAAA    2001:500:4f::1
+
+;; Query time: 50 msec
+;; SERVER: 198.41.0.4#53(a.root-servers.net) (UDP)
+;; WHEN: Mon May 06 20:12:04 CDT 2024
+;; MSG SIZE  rcvd: 353
+```
+
+We can see here that we asked a Root Name Server about `blog.nathanv.me`, and it
+didn't give us the IP address, but instead tells us that we need to talk to one of
+`b0.nic.me`, `a0.nic.me`, `c0.nic.me`, `a2.nic.me`, or `b2.nic.me` in order to get
+the next level of the domain, `nathanv.me`.
+It also helpfully provides the IP addresses of these servers so we don't have to
+figure that out as well and get stuck in a loop.
+
+Now onto `b0.nic.me`:
+
+```bash
+$ dig @b0.nic.me blog.nathanv.me
+
+; <<>> DiG 9.18.18-0ubuntu0.22.04.2-Ubuntu <<>> @b0.nic.me blog.nathanv.me
+; (2 servers found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 1860
+;; flags: qr rd; QUERY: 1, ANSWER: 0, AUTHORITY: 2, ADDITIONAL: 1
+;; WARNING: recursion requested but not available
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; QUESTION SECTION:
+;blog.nathanv.me.               IN      A
+
+;; AUTHORITY SECTION:
+nathanv.me.             3600    IN      NS      terin.ns.cloudflare.com.
+nathanv.me.             3600    IN      NS      deb.ns.cloudflare.com.
+
+;; Query time: 80 msec
+;; SERVER: 199.253.60.1#53(b0.nic.me) (UDP)
+;; WHEN: Mon May 06 20:15:47 CDT 2024
+;; MSG SIZE  rcvd: 99
+```
+
+Again, we can see that the name server `b0.nic.me` doesn't know the IP address of
+`blog.nathanv.me` but it does know who to talk to next, `terin.ns.cloudflare.com`
+or `deb.ns.cloudflare.com`. These are the name servers for the domain `nathanv.me`.
+Usually these are provided by your domain registrar, or in my case, CloudFlare.
+Finally, we can ask `terin.ns.cloudflare.com` for the IP address of `blog.nathanv.me`:
+
+```bash
+$ dig @deb.ns.cloudflare.com blog.nathanv.me
+
+; <<>> DiG 9.18.18-0ubuntu0.22.04.2-Ubuntu <<>> @deb.ns.cloudflare.com blog.nathanv.me
+; (6 servers found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 11690
+;; flags: qr aa rd; QUERY: 1, ANSWER: 2, AUTHORITY: 0, ADDITIONAL: 1
+;; WARNING: recursion requested but not available
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; QUESTION SECTION:
+;blog.nathanv.me.               IN      A
+
+;; ANSWER SECTION:
+blog.nathanv.me.        300     IN      A       104.21.52.60
+blog.nathanv.me.        300     IN      A       172.67.195.246
+
+;; Query time: 30 msec
+;; SERVER: 108.162.192.92#53(deb.ns.cloudflare.com) (UDP)
+;; WHEN: Mon May 06 20:17:41 CDT 2024
+;; MSG SIZE  rcvd: 76
+```
+
+At last, we have learned that the IP address for `blog.nathanv.me` is either
+`104.21.52.60` or `172.67.195.246`. A DNS server that performs these actions is
+called a "recursive resolver" as it has to recursively figure out who to ask for
+each part of the domain name.
+
+You may be wondering, "Who do these Root Name Servers think they are?
+There's nothing special giving them their power other than
+collective agreement. I want my own DNS root!"
+
+{{< figure src="img/alt_dns_root.png" alt="Bender from Futurama saying 'We'll make our own DNS root with blackjack and hookers'" >}}
+
+Well, you wouldn't be the first. There are multiple groups that have
+created [alternate DNS roots](https://en.wikipedia.org/wiki/Alternative_DNS_root)
+with their own Root Name Servers.  Much like cryptocurrency trying to displace the US
+dollar, none of them have gained any widespread adoption.
+
+## Applications of DNS
+
+While the above was a simple example of looking for the IP address of a domain name,
+there's a lot you can do with DNS. For example, you can use it for load balancing.
+If you have multiple servers to run your application, you can configure your DNS
+server to randomly return a different IP address each time. Additionally,
+one of the most popular uses of DNS for consumer use is ad-blocking. With a server
+like [Pi-Hole](https://pi-hole.net/), you can run a DNS server that lies and pretends
+that domains that are known to serve ads don't exist. Projects like
+[DNS Toys](https://www.dns.toys/) exist that can provide useful information over
+the DNS protocol.
+
+DNS can also be used for nefarious purposes. For example, you can use DNS
+for data exfiltration. Imagine making a DNS request for
+`username.password.example.com`. Even though this may not be a real domain,
+the `example.com` nameserver can log this request. Assuming you control the
+`example.com` nameserver, you can later view the request to these non-existent domains.
+Replace `username` and `password` with other sensitive information and you
+can easily get data out of a network in a way that is hard to detect and unlikely
+to be blocked.
+
+Additionally,
+[DNS amplification attacks](https://www.cloudflare.com/learning/ddos/dns-amplification-ddos-attack/)
+can be a problem. Basically, an attacker sends a DNS request to a server
+and spoofs the IP address that the response should be sent to. As you can see above
+the data size of the query is much smaller than the size of the response,
+so by sending lots of small queries to a large public DNS server, an attacker
+can "amplify" the volume of data they are sending and overwhelm the target.
+
+## Conclusion
+
+Hopefully you learned something out of this. Wikipedia has lots of information
+about the history of DNS and all the weird edge cases that have come up over the years.
+I also highly recommend this video by Nill:
+
+{{< youtube 4ZtFk2dtqv0 >}}
+
+Other weird DNS facts:
+
+- `.nato` was created for NATO, but NATO quickly transitioned to using `nato.int`
+and it was deleted shortly after, basically unused.
+- A lot of people got very upset when Google created the `.dev` top-level domain
+as they were using it for development purposes. [RFC 2606](https://datatracker.ietf.org/doc/rfc2606/)
+reserves `.example`, `.invalid`, `.localhost`, and `.test` for this purpose,
+so they were playing with fire to begin with. `.local` and `.onion` have also
+been added to this list. While `.home` and `.corp` are not officially reserved,
+they are in pratice as ICANN has rejected proposals to register them.
+- A lot of people also got upset when Google created the `.zip` top-level domain
+as they feared it would be used to spread malware with applications like Twitter
+that recognize URLs without a proceeding `http://` or `https://`.
+- The email address [`dot@dotat.at`](https://dotat.at/) is my favorite
+[domain hack](https://en.wikipedia.org/wiki/Domain_hack) (read it aloud if you don't
+understand it).
+
+## Further Reading
+
+- <https://en.wikipedia.org/wiki/List_of_Internet_top-level_domains>
+- <https://en.wikipedia.org/wiki/Root_name_server>
+- <https://en.wikipedia.org/wiki/.com>
+- <https://www.icann.org/history>
